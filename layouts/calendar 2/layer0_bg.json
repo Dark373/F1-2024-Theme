@@ -1,0 +1,42 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Items": [
+            {
+                "BlockType": "image",
+                "WidthPercent": 100,
+                "HeightPercent": 100,
+                "RenderIf": "{cal1, Converter=StringEquals, Parameter=DarkBG}",
+                "Source": "bg/bg.dark.png",
+                "Triggers": [
+                    {
+                        "Condition": "{cal2}",
+                        "Property": "Source",
+                        "Value": "bg/bg.dark.plain.png"
+                    }
+                ]
+            },
+            {
+                "BlockType": "image",
+                "WidthPercent": 100,
+                "HeightPercent": 100,
+                "RenderIf": "{cal1, Converter=StringEquals, Parameter=LightBG}",
+                "Source": "bg/bg.light.png",
+                "Triggers": [
+                    {
+                        "Condition": "{cal2}",
+                        "Property": "Source",
+                        "Value": "bg/bg.light.plain.png"
+                    }
+                ]
+            },
+            {
+                "BlockType": "image",
+                "WidthPercent": 100,
+                "HeightPercent": 100,
+                "RenderIf": "{cal1, Converter=StringEquals, Parameter=PurpleBG}",
+                "Source": "bg/bg.purple.plain.png"
+            }
+        ]
+    }
+}
