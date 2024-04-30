@@ -1,0 +1,24 @@
+{
+    "Name": "English",
+    "Id": "en-GB",
+    "Strings": {
+        //abbreviations
+        "UNITED STATES OF AMERICA": "USA",
+        "UNITED ARAB EMIRATES": "ABU DHABI",
+        "SPA-FRANCORCHAMPS": "SPA",
+
+        //month codes
+        "January": "JAN",
+        "February": "FEB",
+        "March": "MAR",
+        "April": "APR",
+        "May": "MAY",
+        "June": "JUN",
+        "July": "JUL",
+        "August": "AUG",
+        "September": "SEP",
+        "October": "OCT",
+        "November": "NOV",
+        "December": "DEC"
+    }
+}
