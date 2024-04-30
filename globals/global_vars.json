@@ -1,0 +1,16 @@
+{
+    //defaults
+    "FontNameDefault": "Formula1-Regular",
+    "FontNameWide": "Formula1-Wide",
+    "FontNameBold": "Formula1-Bold",
+    "FontNameBlack": "Formula1-Black",
+    "FontNameItalic": "Formula1-Italic",
+    "FontSizeDefault": 30,
+    "ForegroundDefault": "ABACB1",
+    "BackgroundDefault": "13151D",
+    "White": "FFFFFF",
+    "Black": "000000",
+
+    //calendar
+    "RoundCountFG": "FFFFFF"
+}

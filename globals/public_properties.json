@@ -1,0 +1,41 @@
+{
+    "Properties": [
+        {
+            "Name": "cal1",
+            "PublicName": "Background Colour",
+            "Category": "Global",
+            "Type": "Enum",
+            "EnumValues": ["DarkBG", "LightBG", "PurpleBG"],
+            "DefaultValue": "DarkBG"
+        },
+        {
+            "Name": "cal2",
+            "PublicName": "Plain Background",
+            "Category": "Global",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "cal3",
+            "PublicName": "Render Calendar Second Column",
+            "Category": "Calendar",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
+            "Name": "cal4",
+            "PublicName": "Number Of Pre Season Races",
+            "Category": "Calendar",
+            "Type": "Integer",
+            "DefaultValue": 0
+        }
+    ],
+    "Categories": [
+        {
+            "Name": "Global"
+        },
+        {
+            "Name": "Calendar"
+        }
+    ]
+}
