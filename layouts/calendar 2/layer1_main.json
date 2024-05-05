@@ -39,7 +39,7 @@
                         },
                         "Triggers": [
                             {
-                                "Condition": "{cal3, Converter=BoolReverse}",
+                                "Condition": "{cal1, Converter=BoolReverse}",
                                 "Property": "ItemStackOptions.Limit",
                                 "Value": "{Season.SeasonOverallNumberEvents}"
                             }
@@ -47,7 +47,7 @@
                     },
                     {
                         "BlockType": "shape",
-                        "RenderIf": "{cal3}",
+                        "RenderIf": "{cal1}",
                         "Margin": "20,3,20,4",
                         "Width": 5,
                         "HeightPercent": 100,
@@ -58,7 +58,7 @@
                     },
                     {
                         "BlockType": "itemstack",
-                        "RenderIf": "{cal3}",
+                        "RenderIf": "{cal1}",
                         "Orientation": "Vertical",
                         "ItemStackOptions": {
                             "ItemSource": "{Events.Events}",

@@ -1,0 +1,140 @@
+{
+    "BlockRoot": {
+        "Name": "mainStack",
+        "BlockType": "stack",
+        "Margin": "60,60,60,0",
+        "Orientation": "Vertical",
+        "Items": [
+            {
+                "BlockType": "stack",
+                "Orientation": "Horizontal",
+                "HorizontalAlignment": "Center",
+                "Items": [
+                    {
+                        "BlockType": "stack",
+                        "Orientation": "Horizontal",
+                        "HorizontalAlignment": "Center",
+                        "Items": [
+                            {
+                                "BlockType": "image",
+                                "Margin": "0, 0, 60, 0",
+                                "Source": "components/thegrid.{g1}.png",
+                                "Height": 2080,
+                                "Width": 294
+                            },
+                            {
+                                "BlockType": "stack",
+                                "MarginTop": 52,
+                                "Orientation": "Horizontal",
+                                "Items": [
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Session.Drivers}",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "/the grid/DriverLineGrid",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "renderif": "{Item.Position, Converter=NumberIsOdd}"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "BlockType": "stack",
+                                "Orientation": "Vertical",
+                                "MarginLeft": 50,
+                                "Items": [
+                                    {
+                                        "BlockType": "stack",
+                                        "Margin": "0, 0, 0, 40",
+                                        "Spacing": 20,
+                                        "HorizontalAlignment": "Right",
+                                        "Items": [
+                                            {
+                                                "BlockType": "text",
+                                                "Source": "{Season.Name, Converter=StringToUpperString}",
+                                                "FontSize": 90,
+                                                "Foreground": "{{g1}}",
+                                                "FontName": "{FontNameBlack}",
+                                                "TextOptions": {
+                                                    "HorizontalAlignment": "Center"
+                                                },
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{g5, Converter=StringEquals, Parameter=Category Name}",
+                                                        "Property": "Source",
+                                                        "Value": "{Season.MainLeagueCategory.Name}"
+                                                    },
+                                                    {
+                                                        "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
+                                                        "Property": "Source",
+                                                        "Value": "{Season.MainLeagueCategory.ShortName}"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "BlockType": "text",
+                                                "Source": "[{Session.Track.CircuitName, Converter=StringToUpperString} GP]",
+                                                "FontSize": 90,
+                                                "Foreground": "{{g1}}",
+                                                "FontName": "{FontNameBlack}",
+                                                "TextOptions": {
+                                                    "HorizontalAlignment": "Center"
+                                                }
+                                            },
+                                            {
+                                                "Name": "leagueLogo",
+                                                "BlockType": "image",
+                                                "VerticalAlignment": "Center",
+                                                "Height": "{LogoSize}",
+                                                "Margin": "0, -6, 0, 0",
+                                                "Source": "{Season.LeagueInfo.LeagueLogo}",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToTrue}",
+                                                        "Setters": [
+                                                            {
+                                                                "Property": "Source",
+                                                                "Value": "logotypes/f1_logo.png"
+                                                            },
+                                                            {
+                                                                "Property": "Height",
+                                                                "Value": 68
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "BlockType": "itemstack",
+                                        "Orientation": "Vertical",
+                                        "ItemStackOptions": {
+                                            "ItemSource": "{Session.Drivers}",
+                                            "Template": {
+                                                "BlockType": "component",
+                                                "Component": "/the grid/DriverLineGrid",
+                                                "ComponentOptions": {
+                                                    "Vars": {
+                                                        "renderif": "{Item.Position, Converter=NumberIsEven}"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

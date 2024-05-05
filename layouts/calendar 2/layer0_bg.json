@@ -4,38 +4,28 @@
         "Items": [
             {
                 "BlockType": "image",
-                "WidthPercent": 100,
-                "HeightPercent": 100,
-                "RenderIf": "{cal1, Converter=StringEquals, Parameter=DarkBG}",
-                "Source": "bg/bg.dark.png",
+                "Source": "bg/bg.{g1}.png",
                 "Triggers": [
                     {
-                        "Condition": "{cal2}",
+                        "Condition": "{g2}",
                         "Property": "Source",
-                        "Value": "bg/bg.dark.plain.png"
-                    }
-                ]
-            },
-            {
-                "BlockType": "image",
-                "WidthPercent": 100,
-                "HeightPercent": 100,
-                "RenderIf": "{cal1, Converter=StringEquals, Parameter=LightBG}",
-                "Source": "bg/bg.light.png",
-                "Triggers": [
+                        "Value": "bg/bg.{g1}.plain.png"
+                    },
                     {
-                        "Condition": "{cal2}",
-                        "Property": "Source",
-                        "Value": "bg/bg.light.plain.png"
+                        "Condition": "{Season.SeasonOverallNumberEvents, Converter=NumberGreater, Parameter=13}",
+                        "ConditionAnd": "{Season.SeasonOverallNumberEvents, Converter=NumberLess, Parameter=35}",
+                        "Setters": [
+                            {
+                                "Property": "WidthPercent",
+                                "Value": 100
+                            },
+                            {
+                                "Property": "HeightPercent",
+                                "Value": 100
+                            }
+                        ]
                     }
                 ]
-            },
-            {
-                "BlockType": "image",
-                "WidthPercent": 100,
-                "HeightPercent": 100,
-                "RenderIf": "{cal1, Converter=StringEquals, Parameter=PurpleBG}",
-                "Source": "bg/bg.purple.plain.png"
             }
         ]
     }

@@ -1,0 +1,29 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Width": 2879,
+        "Height": 1620,
+        "Background": "131227",
+        "Items": [
+            {
+                "BlockType": "stack",
+                "BackgroundImage": "bg/bg.sprint.png",
+                "ColorizeBackground": {
+                    "Enabled": true,
+                    "Color": "09081D"
+                },
+                "Items": [
+                    {
+                        "BlockType": "shape",
+                        "Height": 10000,
+                        "Width": 10000,
+                        "Opacity": 0,
+                        "ShapeOptions": {
+                            "Fill": "{White}"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
