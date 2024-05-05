@@ -18,13 +18,14 @@
                     "BlockType": "image",
                     "Height": "55",
                     "HorizontalAlignment": "Left",
-                    "Source": "logos/f1_logo.png",
+                    "Source": "logotypes/f1_logo.png",
                     "RenderIf": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToTrue}"
                 },
                 {
                     "Name": "LeagueLogo",
+                    "MarginBottom": 20,
                     "BlockType": "image",
-                    "Height": "{LogoSize}",
+                    "Height": "{g4}",
                     "Width": "auto",
                     "HorizontalAlignment": "Left",
                     "Source": "{Season.LeagueInfo.LeagueLogo}",
@@ -38,15 +39,25 @@
                         {
                             "BlockType": "text",
                             "VerticalAlignment": "Center",
-                            "Source": "{Season.ShortName, Converter=StringToUpperString}",
+                            "Source": "{Season.Name, Converter=StringToUpperString}",
                             "FontName": "{FontNameBlack}",
-                            "FontSize": 120,
+                            "FontSize": "{cal3}",
                             "Foreground": "{Season.MainLeagueCategory.Color}",
                             "Triggers": [
                                 {
-                                    "Condition": "{cal3, Converter=BoolReverse}",
+                                    "Condition": "{cal1, Converter=BoolReverse}",
                                     "Property": "FontSize",
-                                    "Value": 114
+                                    "Value": "{cal3, Converter=NumberSubtract, Parameter=5}"
+                                },
+                                {
+                                    "Condition": "{g5, Converter=StringEquals, Parameter=Category Name}",
+                                    "Property": "Source",
+                                    "Value": "{Season.MainLeagueCategory.Name, Converter=StringToUpperString}"
+                                },
+                                {
+                                    "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
+                                    "Property": "Source",
+                                    "Value": "{Season.MainLeagueCategory.ShortName, Converter=StringToUpperString}"
                                 }
                             ]
                         }
@@ -61,20 +72,20 @@
                         {
                             "BlockType": "text",
                             "Foreground": "{Black}",
-                            "FontSize": 120,
+                            "FontSize": "{cal3}",
                             "FontName": "{FontNameBlack}",
                             "Source": "[CALENDAR]",
                             "Triggers": [
                                 {
-                                    "Condition": "{cal1, Converter=StringEquals, Parameter=DarkBG}",
-                                    "ConditionOr": "{cal1, Converter=StringEquals, Parameter=PurpleBG}",
+                                    "Condition": "{g1, Converter=StringEquals, Parameter=Dark}",
+                                    "ConditionOr": "{g1, Converter=StringEquals, Parameter=Purple}",
                                     "Property": "Foreground",
                                     "Value": "{White}"
                                 },
                                 {
-                                    "Condition": "{cal3, Converter=BoolReverse}",
+                                    "Condition": "{cal1, Converter=BoolReverse}",
                                     "Property": "FontSize",
-                                    "Value": 114
+                                    "Value": "{cal3, Converter=NumberSubtract, Parameter=5}"
                                 }
                             ]
                         }
