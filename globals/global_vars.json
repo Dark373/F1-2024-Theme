@@ -6,11 +6,35 @@
     "FontNameBlack": "Formula1-Black",
     "FontNameItalic": "Formula1-Italic",
     "FontSizeDefault": 30,
-    "ForegroundDefault": "ABACB1",
+    "ForegroundDefault": "FFFFFF",
+   // "ForegroundDefault": "ABACB1",
     "BackgroundDefault": "13151D",
+    "Dark": "FFFFFF",
+    "Purple": "FFFFFF",
+    "Light": "000000",
     "White": "FFFFFF",
     "Black": "000000",
-
     //calendar
-    "RoundCountFG": "FFFFFF"
+    "RoundCountFG": "FFFFFF",
+    //dotd
+    "RedBullSecondary": "DB0A40",
+    "FerrariSecondary": "000000",
+    "MercedesSecondary": "000000",
+    "AlpineSecondary": "E73895",
+    "McLarenSecondary": "C0C0C0",
+    "AlfaRomeoSecondary": "000000",
+    "AstonMartinSecondary": "CEDC00",
+    "HaasSecondary": "E6002D",
+    "AlphaTauriSecondary": "000000",
+    "WilliamsSecondary": "2242BD",
+    "DotdNameFontSize": "50",
+    "DotdSeasonNameHeaderFS": "70",
+    "DotdRoundCountHeaderFS": "40",
+    //the grid colours
+    "PositionBG": "CFCFCF",
+    "PositionFG": "000000",
+    //team foreground colours
+    "FerrariFG": "000000",
+    "MercedesFG": "000000",
+    "HaasFG": "000000"
 }
