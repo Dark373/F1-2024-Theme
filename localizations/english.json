@@ -7,6 +7,9 @@
         "UNITED ARAB EMIRATES": "ABU DHABI",
         "SPA-FRANCORCHAMPS": "SPA",
 
+        //calendar
+        "CALENDAR": "CALENDAR",
+
         //month codes
         "January": "JAN",
         "February": "FEB",
@@ -19,6 +22,8 @@
         "September": "SEP",
         "October": "OCT",
         "November": "NOV",
-        "December": "DEC"
+        "December": "DEC",
+
+        "PRE-SEASON": "PRE-SEASON"
     }
 }
