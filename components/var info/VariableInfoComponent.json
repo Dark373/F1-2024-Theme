@@ -48,12 +48,12 @@
             "Items": [
                 {
                     "BlockType": "text",
-                    "Margin": "-6,930,0,0",
-                    "Source": "<source>",
+                    "Margin": "0,930,0,0",
+                    "Source": "[<source>]",
                     "FontName": "{FontNameBlack}",
                     "FontSize": "<fastestlap>",
                     "Foreground": "{{Item.Team.Name}FG}",
-                    "HorizontalAlignment": "Left",
+                    "HorizontalAlignment": "Center",
                     "VerticalAlignment": "Center",
                     "Triggers": [
                         {
@@ -94,11 +94,15 @@
                             ]
                         },
                         {
-                            "Condition": "{var1, Converter=StringEquals, Parameter=P}",
+                            "Condition": "{var1, Converter=StringEquals, Parameter=Position}",
                             "Setters": [
                                 {
                                     "Property": "FontSize",
                                     "Value": "<position>"
+                                },
+                                {
+                                    "Property": "Source",
+                                    "Value": "P{Item.Position}"
                                 },
                                 {
                                     "Property": "Margin",
