@@ -20,7 +20,15 @@
                                 "Margin": "0, 0, 60, 0",
                                 "Source": "components/thegrid.{g1}.png",
                                 "Height": 2080,
-                                "Width": 294
+                                "Width": 294,
+                                "Triggers": [
+                                    {
+                                        "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                                        "ConditionOr": "{g1, Converter=StringEquals, Parameter=Purple}",
+                                        "Property": "Source",
+                                        "Value": "components/thegrid.Dark.png"
+                                    }
+                                ]
                             },
                             {
                                 "BlockType": "stack",

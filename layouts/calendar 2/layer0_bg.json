@@ -1,6 +1,7 @@
 {
     "BlockRoot": {
         "BlockType": "stack",
+        "Background": "{Season.MainLeagueCategory.Color}",
         "Items": [
             {
                 "BlockType": "image",

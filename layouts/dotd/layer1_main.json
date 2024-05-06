@@ -6,7 +6,7 @@
             "ItemSource": "{Session.Drivers}",
             "FilterMember": "IsRaceDriverOfDay",
             "FilterMemberValue": "True",
-            "Template": {
+            "ItemTemplate": {
                 "Name": "mainStack",
                 "Width": 1080,
                 "Height": 1620,
@@ -383,7 +383,7 @@
                                             },
                                             {
                                                 "Property": "Height",
-                                                "Value": "{logotypesize}"
+                                                "Value": "{g4}"
                                             }
                                         ]
                                     }
