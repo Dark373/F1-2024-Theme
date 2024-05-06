@@ -1,0 +1,221 @@
+{
+    "ComponentName": "HeaderBlockVariableInfo",
+    "BlockType": "dock",
+    "Orientation": "Horizontal",
+    "HorizontalAlignment": "Center",
+    "Margin": "50, 0, 50, 0",
+    "Items": [
+        {
+            "BlockType": "itemstack",
+            "HorizontalAlignment": "Center",
+            "Orientation": "Horizontal",
+            "ItemStackOptions": {
+                "ItemSource": "{Session.Drivers}",
+                "FilterMember": "IsRaceFastestLap",
+                "FilterMemberValue": "True",
+                "Limit": 1,
+                "ItemTemplate": {
+                    "BlockType": "dock",
+                    "Width": 2050,
+                    "Items": [
+                        {
+                            //headerLeft
+                            "Name": "headerLeftPart",
+                            "Width": "*",
+                            "BlockType": "stack",
+                            "HorizontalAlignment": "Left",
+                            "Orientation": "Horizontal",
+                            "Spacing": 20,
+                            "Items": [
+                                {
+                                    "BlockType": "image",
+                                    "Height": 85,
+                                    "Background": "{Black}",
+                                    "Padding": "1,-13",
+                                    "HorizontalAlignment": "Left",
+                                    "VerticalAlignment": "Top",
+                                    "ImageOptions": {
+                                        "Path": "{Item.Driver.Nationality.LogotypePath}",
+                                        "VerticalAlignment": "Center"
+                                    },
+                                    "Triggers": [
+                                        {
+                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Saudi Arabia}",
+                                            "Property": "Source",
+                                            "Value": "flags/saudi_arabia.png"
+                                        },
+                                        {
+                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Mexico}",
+                                            "Property": "Source",
+                                            "Value": "flags/mexico.png"
+                                        },
+                                        {
+                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Brazil}",
+                                            "Property": "Source",
+                                            "Value": "flags/brazil.png"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "VerticalAlignment": "Center",
+                                    "Source": "{Item.Driver.{name1}, Converter=StringToUpperString}",
+                                    "FontName": "{FontNameBlack}",
+                                    "FontSize": 70,
+                                    "Foreground": "{{g1}}",
+                                    "Triggers": [
+                                        {
+                                            "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                            "Property": "Source",
+                                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                        },
+                                        {
+                                            "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+                                            "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+                                            "Property": "Source",
+                                            "Value": "{Item.Driver.{name1}}"
+                                        },
+                                        {
+                                            "Condition": "{name2}",
+                                            "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                            "Property": "Source",
+                                            "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "BlockType": "text",
+                                    "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                    "VerticalAlignment": "Center",
+                                    "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
+                                    "FontName": "{FontNameBlack}",
+                                    "FontSize": 70,
+                                    "Foreground": "{{g1}}",
+                                    "Triggers": [
+                                        {
+                                            "Condition": "{name2}",
+                                            "Property": "Source",
+                                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            //headerright
+                            "Width": "*",
+                            "BlockType": "stack",
+                            "HorizontalAlignment": "Right",
+                            "Orientation": "Horizontal",
+                            "Items": [
+                                {
+                                    "BlockType": "text",
+                                    "HorizontalAlignment": "Right",
+                                    "VerticalAlignment": "Center",
+                                    "Source": "{Item.FastestLapTime}",
+                                    "FontName": "{FontNameBlack}",
+                                    "FontSize": 70,
+                                    "Foreground": "{{g1}}",
+                                    "Triggers": [
+                                        {
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=Winner}",
+                                            "Property": "Source",
+                                            "Value": "[P1]"
+                                        },
+                                        {
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=PodiumP2}",
+                                            "Property": "Source",
+                                            "Value": "[P2]"
+                                        },
+                                        {
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=PodiumP3}",
+                                            "Property": "Source",
+                                            "Value": "[P3]"
+                                        },
+                                        {
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=Points}",
+                                            "Property": "Source",
+                                            "Value": "P{Item.Position}"
+                                        },
+                                        {
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=P}",
+                                            "Property": "Source",
+                                            "Value": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "Triggers": [
+                {
+                    "Condition": "{var1, Converter=StringEquals, Parameter=Winner}",
+                    "Setters": [
+                        {
+                            "Property": "ItemStackOptions.FilterMember",
+                            "Value": "IsFinished"
+                        },
+                        {
+                            "Property": "ItemStackOptions.FilterMemberValue",
+                            "Value": "True"
+                        }
+                    ]
+                },
+                {
+                    "Condition": "{var1, Converter=StringEquals, Parameter=PodiumP2}",
+                    "Setters": [
+                        {
+                            "Property": "ItemStackOptions.FilterMember",
+                            "Value": "IsFinished"
+                        },
+                        {
+                            "Property": "ItemStackOptions.FilterMemberValue",
+                            "Value": "True"
+                        },
+                        {
+                            "Property": "ItemStackOptions.IndexStart",
+                            "Value": 1
+                        }
+                    ]
+                },
+                {
+                    "Condition": "{var1, Converter=StringEquals, Parameter=PodiumP3}",
+                    "Setters": [
+                        {
+                            "Property": "ItemStackOptions.FilterMember",
+                            "Value": "IsFinished"
+                        },
+                        {
+                            "Property": "ItemStackOptions.FilterMemberValue",
+                            "Value": "True"
+                        },
+                        {
+                            "Property": "ItemStackOptions.IndexStart",
+                            "Value": 2
+                        }
+                    ]
+                },
+                {
+                    "Condition": "{var1, Converter=StringEquals, Parameter=Points}",
+                    "ConditionOr":  "{var1, Converter=StringEquals, Parameter=P}",
+                    "Setters": [
+                        {
+                            "Property": "ItemStackOptions.FilterMember",
+                            "Value": "IsFinished"
+                        },
+                        {
+                            "Property": "ItemStackOptions.FilterMemberValue",
+                            "Value": "True"
+                        },
+                        {
+                            "Property": "ItemStackOptions.IndexStart",
+                            "Value": "{var7, Converter=NumberSubtract, Parameter=1}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

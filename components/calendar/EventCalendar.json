@@ -162,8 +162,7 @@
                             "Source": "{Item.Date, Converter=DateToDayOfMonth} [{Item.Date, Converter=DateToMonthInWords}]",
                             "Triggers": [
                                 {
-                                    "Condition": "{g1, Converter=StringEquals, Parameter=Dark}",
-                                    "ConditionOr": "{g1, Converter=StringEquals, Parameter=Purple}",
+                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Light}",
                                     "Property": "Foreground",
                                     "Value": "{Black}"
                                 },
@@ -225,8 +224,7 @@
                                     "Source": "{Item.Description}",
                                     "Triggers": [
                                         {
-                                            "Condition": "{g1, Converter=StringEquals, Parameter=Dark}",
-                                            "ConditionOr": "{g1, Converter=StringEquals, Parameter=Purple}",
+                                            "Condition": "{g1, Converter=StringNotEquals, Parameter=Light}",
                                             "Property": "Foreground",
                                             "Value": "{Black}"
                                         },

@@ -42,7 +42,7 @@
                             "Source": "{Season.Name, Converter=StringToUpperString}",
                             "FontName": "{FontNameBlack}",
                             "FontSize": "{cal3}",
-                            "Foreground": "{Season.MainLeagueCategory.Color}",
+                            "Foreground": "{White}",
                             "Triggers": [
                                 {
                                     "Condition": "{cal1, Converter=BoolReverse}",
@@ -58,6 +58,11 @@
                                     "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
                                     "Property": "Source",
                                     "Value": "{Season.MainLeagueCategory.ShortName, Converter=StringToUpperString}"
+                                },
+                                {
+                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                                    "Property": "Foreground",
+                                    "Value": "{Season.MainLeagueCategory.Color}"
                                 }
                             ]
                         }
@@ -77,8 +82,7 @@
                             "Source": "[CALENDAR]",
                             "Triggers": [
                                 {
-                                    "Condition": "{g1, Converter=StringEquals, Parameter=Dark}",
-                                    "ConditionOr": "{g1, Converter=StringEquals, Parameter=Purple}",
+                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Light}",
                                     "Property": "Foreground",
                                     "Value": "{White}"
                                 },
