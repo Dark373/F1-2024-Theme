@@ -122,10 +122,10 @@
         {
             "Name": "var1",
             "PublicName": "Displayed Information",
-            "Description": "Chose what is displayed on the Variable Information render. (P) = Position",
+            "Description": "Chose what is displayed on the Variable Information render",
             "Category": "Variable Information",
             "Type": "Enum",
-            "EnumValues": ["Fastest Lap", "Winner", "PodiumP2", "PodiumP3", "Points", "P"],
+            "EnumValues": ["Fastest Lap", "Winner", "PodiumP2", "PodiumP3", "Points", "Position"],
             "DefaultValue": "Fastest Lap"
         },
         {
