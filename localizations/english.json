@@ -10,6 +10,12 @@
         //calendar
         "CALENDAR": "CALENDAR",
 
+        //var info
+        "POLE": "POLE",
+        "WINNER": "WINNER",
+        "PODIUMP2": "PODIUM",
+        "PODIUMP3": "PODIUM",
+
         //month codes
         "January": "JAN",
         "February": "FEB",
