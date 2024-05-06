@@ -6,7 +6,7 @@
             "Description": "Changes the colour theme of certain backgrounds",
             "Category": "Global",
             "Type": "Enum",
-            "EnumValues": ["Dark", "Light", "Purple"],
+            "EnumValues": ["Dark", "Light", "Purple", "Custom Colour"],
             "DefaultValue": "Dark"
         },
         {
@@ -42,6 +42,24 @@
             "Type": "Enum",
             "EnumValues": ["Season Name", "Category Name", "Category Short Name"],
             "DefaultValue": "Season Name"
+        },
+        {
+            "Name": "g6",
+            "PublicName": "Driver Limit",
+            "Description": "Change the amount of drivers displayed on renders. 10 = top 10 drivers will render.",
+            "Category": "Global",
+            "Type": "Integer",
+            "MinimumValue": 1,
+            "DefaultValue": 20
+        },
+        {
+            "Name": "g7",
+            "PublicName": "Start Position",
+            "Description": "Determines which position continuous lists of drivers/teams starts from. Example: a value of 5 means certain renders will start from P5 instead of P1. For (Variable Information: Points) this value decides which position will render.",
+            "Category": "Global",
+            "Type": "Integer",
+            "MinimumValue": 1,
+            "DefaultValue": 1
         },
         {
             "Name": "name1",
@@ -100,6 +118,72 @@
             "Category": "The Grid",
             "Type": "Bool",
             "DefaultValue": false
+        },
+        {
+            "Name": "var1",
+            "PublicName": "Displayed Information",
+            "Description": "Chose what is displayed on the Variable Information render. (P) = Position",
+            "Category": "Variable Information",
+            "Type": "Enum",
+            "EnumValues": ["Fastest Lap", "Winner", "PodiumP2", "PodiumP3", "Points", "P"],
+            "DefaultValue": "Fastest Lap"
+        },
+        {
+            "Name": "var2",
+            "PublicName": "Fastest Lap Font Size",
+            "Description": "Fastest Lap text font size. Advised to change for longer translations.",
+            "Category": "Variable Information",
+            "Type": "Integer",
+            "DefaultValue": 288
+        },
+        {
+            "Name": "var3",
+            "PublicName": "Winner Font Size",
+            "Description": "Winner text font size. Advised to change for longer translations.",
+            "Category": "Variable Information",
+            "Type": "Integer",
+            "DefaultValue": 434
+        },
+        {
+            "Name": "var4",
+            "PublicName": "Podium Font Size",
+            "Description": "Podium text font size. Advised to change for longer translations.",
+            "Category": "Variable Information",
+            "Type": "Integer",
+            "DefaultValue": 458
+        },
+        {
+            "Name": "var5",
+            "PublicName": "Points Font Size",
+            "Description": "Points text font size. Advised to change for longer translations.",
+            "Category": "Variable Information",
+            "Type": "Integer",
+            "DefaultValue": 497
+        },
+        {
+            "Name": "var6",
+            "PublicName": "Position Font Size",
+            "Description": "Position text font size. Advised to change for longer translations.",
+            "Category": "Variable Information",
+            "Type": "Integer",
+            "DefaultValue": 600
+        },
+        {
+            "Name": "var7",
+            "PublicName": "Position",
+            "Description": "Determines which position info is taken from. Affects (Points) & (Position) only",
+            "Category": "Variable Information",
+            "Type": "Integer",
+            "MinimumValue": 1,
+            "DefaultValue": 1
+        },
+        {
+            "Name": "pol1",
+            "PublicName": "Pole Font Size",
+            "Description": "Pole text font size. Advised to change for longer translations.",
+            "Category": "Pole",
+            "Type": "Integer",
+            "DefaultValue": 719
         }
     ],
     "Categories": [
@@ -111,6 +195,12 @@
         },
         {
             "Name": "The Grid"
+        },
+        {
+            "Name": "Variable Information"
+        },
+        {
+            "Name": "Pole"
         }
     ]
 }

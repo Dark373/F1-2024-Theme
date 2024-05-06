@@ -12,6 +12,7 @@
     "Dark": "FFFFFF",
     "Purple": "FFFFFF",
     "Light": "000000",
+    "Custom Colour": "FFFFFF",
     "White": "FFFFFF",
     "Black": "000000",
     //calendar
@@ -36,5 +37,9 @@
     //team foreground colours
     "FerrariFG": "000000",
     "MercedesFG": "000000",
-    "HaasFG": "000000"
+    "HaasFG": "000000",
+
+    "DarkGradient": "0E0F14",
+    "LightGradient": "E9E9EB",
+    "PurpleGradient": "09081D"
 }
