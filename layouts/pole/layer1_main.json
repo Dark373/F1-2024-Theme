@@ -74,12 +74,12 @@
                                         "Items": [
                                             {
                                                 "BlockType": "text",
-                                                "Margin": "-6,930,0,0",
+                                                "Margin": "-0,930,0,0",
                                                 "Source": "[POLE]",
                                                 "FontName": "{FontNameBlack}",
                                                 "FontSize": "{pol1}",
                                                 "Foreground": "{{Item.Team.Name}FG}",
-                                                "HorizontalAlignment": "Left",
+                                                "HorizontalAlignment": "Center",
                                                 "VerticalAlignment": "Center",
                                                 "Triggers": [
                                                     {
@@ -91,7 +91,7 @@
                                             },
                                             {
                                                 "BlockType": "dock",
-                                                "Spacing": 20,
+                                                "Spacing": 12,
                                                 "Margin": "50,0,50,25",
                                                 "VerticalAlignment": "Bottom",
                                                 "Items": [

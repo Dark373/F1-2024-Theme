@@ -32,7 +32,7 @@
                                 "Component": "/var info/VariableInfoComponent",
                                 "ComponentOptions": {
                                     "Vars": {
-                                        "source": "[{var1, Converter=StringToUpperString}]",
+                                        "source": "{var1, Converter=StringToUpperString}",
                                         "fastestlap": "{var2}",
                                         "winner": "{var3}",
                                         "podium": "{var4}",
@@ -94,7 +94,7 @@
                     },
                     {
                         "Condition": "{var1, Converter=StringEquals, Parameter=Points}",
-                        "ConditionOr":  "{var1, Converter=StringEquals, Parameter=P}",
+                        "ConditionOr":  "{var1, Converter=StringEquals, Parameter=Position}",
                         "Setters": [
                             {
                                 "Property": "ItemStackOptions.FilterMember",

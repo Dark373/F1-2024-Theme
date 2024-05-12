@@ -76,7 +76,7 @@
             },
             {
                 "Condition": "{var1, Converter=StringEquals, Parameter=Points}",
-                "ConditionOr":  "{var1, Converter=StringEquals, Parameter=P}",
+                "ConditionOr":  "{var1, Converter=StringEquals, Parameter=Position}",
                 "Setters": [
                     {
                         "Property": "ItemStackOptions.FilterMember",

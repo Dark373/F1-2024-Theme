@@ -12,6 +12,13 @@
                 "Height": 1620,
                 "BlockType": "stack",
                 "Orientation": "Vertical",
+                "Triggers": [
+                    {
+                        "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
+                        "Property": "Height",
+                        "Value": "auto"
+                    }
+                ],
                 "Items": [
                     {
                         "BlockType": "stack",
@@ -171,7 +178,9 @@
                                                 "Height": 700,
                                                 "Margin": "0, 0, 80, 0",
                                                 "Width": "auto",
-                                                "Path": "{Item.Team.LogotypePath}"
+                                                "ImageOptions": {
+                                                    "Path": "{Item.Team.LogotypePath}"
+                                                }
                                             }
                                         ]
                                     }
@@ -232,7 +241,7 @@
                                                 "BlockType": "text",
                                                 "HorizontalAlignment": "Left",
                                                 "VerticalAlignment": "Center",
-                                                "FontSize": "{DotdNameFontSize}",
+                                                "FontSize": "{dot1}",
                                                 "Foreground": "{{Item.Team.Name}FG}",
                                                 "FontName": "{FontNameDefault}",
                                                 "Source": "{Session.DriverDayDriver.{name1}, Converter=StringToUpperString}",
@@ -294,7 +303,7 @@
                                                 "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
                                                 "HorizontalAlignment": "Left",
                                                 "VerticalAlignment": "Center",
-                                                "FontSize": "{DotdNameFontSize}",
+                                                "FontSize": "{dot1}",
                                                 "Foreground": "{{Item.Team.Name}FG}",
                                                 "FontName": "{FontNameBlack}",
                                                 "Source": "{Session.DriverDayDriver.RealName, Converter=StringToUpperString}",
