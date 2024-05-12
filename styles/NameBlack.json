@@ -1,0 +1,18 @@
+[
+    {
+        "StyleName": "NameBlack1",
+        "FontName": "{FontNameBlack}",
+        "FontSize": 70,
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
+    },
+    {
+        "StyleName": "NameBlack2",
+        "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "FontName": "{FontNameBlack}",
+        "FontSize": 70,
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
+    
+    }
+]

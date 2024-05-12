@@ -1,0 +1,9 @@
+{
+    "StyleName": "DriverFlags",
+    "VerticalAlignment": "Center",
+    "HorizontalAlignment": "Left",
+    "Background": "{Black}",
+    "Padding": "1,-13",
+    "MarginTop": -4,
+    "Height": 85
+}

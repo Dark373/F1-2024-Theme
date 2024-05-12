@@ -1,0 +1,18 @@
+[
+    {
+        "StyleName": "NameDefault1",
+        "FontName": "{FontNameDefault}",
+        "FontSize": 30,
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
+    },
+    {
+        "StyleName": "NameDefault2",
+        "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "FontName": "{FontNameDefault}",
+        "FontSize": 30,
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
+    
+    }
+]
