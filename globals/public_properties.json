@@ -6,7 +6,7 @@
             "Description": "Changes the colour theme of certain backgrounds",
             "Category": "Global",
             "Type": "Enum",
-            "EnumValues": ["Dark", "Light", "Purple", "Custom Colour"],
+            "EnumValues": ["Dark", "Light", "Purple", "Custom Colour", "No Background"],
             "DefaultValue": "Dark"
         },
         {
@@ -178,12 +178,45 @@
             "DefaultValue": 1
         },
         {
+            "Name": "dot1",
+            "PublicName": "Driver Name Font Size",
+            "Description": "Change the size of the driver name on the render.",
+            "Category": "Driver Of The Day",
+            "Type": "Integer",
+            "DefaultValue": 50
+        },
+        {
             "Name": "pol1",
             "PublicName": "Pole Font Size",
             "Description": "Pole text font size. Advised to change for longer translations.",
             "Category": "Pole",
             "Type": "Integer",
             "DefaultValue": 719
+        },
+        {
+            "Name": "cha1",
+            "PublicName": "Bottom Text",
+            "Description": "Optional text with the intention of adding pevious titles. But its up to you.",
+            "Category": "Champion",
+            "Type": "String"
+        },
+        {
+            "Name": "cha2",
+            "PublicName": "Background Colour",
+            "Description": "",
+            "Category": "Champion",
+            "Type": "Enum",
+            "EnumValues": ["Team", "Category", "Gold"],
+            "DefaultValue": "Team"
+        },
+        {
+            "Name": "cha3",
+            "PublicName": "Gradient Colour",
+            "Description": "",
+            "Category": "Champion",
+            "Type": "Enum",
+            "EnumValues": ["Black", "White"],
+            "DefaultValue": "Black"
         }
     ],
     "Categories": [
@@ -200,7 +233,13 @@
             "Name": "Variable Information"
         },
         {
+            "Name": "Driver Of The Day"
+        },
+        {
             "Name": "Pole"
+        },
+        {
+            "Name": "Champion"
         }
     ]
 }
