@@ -19,83 +19,78 @@
                     "Width": 2050,
                     "Items": [
                         {
-                            //headerLeft
-                            "Name": "headerLeftPart",
-                            "Width": "*",
-                            "BlockType": "stack",
-                            "HorizontalAlignment": "Left",
-                            "Orientation": "Horizontal",
-                            "Spacing": 20,
+                            "Name": "DriverLine",
+                            "BlockType": "dock",
+                            "VerticalAlignment": "Center",
                             "Items": [
                                 {
-                                    "BlockType": "image",
-                                    "Height": 85,
-                                    "Background": "{Black}",
-                                    "Padding": "1,-13",
+                                    "BlockType": "stack",
+                                    "Spacing": 12,
                                     "HorizontalAlignment": "Left",
-                                    "VerticalAlignment": "Top",
-                                    "ImageOptions": {
-                                        "Path": "{Item.Driver.Nationality.LogotypePath}",
-                                        "VerticalAlignment": "Center"
-                                    },
-                                    "Triggers": [
-                                        {
-                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Saudi Arabia}",
-                                            "Property": "Source",
-                                            "Value": "flags/saudi_arabia.png"
-                                        },
-                                        {
-                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Mexico}",
-                                            "Property": "Source",
-                                            "Value": "flags/mexico.png"
-                                        },
-                                        {
-                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Brazil}",
-                                            "Property": "Source",
-                                            "Value": "flags/brazil.png"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "BlockType": "text",
                                     "VerticalAlignment": "Center",
-                                    "Source": "{Item.Driver.{name1}, Converter=StringToUpperString}",
-                                    "FontName": "{FontNameBlack}",
-                                    "FontSize": 70,
-                                    "Foreground": "{{g1}}",
-                                    "Triggers": [
+                                    "Items": [
                                         {
-                                            "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                            "BlockType": "image",
+                                            "Style": "DriverFlags",
+                                            "ImageOptions": {
+                                                "Path": "{Item.Driver.Nationality.LogotypePath}"
+                                            }
                                         },
                                         {
-                                            "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
-                                            "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.{name1}}"
+                                            "BlockType": "text",
+                                            "Style": "NameBlack1",
+                                            "Foreground": "{{Item.Team.Name}FG}",
+                                            "Source": "{Item.Driver.{name1}}",
+                                            "Triggers": [
+                                                {
+                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                                },
+                                                {
+                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+                                                    "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.{name1}}"
+                                                },
+                                                {
+                                                    "Condition": "{name2}",
+                                                    "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+                                                },
+                                                {
+                                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                                                    "Property": "Foreground",
+                                                    "Value": "{{g1}}"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "Condition": "{name2}",
-                                            "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+                                            "BlockType": "text",
+                                            "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                            "Style": "NameBlack2",
+                                            "Foreground": "{{Item.Team.Name}FG}",
+                                            "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
+                                            "Triggers": [
+                                                {
+                                                    "Condition": "{name2}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                                },
+                                                {
+                                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                                                    "Property": "Foreground",
+                                                    "Value": "{{g1}}"
+                                                }
+                                            ]
                                         }
-                                    ]
-                                },
-                                {
-                                    "BlockType": "text",
-                                    "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                    "VerticalAlignment": "Center",
-                                    "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
-                                    "FontName": "{FontNameBlack}",
-                                    "FontSize": 70,
-                                    "Foreground": "{{g1}}",
+                                    ],
                                     "Triggers": [
                                         {
-                                            "Condition": "{name2}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=Position}",
+                                            "Property": "HorizontalAlignment",
+                                            "Value": "Center"
                                         }
                                     ]
                                 }
@@ -115,8 +110,19 @@
                                     "Source": "{Item.FastestLapTime}",
                                     "FontName": "{FontNameBlack}",
                                     "FontSize": 70,
-                                    "Foreground": "{{g1}}",
+                                    "Foreground":  "{{Item.Team.Name}FG}",
                                     "Triggers": [
+                                        {
+                                            "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                                            "Property": "Foreground",
+                                            "Value": "{{g1}}"
+                                        },
+                                        {
+                                            "Condition": "{var1, Converter=StringEquals, Parameter=Fastest Lap}",
+                                            "ConditionAnd": "{Session.IsLiveData}",
+                                            "Property": "Source",
+                                            "Value": "{Item.FastestLapTime} [ON LAP] {Item.FastestLapNumLap}"
+                                        },
                                         {
                                             "Condition": "{var1, Converter=StringEquals, Parameter=Winner}",
                                             "Property": "Source",
@@ -199,7 +205,7 @@
                 },
                 {
                     "Condition": "{var1, Converter=StringEquals, Parameter=Points}",
-                    "ConditionOr":  "{var1, Converter=StringEquals, Parameter=Position}",
+                    "ConditionOr": "{var1, Converter=StringEquals, Parameter=Position}",
                     "Setters": [
                         {
                             "Property": "ItemStackOptions.FilterMember",

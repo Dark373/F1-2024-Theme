@@ -12,7 +12,6 @@
             "Items": [
                 {
                     "BlockType": "image",
-                    "Margin": "0,0,0,0",
                     "HorizontalAlignment": "Center",
                     "VerticalAlignment": "Center",
                     "Height": 3000,
@@ -114,17 +113,13 @@
                 },
                 {
                     "BlockType": "dock",
-                    "Spacing": 20,
+                    "Spacing": 12,
                     "Margin": "50,0,50,25",
                     "VerticalAlignment": "Bottom",
                     "Items": [
                         {
                             "BlockType": "image",
-                            "Height": 85,
-                            "Background": "{Black}",
-                            "Padding": "1,-13",
-                            "HorizontalAlignment": "Left",
-                            "VerticalAlignment": "Center",
+                            "Style": "DriverFlags",
                             "ImageOptions": {
                                 "Path": "{Session.Track.Nation.LogotypePath}"
                             },

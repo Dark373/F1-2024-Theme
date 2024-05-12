@@ -1,0 +1,62 @@
+{
+    "ComponentName": "DriverLine",
+    "BlockType": "dock",
+    "VerticalAlignment": "Center",
+    "Items": [
+        {
+            "BlockType": "stack",
+            "Spacing": 12,
+            "HorizontalAlignment": "<Halign>",
+            "VerticalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "RenderIf": "<render>",
+                    "Style": "DriverFlags",
+                    "ImageOptions": {
+                        "Path": "{Item.Driver.Nationality.LogotypePath}"
+                    }
+                },
+                {
+                    "BlockType": "text",
+                    "Style": "NameBlack1",
+                    "Foreground": "<fg>",
+                    "Source": "{Item.Driver.{name1}}",
+                    "Triggers": [
+                        {
+                            "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                            "Property": "Source",
+                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                        },
+                        {
+                            "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+                            "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+                            "Property": "Source",
+                            "Value": "{Item.Driver.{name1}}"
+                        },
+                        {
+                            "Condition": "{name2}",
+                            "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                            "Property": "Source",
+                            "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "text",
+                    "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                    "Style": "NameBlack2",
+                    "Foreground": "<fg>",
+                    "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
+                    "Triggers": [
+                        {
+                            "Condition": "{name2}",
+                            "Property": "Source",
+                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
