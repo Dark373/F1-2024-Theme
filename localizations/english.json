@@ -15,6 +15,35 @@
         "WINNER": "WINNER",
         "PODIUMP2": "PODIUM",
         "PODIUMP3": "PODIUM",
+        "ON LAP": "ON LAP",
+
+        //gp
+        "BAHRAIN GP": "BAHRAIN GP",
+        "JEDDAH GP" : "SAUDI ARABIAN GP",
+        "MELBOURNE GP": "AUSTRALIAN GP",
+        "SUZUKA GP" : "JAPANESE GP",
+        "SHANGHAI GP" : "CHINESE GP",
+        "MIAMI GP": "MIAMI GP",
+        "IMOLA GP": "GP DELL'EMILIA-ROMAGNA",
+        "MONACO GP": "GP DE MONACO",
+        "MONTREAL GP" : "GP DU CANADA",
+        "BARCELONA GP" : "GP DE ESPAÑA",
+        "SPIELBERG GP" : "AUSTRIAN GP",
+        "SILVERSTONE GP" : "BRITISH GP",
+        "HUNGARORING GP" : "HUNGARIAN GP",
+        "SPA-FRANCORCHAMPS GP" : "BELGIAN GP",
+        "ZANDVOORT GP" : "DUTCH GP",
+        "MONZA GP" : "GP D'ITALIA",
+        "BAKU GP" : "AZERBAIJAN GP",
+        "MARINA BAY GP": "SINGAPORE GP",
+        "AUSTIN GP" : "UNITED STATES GP",
+        "MEXICO GP": "GP DE LA CIUDAD DE MÉXICO",
+        "INTERLAGOS GP" : "GP DE SÃO PAULO",
+        "LOSAIL GP": "QATAR GP",
+        "LAS VEGAS GP": "LAS VEGAS GP",
+        "YAS MARINA GP" : "ABU DHABI GP",
+        "PAUL RICARD GP" : "GP DE FRANCE",
+        "PORTIMÃO GP" : "GP DE PORTUGAL",
 
         //month codes
         "January": "JAN",
@@ -30,6 +59,8 @@
         "November": "NOV",
         "December": "DEC",
 
-        "PRE-SEASON": "PRE-SEASON"
+        "PRE-SEASON": "PRE-SEASON",
+        "DRIVERS'": "DRIVERS'",
+        "CHAMPION": "CHAMPION"
     }
 }
