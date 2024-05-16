@@ -1,0 +1,30 @@
+{
+    "BlockRoot": {
+        "BlockType": "itemstack",
+        "Margin": "0,50,0,0",
+        "Orientation": "Vertical",
+        "Width": 2160,
+        "Height": 2700,
+        "ItemStackOptions": {
+            "ItemSource": "{Standings.Teams}",
+            "Limit": 1,
+            "IndexStart": "{com1, Converter=NumberAdd, Parameter=1}",
+            "ItemTemplate": {
+                "BlockType": "stack",
+                "Orientation": "Vertical",
+                "HorizontalAlignment": "Center",
+                "Items": [
+                    {
+                        "BlockType": "stack",
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "/comparison/HeaderBlockName"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

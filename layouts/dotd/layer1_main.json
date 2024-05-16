@@ -216,19 +216,7 @@
                                         },
                                         "Triggers": [
                                             {
-                                                "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Saudi Arabia}",
-                                                "Property": "Source",
-                                                "Value": "flags/saudi_arabia.png"
-                                            },
-                                            {
-                                                "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Mexico}",
-                                                "Property": "Source",
-                                                "Value": "flags/mexico.png"
-                                            },
-                                            {
-                                                "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Brazil}",
-                                                "Property": "Source",
-                                                "Value": "flags/brazil.png"
+                                                "Trigger": "Flags"
                                             }
                                         ]
                                     },
@@ -341,19 +329,7 @@
                                 },
                                 "Triggers": [
                                     {
-                                        "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Saudi Arabia}",
-                                        "Property": "Source",
-                                        "Value": "flags/saudi_arabia.png"
-                                    },
-                                    {
-                                        "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Mexico}",
-                                        "Property": "Source",
-                                        "Value": "flags/mexico.png"
-                                    },
-                                    {
-                                        "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Brazil}",
-                                        "Property": "Source",
-                                        "Value": "flags/brazil.png"
+                                        "Trigger": "Flags"
                                     }
                                 ]
                             },

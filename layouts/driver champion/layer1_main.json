@@ -35,6 +35,23 @@
                                 "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
                                 "Property": "Source",
                                 "Value": "avatars/{Item.Driver.Name}.png"
+                            },
+                            {
+                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
+                                "Setters": [
+                                    {
+                                        "Property": "Source",
+                                        "Value": "DriversTrophy.png"
+                                    },
+                                    {
+                                        "Property": "Height",
+                                        "Value": 2000
+                                    },
+                                    {
+                                        "Property": "Margin",
+                                        "Value": "0,100,0,505"
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -53,7 +70,7 @@
                         "Items": [
                             {
                                 "BlockType": "component",
-                                "Margin": "0,2100,0,0",
+                                "Margin": "0,2000,0,0",
                                 "Component": "/DriverLine",
                                 "ComponentOptions": {
                                     "Vars": {
@@ -67,7 +84,7 @@
                                 "BlockType": "text",
                                 "Source": "[DRIVERS']",
                                 "FontName": "{FontNameBlack}",
-                                "FontSize": 240,
+                                "FontSize": "{ChampTextFS}",
                                 "Foreground": "{ChampColourFG}",
                                 "HorizontalAlignment": "Center",
                                 "VerticalAlignment": "Center"
@@ -77,21 +94,62 @@
                                 "Margin": "0,-35,0,0",
                                 "Source": "[CHAMPION]",
                                 "FontName": "{FontNameBlack}",
-                                "FontSize": 240,
+                                "FontSize": "{ChampTextFS}",
                                 "Foreground": "{ChampColourFG}",
                                 "HorizontalAlignment": "Center",
                                 "VerticalAlignment": "Center"
                             },
                             {
-                                "BlockType": "stack",
-                                "HorizontalAlignment": "Center",
+                                "BlockType": "dock",
                                 "Orientation": "Horizontal",
                                 "Items": [
                                     {
+                                        "BlockType": "image",
+                                        "Height": 140,
+                                        "HorizontalAlignment": "Left",
+                                        "VerticalAlignment": "Center",
+                                        "ImageOptions": {
+                                            "Path": "{Item.Team.LogotypePath}"
+                                        }
+                                    },
+                                    {
                                         "BlockType": "text",
+                                        "HorizontalAlignment": "Center",
                                         "Source": "{cha1, Converter=StringToUpperString}",
                                         "Style": "NameDefault1",
                                         "Foreground": "{ChampColourFG}"
+                                    },
+                                    {
+                                        "BlockType": "image",
+                                        "Height": 40,
+                                        "HorizontalAlignment": "Right",
+                                        "VerticalAlignment": "Center",
+                                        "ImageOptions": {
+                                            "Path": "logotypes/f1_logo.png",
+                                            "VerticalAlignment": "Center",
+                                            "HorizontalAlignment": "Right"
+                                        },
+                                        "Triggers": [
+                                            {
+                                                "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Ferrari}",
+                                                "ConditionAnd": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                                                "Property": "Source",
+                                                "Value": "logotypes/f1_logo.black.png"
+                                            },
+                                            {
+                                                "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToFalse}",
+                                                "Setters": [
+                                                    {
+                                                        "Property": "Source",
+                                                        "Value": "{Season.LeagueInfo.LeagueLogo}"
+                                                    },
+                                                    {
+                                                        "Property": "Height",
+                                                        "Value": "{g4}"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
