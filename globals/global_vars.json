@@ -38,8 +38,16 @@
     "FerrariFG": "000000",
     "MercedesFG": "000000",
     "HaasFG": "000000",
+    "SauberFG": "000000",
     //champion
     "ChampColourFG": "D2B772",
+    "ChampTextFS": 240,
+    "DRIVERS'": "DRIVERS'",
+    "CONSTRUCTORS'": "CONSTRUCTORS'",
+    "CHAMPION": "CHAMPION",
+    "POINTS": "POINTS",
+    "WINS": "WINS",
+    "PODIUMS": "PODIUMS",
 
     "DarkGradient": "0E0F14",
     "LightGradient": "E9E9EB",
