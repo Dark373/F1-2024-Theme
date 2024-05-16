@@ -1,0 +1,28 @@
+[
+    {
+        "TriggerName": "Name1",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Name2",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+        "Property": "Source",
+        "Value": "{Item.Driver.{name1}}"
+    },
+    {
+        "TriggerName": "Name3",
+        "Condition": "{name2}",
+        "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Name4",
+        "Condition": "{name2}",
+        "Property": "Source",
+        "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+    }
+]
