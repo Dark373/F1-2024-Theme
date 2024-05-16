@@ -19,82 +19,17 @@
                     "Width": 2050,
                     "Items": [
                         {
-                            "Name": "DriverLine",
-                            "BlockType": "dock",
-                            "VerticalAlignment": "Center",
-                            "Items": [
-                                {
-                                    "BlockType": "stack",
-                                    "Spacing": 12,
-                                    "HorizontalAlignment": "Left",
-                                    "VerticalAlignment": "Center",
-                                    "Items": [
-                                        {
-                                            "BlockType": "image",
-                                            "Style": "DriverFlags",
-                                            "ImageOptions": {
-                                                "Path": "{Item.Driver.Nationality.LogotypePath}"
-                                            }
-                                        },
-                                        {
-                                            "BlockType": "text",
-                                            "Style": "NameBlack1",
-                                            "Foreground": "{{Item.Team.Name}FG}",
-                                            "Source": "{Item.Driver.{name1}}",
-                                            "Triggers": [
-                                                {
-                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                                    "Property": "Source",
-                                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
-                                                },
-                                                {
-                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
-                                                    "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
-                                                    "Property": "Source",
-                                                    "Value": "{Item.Driver.{name1}}"
-                                                },
-                                                {
-                                                    "Condition": "{name2}",
-                                                    "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                                    "Property": "Source",
-                                                    "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
-                                                },
-                                                {
-                                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
-                                                    "Property": "Foreground",
-                                                    "Value": "{{g1}}"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "BlockType": "text",
-                                            "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                            "Style": "NameBlack2",
-                                            "Foreground": "{{Item.Team.Name}FG}",
-                                            "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
-                                            "Triggers": [
-                                                {
-                                                    "Condition": "{name2}",
-                                                    "Property": "Source",
-                                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
-                                                },
-                                                {
-                                                    "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
-                                                    "Property": "Foreground",
-                                                    "Value": "{{g1}}"
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    "Triggers": [
-                                        {
-                                            "Condition": "{var1, Converter=StringEquals, Parameter=Position}",
-                                            "Property": "HorizontalAlignment",
-                                            "Value": "Center"
-                                        }
-                                    ]
+                            "BlockType": "component",
+                            "Component": "/DriverLine",
+                            "ComponentOptions": {
+                                "Vars": {
+                                    "Halign": "Left",
+                                    "fg1": "{{g1}}",
+                                    "fg2": "{{g1}}",
+                                    "style1": "NameBlack1",
+                                    "style2": "NameBlack2"
                                 }
-                            ]
+                            }
                         },
                         {
                             //headerright
@@ -110,12 +45,13 @@
                                     "Source": "{Item.FastestLapTime}",
                                     "FontName": "{FontNameBlack}",
                                     "FontSize": 70,
-                                    "Foreground":  "{{Item.Team.Name}FG}",
+                                    "Foreground":  "{{g1}}",
                                     "Triggers": [
                                         {
-                                            "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                                            "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                                            "ConditionAnd": "{g2}",
                                             "Property": "Foreground",
-                                            "Value": "{{g1}}"
+                                            "Value": "{{Item.Team.Name}FG}"
                                         },
                                         {
                                             "Condition": "{var1, Converter=StringEquals, Parameter=Fastest Lap}",

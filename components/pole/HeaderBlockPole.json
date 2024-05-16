@@ -26,76 +26,17 @@
                             "Spacing": 20,
                             "Items": [
                                 {
-                                    "BlockType": "image",
-                                    "Height": 85,
-                                    "Background": "{Black}",
-                                    "Padding": "1,-13",
-                                    "HorizontalAlignment": "Left",
-                                    "VerticalAlignment": "Top",
-                                    "ImageOptions": {
-                                        "Path": "{Item.Driver.Nationality.LogotypePath}",
-                                        "VerticalAlignment": "Center"
-                                    },
-                                    "Triggers": [
-                                        {
-                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Saudi Arabia}",
-                                            "Property": "Source",
-                                            "Value": "flags/saudi_arabia.png"
-                                        },
-                                        {
-                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Mexico}",
-                                            "Property": "Source",
-                                            "Value": "flags/mexico.png"
-                                        },
-                                        {
-                                            "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Brazil}",
-                                            "Property": "Source",
-                                            "Value": "flags/brazil.png"
+                                    "BlockType": "component",
+                                    "Component": "/DriverLine",
+                                    "ComponentOptions": {
+                                        "Vars": {
+                                            "Halign": "Left",
+                                            "fg1": "{{g1}}",
+                                            "fg2": "{{g1}}",
+                                            "style1": "NameBlack1",
+                                            "style2": "NameBlack2"
                                         }
-                                    ]
-                                },
-                                {
-                                    "BlockType": "text",
-                                    "VerticalAlignment": "Center",
-                                    "Source": "{Item.Driver.{name1}, Converter=StringToUpperString}",
-                                    "FontName": "{FontNameBlack}",
-                                    "FontSize": 70,
-                                    "Foreground": "{{g1}}",
-                                    "Triggers": [
-                                        {
-                                            "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
-                                        },
-                                        {
-                                            "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
-                                            "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.{name1}}"
-                                        },
-                                        {
-                                            "Condition": "{name2}",
-                                            "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "BlockType": "text",
-                                    "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                    "VerticalAlignment": "Center",
-                                    "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
-                                    "FontName": "{FontNameBlack}",
-                                    "FontSize": 70,
-                                    "Foreground": "{{g1}}",
-                                    "Triggers": [
-                                        {
-                                            "Condition": "{name2}",
-                                            "Property": "Source",
-                                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
-                                        }
-                                    ]
+                                    }
                                 }
                             ]
                         },

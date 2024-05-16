@@ -21,6 +21,23 @@
                             "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
                             "Property": "Source",
                             "Value": "avatars/{Item.Driver.Name}.png"
+                        },
+                        {
+                            "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
+                            "Setters": [
+                                {
+                                    "Property": "Source",
+                                    "Value": "{Item.Team.LogotypePath}"
+                                },
+                                {
+                                    "Property": "Height",
+                                    "Value": 1000
+                                },
+                                {
+                                    "Property": "Margin",
+                                    "Value": "0,700,0,905"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -125,19 +142,7 @@
                             },
                             "Triggers": [
                                 {
-                                    "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Saudi Arabia}",
-                                    "Property": "Source",
-                                    "Value": "flags/saudi_arabia.png"
-                                },
-                                {
-                                    "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Mexico}",
-                                    "Property": "Source",
-                                    "Value": "flags/mexico.png"
-                                },
-                                {
-                                    "Condition": "{Item.Track.CountryName, Converter=StringEquals, Parameter=Brazil}",
-                                    "Property": "Source",
-                                    "Value": "flags/brazil.png"
+                                    "Trigger": "Flags"
                                 }
                             ]
                         },
