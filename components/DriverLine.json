@@ -15,44 +15,39 @@
                     "Style": "DriverFlags",
                     "ImageOptions": {
                         "Path": "{Item.Driver.Nationality.LogotypePath}"
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Trigger": "Flags"
+                        }
+                    ]
                 },
                 {
                     "BlockType": "text",
-                    "Style": "NameBlack1",
-                    "Foreground": "<fg>",
-                    "Source": "{Item.Driver.{name1}}",
+                    "Style": "<style1>",
+                    "Foreground": "<fg1>",
+                    "Source": "{Item.Driver.{name1}, Converter=StringToUpperString}",
                     "Triggers": [
                         {
-                            "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                            "Property": "Source",
-                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                            "Trigger": "Name1"
                         },
                         {
-                            "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
-                            "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
-                            "Property": "Source",
-                            "Value": "{Item.Driver.{name1}}"
+                            "Trigger": "Name2"
                         },
                         {
-                            "Condition": "{name2}",
-                            "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                            "Property": "Source",
-                            "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+                            "Trigger": "Name3"
                         }
                     ]
                 },
                 {
                     "BlockType": "text",
                     "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                    "Style": "NameBlack2",
-                    "Foreground": "<fg>",
+                    "Style": "<style2>",
+                    "Foreground": "<fg2>",
                     "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",
                     "Triggers": [
                         {
-                            "Condition": "{name2}",
-                            "Property": "Source",
-                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                            "Trigger": "Name4"
                         }
                     ]
                 }
