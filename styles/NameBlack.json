@@ -13,5 +13,12 @@
         "HorizontalAlignment": "Left",
         "VerticalAlignment": "Center"
     
+    },
+    {
+        "StyleName": "NameBlackCom",
+        "FontName": "{FontNameBlack}",
+        "FontSize": 120,
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
     }
 ]
