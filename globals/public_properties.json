@@ -230,8 +230,8 @@
         {
             "Name": "com1",
             "PublicName": "Team To Compare",
-            "Description": "",
-            "Category": "Comparison",
+            "Description": "Based on the championship order of your season.",
+            "Category": "Head-To-Head",
             "Type": "Integer",
             "MinimumValue": 1,
             "DefaultValue": 1
@@ -260,7 +260,7 @@
             "Name": "Champion"
         },
         {
-            "Name": "Comparison"
+            "Name": "Head-To-Head"
         }
     ]
 }
