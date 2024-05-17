@@ -1,0 +1,42 @@
+{
+    "ComponentName": "LeftStatsBar",
+    "BlockType": "stack",
+    "VerticalAlignment": "Center",
+    "HorizontalAlignment": "Left",
+    "Items": [
+        {
+            "BlockType": "dock",
+            "Orientation": "Horizontal",
+            "Width": 1000,
+            "Items": [
+                {
+                    "BlockType": "shape",
+                    "Height": 100,
+                    "Width": 1000,
+                    "WidthPercent": "<stat>",
+                    "VerticalAlignment": "Top",
+                    "HorizontalAlignment": "Left",
+                    "ShapeOptions": {
+                        "Fill": "{Item.Team.SecondaryColor}"
+                    }
+                },
+                {
+                    "BlockType": "text",
+                    "MarginLeft": 12,
+                    "HorizontalAlignment": "Right",
+                    "VerticalAlignment": "Center",
+                    "Source": "<statvalue>",
+                    "Style": "NameBlackCom",
+                    "Foreground": "{Item.Team.SecondaryColor}",
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Haas}",
+                            "Property": "Foreground",
+                            "Value": "{Item.Team.SecondaryColor}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

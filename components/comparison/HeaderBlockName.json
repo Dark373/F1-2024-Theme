@@ -1,11 +1,13 @@
 {
     "BlockType": "dock",
+    "Spacing": 20,
     "VerticalAlignment": "Top",
     "HorizontalAlignment": "Center",
-    "Spacing": 150,
+    "Width": 2160,
     "Items": [
         {
             "BlockType": "stack",
+            "Width": 900,
             "Orientation": "Vertical",
             "HorizontalAlignment": "Left",
             "VerticalAlignment": "Center",
@@ -14,8 +16,8 @@
                     "BlockType": "text",
                     "Source": "{Item.Driver0.Driver.{name1}, Converter=StringToUpperString}",
                     "FontName": "{FontNameBlack}",
-                    "FontSize": "{g8}",
-                    "Foreground": "{White}",
+                    "FontSize": "{g8, Converter=NumberAdd, Parameter=20}",
+                    "Foreground": "{{g1}}",
                     "HorizontalAlignment": "Right",
                     "VerticalAlignment": "Center",
                     "Triggers": [
@@ -40,7 +42,7 @@
                     "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
                     "Source": "{Item.Driver0.Driver.RealName, Converter=StringToUpperString}",
                     "FontName": "{FontNameBlack}",
-                    "FontSize": "{g8}",
+                    "FontSize": "{g8, Converter=NumberAdd, Parameter=20}",
                     "Foreground": "{Item.Team.Color}",
                     "HorizontalAlignment": "Right",
                     "VerticalAlignment": "Center",
@@ -53,26 +55,21 @@
             ]
         },
         {
-            "BlockType": "stack",
+            "BlockType": "image",
+            "Padding": "20,0",
             "Background": "{Item.Team.Color}",
-            "HorizontalAlignment": "Left",
+            "Height": 250,
             "VerticalAlignment": "Center",
-            "Items": [
-                {
-                    "BlockType": "image",
-                    "Height": 250,
-                    "VerticalAlignment": "Center",
-                    "HorizontalAlignment": "Center",
-                    "ImageOptions": {
-                        "Path": "{Item.Team.LogotypePath}",
-                        "VerticalAlignment": "Center",
-                        "HorizontalAlignment": "Center"
-                    }
-                }
-            ]
+            "HorizontalAlignment": "Center",
+            "ImageOptions": {
+                "Path": "{Item.Team.LogotypePath}",
+                "VerticalAlignment": "Center",
+                "HorizontalAlignment": "Center"
+            }
         },
         {
             "BlockType": "stack",
+            "Width": 900,
             "Orientation": "Vertical",
             "HorizontalAlignment": "Right",
             "VerticalAlignment": "Center",
@@ -81,15 +78,15 @@
                     "BlockType": "text",
                     "Source": "{Item.Driver1.Driver.{name1}, Converter=StringToUpperString}",
                     "FontName": "{FontNameBlack}",
-                    "FontSize": "{g8}",
-                    "Foreground": "{White}",
+                    "FontSize": "{g8, Converter=NumberAdd, Parameter=20}",
+                    "Foreground": "{{g1}}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "Triggers": [
                         {
                             "Condition": "{name1, Converter=StringNotEquals, Parameter=Full Name}",
                             "Property": "Foreground",
-                            "Value": "{Item.Team.Color}"
+                            "Value": "{Item.Team.SecondaryColor}"
                         },
                         {
                             "Trigger": "Driver1Name1"
@@ -107,8 +104,8 @@
                     "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
                     "Source": "{Item.Driver1.Driver.RealName, Converter=StringToUpperString}",
                     "FontName": "{FontNameBlack}",
-                    "FontSize": "{g8}",
-                    "Foreground": "{Item.Team.Color}",
+                    "FontSize": "{g8, Converter=NumberAdd, Parameter=20}",
+                    "Foreground": "{Item.Team.SecondaryColor}",
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "Triggers": [
