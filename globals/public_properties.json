@@ -229,7 +229,25 @@
         },
         {
             "Name": "com1",
-            "PublicName": "Team To Compare",
+            "PublicName": "Teammates To Compare",
+            "Description": "Based on the championship order of your season.",
+            "Category": "Head-To-Head",
+            "Type": "Integer",
+            "MinimumValue": 1,
+            "DefaultValue": 1
+        },
+        {
+            "Name": "com2",
+            "PublicName": "First Team To Compare",
+            "Description": "Based on the championship order of your season.",
+            "Category": "Head-To-Head",
+            "Type": "Integer",
+            "MinimumValue": 1,
+            "DefaultValue": 1
+        },
+        {
+            "Name": "com3",
+            "PublicName": "Second Team To Compare",
             "Description": "Based on the championship order of your season.",
             "Category": "Head-To-Head",
             "Type": "Integer",

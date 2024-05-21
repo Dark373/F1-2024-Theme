@@ -48,6 +48,8 @@
     "POINTS": "POINTS",
     "WINS": "WINS",
     "PODIUMS": "PODIUMS",
+    //standings
+    "PointsStandingsFG": "FFFFFF",
 
     //comparison stats
 
