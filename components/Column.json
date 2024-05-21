@@ -1,0 +1,15 @@
+{
+    "BlockType": "stack",
+    "ComponentName": "Column",
+    "Items": [
+        {
+            "BlockType": "text",
+            "Style": "<style1>",
+            "Source": "<source>"
+        }
+    ],
+    "ColorizeBackground": {
+        "Enabled": false,
+        "Color": "{Season.MainLeagueCategory.Color}"
+    }
+}

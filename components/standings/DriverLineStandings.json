@@ -1,0 +1,195 @@
+{
+    "ComponentName": "DriverLineStandings",
+    "BlockType": "stack",
+    "VerticalAlignment": "Center",
+    "HorizontalAlignment": "Left",
+    "WidthPercent": 100,
+    "Triggers": [
+        {
+            "Condition": "{Item.Position, Converter=NumberNotEquals, Parameter={g7}}",
+            "Property": "MarginTop",
+            "Value": 3
+        },
+        {
+            "Condition": "{Item.Position, Converter=NumberIsOdd}",
+            "Property": "Background",
+            "Value": "F0F0F0"
+        },
+        {
+            "Condition": "{Item.Position, Converter=NumberIsEven}",
+            "Property": "Background",
+            "Value": "E4E4E4"
+        },
+        {
+            "Condition": "{Item.Position, Converter=NumberEquals, Parameter={g7}}",
+            "ConditionOr": "{Item.Position, Converter=NumberEquals, Parameter={g6}}",
+            "Property": "Background",
+            "Value": "00000000"
+        }
+    ],
+    "Items": [
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Center",
+            "VerticalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Width": 220,
+                    "Height": 208,
+                    "HorizontalAlignment": "Center",
+                    "Source": "{Item.Position}",
+                    "Style": "NameBlackStandings",
+                    "Foreground": "{Black}",
+                    "VerticalAlignment": "Center",
+                    "FontSize": 100,
+                    "ColorizeBackground": {
+                        "Enabled": false,
+                        "Color": "F0F0F0"
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Position, Converter=NumberEquals, Parameter={g7}}",
+                            "Setters": [
+                                {
+                                    "Property": "BackgroundImage",
+                                    "Value": "components/bg.position.corner.png"
+                                },
+                                {
+                                    "Property": "ColorizeBackground.Enabled",
+                                    "Value": true
+                                }
+                            ]
+                        },
+                        {
+                            "Condition": "{Item.Position, Converter=NumberEquals, Parameter={g6}}",
+                            "Setters": [
+                                {
+                                    "Property": "BackgroundImage",
+                                    "Value": "components/bg.position.corner2.png"
+                                },
+                                {
+                                    "Property": "ColorizeBackground.Enabled",
+                                    "Value": true
+                                }
+                            ]
+                        },
+                        {
+                            "Condition": "{Item.Position, Converter=NumberIsOdd}",
+                            "Property": "ColorizeBackground.Color",
+                            "Value": "F0F0F0"
+                        },
+                        {
+                            "Condition": "{Item.Position, Converter=NumberIsEven}",
+                            "Property": "ColorizeBackground.Color",
+                            "Value": "E4E4E4"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "BlockType": "stack",
+            "Spacing": 60,
+            "VerticalAlignment": "Center",
+            "PaddingRight": 20,
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Background": "{Item.Team.Color}",
+                    "Padding": "0,4",
+                    "PaddingLeft": 75,
+                    "PaddingRight": 85,
+                    "Height": 200,
+                    "Width": 200,
+                    "HorizontalAlignment": "Center",
+                    "VerticalAlignment": "Center",
+                    "ImageOptions": {
+                        "Path": "{Item.Team.LogotypePath}",
+                        "HorizontalAlignment": "Center",
+                        "VerticalAlignment": "Center"
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
+                            "Property": "Padding",
+                            "Value": "80,4"
+                        },
+                        {
+                            "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                            "Setters": [
+                                {
+                                    "Property": "Background",
+                                    "Value": "{Season.MainLeagueCategory.Color}"
+                                },
+                                {
+                                    "Property": "Source",
+                                    "Value": "logotypes/reserve.png"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "stack",
+                    "RenderIf": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
+                    "HorizontalAlignment": "Center",
+                    "Margin": "-140,0,0,0",
+                    "Padding": "-235,-220",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Height": 710,
+                            "Margin": "0,-105,0,0",
+                            "VerticalAlignment": "Bottom",
+                            "HorizontalAlignment": "Center",
+                            "Source": "avatars/{Item.Team.Name}_{Item.SeatPosition}.png",
+                            "Triggers": [
+                                {
+                                    "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+                                    "Property": "Source",
+                                    "Value": "{Item.Driver.Name}"
+                                },
+                                {
+                                    "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                                    "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=Custom Avatars}",
+                                    "Property": "Source",
+                                    "Value": "avatars/placeholder1.png"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "BlockType": "stack",
+                    "Width": 996,
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            "Component": "DriverLine",
+                            "ComponentOptions": {
+                                "Vars": {
+                                    "render": "false",
+                                    "Halign": "Left",
+                                    "style1": "NameBlackStandings",
+                                    "fg1": "{Black}",
+                                    "style2": "NameBlackStandings",
+                                    "fg2": "{Black}"
+                                }
+                            }
+                        }
+                    ],
+                    "Triggers": [
+                        {
+                            "Condition": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
+                            "Property": "Width",
+                            "Value": 856
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
