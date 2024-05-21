@@ -15,6 +15,24 @@
     
     },
     {
+        "StyleName": "NameBlackStandings",
+        "FontName": "{FontNameBlack}",
+        "FontSize": 100,
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
+    
+    },
+    {
+        "StyleName": "NameBlackPoints",
+        "Width": 367,
+        "FontName": "{FontNameBlack}",
+        "Foreground": "{PointsStandingsFG}",
+        "FontSize": 128,
+        "HorizontalAlignment": "Center",
+        "VerticalAlignment": "Center"
+    
+    },
+    {
         "StyleName": "NameBlackCom",
         "FontName": "{FontNameBlack}",
         "FontSize": 120,
