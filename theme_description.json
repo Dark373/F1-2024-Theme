@@ -4,5 +4,13 @@
   "Author": "Dark373",
   "Version": "1.0.0",
   "Links": [],
-  "DefaultLocalizationId": "en-GB"
+  "DefaultLocalizationId": "en-GB",
+  "LogotypeBehaviours": [
+    {
+      "Category": "Team",
+      "Variant": "light",
+      "UseFallbackSource": true,
+      "UseFallbackVariant": false
+    }
+  ]
 }
