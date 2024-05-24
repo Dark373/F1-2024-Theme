@@ -1,9 +1,20 @@
-{
-    "StyleName": "DriverFlags",
-    "VerticalAlignment": "Center",
-    "HorizontalAlignment": "Left",
-    "Background": "{Black}",
-    "Padding": "1,-13",
-    "MarginTop": -4,
-    "Height": 85
-}
+[
+    {
+        "StyleName": "DriverFlags",
+        "VerticalAlignment": "Center",
+        "HorizontalAlignment": "Left",
+        "Background": "{Black}",
+        "Padding": "1,-13",
+        "MarginTop": -4,
+        "Height": 85
+    },
+    {
+        "StyleName": "PodiumFlags",
+        "VerticalAlignment": "Center",
+        "HorizontalAlignment": "Left",
+        "Background": "{Black}",
+        "Padding": "1,-13",
+        "MarginTop": -3,
+        "Height": 66
+    }
+]

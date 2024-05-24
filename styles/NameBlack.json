@@ -17,13 +17,25 @@
     {
         "StyleName": "NameBlackStandings",
         "FontName": "{FontNameBlack}",
-        "FontSize": 100,
+        "FontSize": "{g8, Converter=NumberAdd, Parameter=30}",
         "HorizontalAlignment": "Left",
         "VerticalAlignment": "Center"
     
     },
     {
+        "StyleName": "NameBlackDataTable",
+        "FontName": "{FontNameBlack}",
+        "MarginTop": 8,
+        "Width": 220,
+        "Height": 210,
+        "FontSize": 100,
+        "HorizontalAlignment": "Center",
+        "VerticalAlignment": "Center"
+    
+    },
+    {
         "StyleName": "NameBlackPoints",
+        "Height": 208,
         "Width": 367,
         "FontName": "{FontNameBlack}",
         "Foreground": "{PointsStandingsFG}",
@@ -31,6 +43,13 @@
         "HorizontalAlignment": "Center",
         "VerticalAlignment": "Center"
     
+    },
+    {
+        "StyleName": "NameBlackPodium",
+        "FontName": "{FontNameBlack}",
+        "FontSize": "{g8, Converter=NumberSubtract, Parameter=18}",
+        "HorizontalAlignment": "Center",
+        "VerticalAlignment": "Center"
     },
     {
         "StyleName": "NameBlackCom",

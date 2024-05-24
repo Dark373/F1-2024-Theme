@@ -2,6 +2,8 @@
     "Name": "English",
     "Id": "en-GB",
     "Strings": {
+        //team names
+        "MCLAREN": "McLAREN",
         //abbreviations
         "UNITED STATES OF AMERICA": "USA",
         "UNITED ARAB EMIRATES": "ABU DHABI",
@@ -58,6 +60,26 @@
         "October": "OCT",
         "November": "NOV",
         "December": "DEC",
+
+        //standings
+        "DRIVER": "DRIVER",
+        "TEAM": "TEAM",
+        "STANDINGS": "STANDINGS",
+        "Points": "",
+        "CountP1": "P1",
+        "CountP2": "P2",
+        "CountP3": "P3",
+        "CountTop3": "PODIUMS",
+        "CountTop10": "TOP 10",
+        "BestPos": "BEST",
+        "RaceFastestLapCount": "FL",
+        "CountQualP1": "POLES",
+        "RaceDriverDayCount": "DOTD",
+        "PenaltyPoints": "PP",
+        "CountDnf": "DNF",
+        "EventsCount": "EVENTS",
+        "PointsToAboveDiff": "INT.",
+        "PointsToLeaderDiff": "GAP",            
 
         "PRE-SEASON": "PRE-SEASON",
         "DRIVERS'": "DRIVERS'",
