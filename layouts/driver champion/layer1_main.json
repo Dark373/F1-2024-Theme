@@ -76,7 +76,10 @@
                                     "Vars": {
                                         "render": "false",
                                         "Halign": "Center",
-                                        "fg": "{ChampColourFG}"
+                                        "fg1": "{ChampColourFG}",
+                                        "fg2": "{ChampColourFG}",
+                                        "style1": "NameBlack1",
+                                        "style2": "NameBlack1"
                                     }
                                 }
                             },
