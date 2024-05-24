@@ -88,20 +88,20 @@
             "DefaultValue": false
         },
         {
+            "Name": "name3",
+            "PublicName": "Upper Case Names",
+            "Description": "Sets all name fields to uppercase.",
+            "Category": "Global",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
             "Name": "cal1",
             "PublicName": "Render Calendar Second Column",
             "Description": "Spilts the total rounds in two columns. Toggle off for all rounds to render in a single column; Advised for very short seasons.",
             "Category": "Calendar",
             "Type": "Bool",
             "DefaultValue": true
-        },
-        {
-            "Name": "cal2",
-            "PublicName": "Number Of Pre Season Races",
-            "Description": "Corrects the round count for seasons with non-championship races. Set value to 1 if one none-championship race is present in your season etc.",
-            "Category": "Calendar",
-            "Type": "Integer",
-            "DefaultValue": 0
         },
         {
             "Name": "cal3",
@@ -203,6 +203,113 @@
             "DefaultValue": 719
         },
         {
+            "Name": "sta13",
+            "PublicName": "Team Colour Background",
+            "Description": "Renders team colour behind the driver name.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta1",
+            "PublicName": "First Column Data",
+            "Description": "Choose what data is shown in the first coolumn of standings renders",
+            "Category": "Standings",
+            "Type": "Enum",
+            "EnumValues": ["Points", "CountP1", "CountP2", "CountP3", "CountTop3", "CountTop10", "BestPos", "RaceFastestLapCount", "CountQualP1", "RaceDriverDayCount", "PenaltyPoints", "CountDnf"],
+            "DefaultValue": "Points"
+        },
+        {
+            "Name": "sta2",
+            "PublicName": "Render Data Table",
+            "Description": "Data table contains info such as wins, podiums and more.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
+            "Name": "sta3",
+            "PublicName": "First Data Table Column.",
+            "Description": "Default: Points Interval",
+            "Category": "Standings",
+            "Type": "Enum",
+            "EnumValues": ["PointsToAboveDiff", "PointsToLeaderDiff"],
+            "DefaultValue": "PointsToAboveDiff"
+        },
+        {
+            "Name": "sta4",
+            "PublicName": "Render Second Points Gap Column",
+            "Description": "Renders a second points gap column with points gap to leader.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta5",
+            "PublicName": "Render Podiums",
+            "Description": "Renders the set of podium positions.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta6",
+            "PublicName": "Render Top 10",
+            "Description": "Renders the amount of top 10 finishes",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta7",
+            "PublicName": "Render Fastest Lap",
+            "Description": "Renders the amount of fastest lap awards",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta8",
+            "PublicName": "Render Poles",
+            "Description": "Renders the amount of pole position awards",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta9",
+            "PublicName": "Render DOTD",
+            "Description": "Renders the amount of driver of the day awards",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta10",
+            "PublicName": "Render Penalty Points",
+            "Description": "Renders the amount of penalty points",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta11",
+            "PublicName": "Render DNF",
+            "Description": "Renders the amount of times a driver did not finish",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "sta12",
+            "PublicName": "Final Column Data",
+            "Description": "Renders what data is displayed in the final column",
+            "Category": "Standings",
+            "Type": "Enum",
+            "EnumValues": ["PointsToLeaderDiff", "EventsCount"],
+            "DefaultValue": "EventsCount"
+        },
+        {
             "Name": "cha1",
             "PublicName": "Bottom Text",
             "Description": "Optional text with the intention of adding pevious titles. But its up to you.",
@@ -275,10 +382,13 @@
             "Name": "Pole"
         },
         {
-            "Name": "Champion"
+            "Name": "Standings"
         },
         {
             "Name": "Head-To-Head"
+        },
+        {
+            "Name": "Champion"
         }
     ]
 }

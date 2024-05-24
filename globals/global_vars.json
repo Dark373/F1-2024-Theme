@@ -49,7 +49,22 @@
     "WINS": "WINS",
     "PODIUMS": "PODIUMS",
     //standings
+    "StandingsDriverLineWidth": "2024",
+    "StandingsTeamLineWidth": "2024",
+    "ReserveStandingsFG": "000000",
     "PointsStandingsFG": "FFFFFF",
+    "Col1FG": "000000",
+    "Col2FG": "000000",
+    "P1FG": "D1B000",
+    "P2FG": "71706e",
+    "P3FG": "CD7F32",
+    "Top10FG": "000000",
+    "FLFG": "B500FF",
+    "PoleFG": "FF10EF",
+    "DOTDFG": "000000",
+    "PPFG": "FF0000",
+    "DNFFG": "8B0000",
+    "EventsFG": "000000",
 
     //comparison stats
 
