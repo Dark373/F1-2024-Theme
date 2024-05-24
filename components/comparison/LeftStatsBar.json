@@ -27,14 +27,18 @@
                     "VerticalAlignment": "Center",
                     "Source": "<statvalue>",
                     "Style": "NameBlackCom",
-                    "Foreground": "{Item.Team.SecondaryColor}",
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Haas}",
-                            "Property": "Foreground",
-                            "Value": "{Item.Team.SecondaryColor}"
-                        }
-                    ]
+                    "Foreground": "{Item.Team.SecondaryColor}"
+                },
+                {
+                    "BlockType": "text",
+                    "MarginLeft": -4,
+                    "Source": "<statvalue1>",
+                    "StyleName": "NameBlackCom",
+                    "FontName": "{FontNameBlack}",
+                    "FontSize": 70,
+                    "HorizontalAlignment": "Right",
+                    "VerticalAlignment": "Top",
+                    "Foreground": "{Item.Team.SecondaryColor}"
                 }
             ]
         }

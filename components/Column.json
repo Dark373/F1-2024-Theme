@@ -1,11 +1,23 @@
 {
     "BlockType": "stack",
     "ComponentName": "Column",
+    "Orientation": "Vertical",
     "Items": [
         {
             "BlockType": "text",
             "Style": "<style1>",
+            "MarginTop": 8,
+            "Height": 200,
             "Source": "<source>"
+        },
+        {
+            "BlockType": "shape",
+            "RenderIf": "{Item.Position, Converter=NumberNotEquals, Parameter={g6}}",
+            "WidthPercent": 100,
+            "Height": 3,
+            "ShapeOptions": {
+                "Fill": "{White}"
+            }
         }
     ],
     "ColorizeBackground": {

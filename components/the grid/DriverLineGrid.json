@@ -112,15 +112,10 @@
                             "FontName": "{FontNameBlack}",
                             "Triggers": [
                                 {
-                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                    "Property": "Source",
-                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                    "Trigger": "Name1"
                                 },
                                 {
-                                    "Condition": "{name2}",
-                                    "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                    "Property": "Source",
-                                    "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+                                    "Trigger": "Name3"
                                 }
                             ]
                         },
@@ -135,10 +130,7 @@
                             "FontName": "{FontNameBlack}",
                             "Triggers": [
                                 {
-                                    "Condition": "{name2}",
-                                    "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                    "Property": "Source",
-                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
+                                    "Trigger": "Name4"
                                 }
                             ]
                         }

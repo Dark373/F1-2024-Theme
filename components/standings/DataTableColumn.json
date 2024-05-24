@@ -1,0 +1,35 @@
+{
+    "ComponentName": "DataTableColumn",
+    "Width": "<w>",
+    "Height": 210,
+    "BlockType": "stack",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Center",
+    "Items": [
+        {
+            "BlockType": "dock",
+            "VerticalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Source": "<source>",
+                    "Width": "<w>",
+                    "Style": "NameBlackDataTable",
+                    "Foreground": "<fg>"
+                }
+            ]
+        }
+    ],
+    "Triggers": [
+        {
+            "Condition": "{Item.Position, Converter=NumberIsOdd}",
+            "Property": "Background",
+            "Value": "F0F0F0"
+        },
+        {
+            "Condition": "{Item.Position, Converter=NumberIsEven}",
+            "Property": "Background",
+            "Value": "E4E4E4"
+        }
+    ]
+}

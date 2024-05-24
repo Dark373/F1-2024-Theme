@@ -11,7 +11,6 @@
             "Items": [
                 {
                     "BlockType": "text",
-                    "MarginRight": 12,
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",
                     "Source": "<statvalue>",
@@ -19,7 +18,19 @@
                     "Foreground": "{Item.Team.Color}"
                 },
                 {
+                    "BlockType": "text",
+                    "MarginLeft": -4,
+                    "Source": "<statvalue1>",
+                    "StyleName": "NameBlackCom",
+                    "FontName": "{FontNameBlack}",
+                    "FontSize": 70,
+                    "HorizontalAlignment": "Left",
+                    "VerticalAlignment": "Top",
+                    "Foreground": "{Item.Team.Color}"
+                },
+                {
                     "BlockType": "shape",
+                    "MarginLeft": 12,
                     "Height": 100,
                     "Width": 1000,
                     "WidthPercent": "<stat>",

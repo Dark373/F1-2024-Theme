@@ -1,0 +1,82 @@
+{
+    "ComponentName": "DriverCard",
+    "BlockType": "stack",
+    "Orientation": "Vertical",
+    "HorizontalAlignment": "Center",
+    "Items": [
+        {
+            "BlockType": "dock",
+            "Width": "<w>",
+            "Height": "<h>",
+            "BackgroundImage": "components/bg.podium.png",
+            "ColorizeBackground": {
+                "Enabled": true,
+                "Color": "{Item.Team.Color}"
+            },
+            "Items": [
+                {
+                    "BlockType": "dock",
+                    "BackgroundImage": "components/bg.podium.gradient.png",
+                    "ColorizeBackground": {
+                        "Enabled": true,
+                        "Color": "{Item.Team.SecondaryColor}"
+                    },
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "Margin": "58,33,0,0",
+                            "Source": "<pos>",
+                            "FontSize": 378,
+                            "FontName": "{FontNameBlack}",
+                            "Foreground": "{White}",
+                            "HorizontalAlignment": "Left",
+                            "VerticalAlignment": "Top"
+                        },
+                        {
+                            "BlockType": "image",
+                            "Margin": "<margin>",
+                            "HorizontalAlignment": "Center",
+                            "VerticalAlignment": "Center",
+                            "Height": 1460,
+                            "Source": "avatars/{Item.Team.Name}_{Item.SeatPosition}.png",
+                            "Triggers": [
+                                {
+                                    "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+                                    "Property": "Source",
+                                    "Value": "avatars/{Item.Driver.Name}.png"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "BlockType": "dock",
+            "Width": "*",
+            "Height": 123,
+            "BackgroundImage": "components/bg.podium.name.png",
+            "ColorizeBackground": {
+                "Enabled": true,
+                "Color": "{Item.Team.Color}"
+            },
+            "Items": [
+                {
+                    "BlockType": "component",
+                    "Component": "DriverLine",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "render": "true",
+                            "flagstyle": "PodiumFlags",
+                            "Halign": "Center",
+                            "style1": "NameBlackPodium",
+                            "fg1": "{{Item.Team.Name}FG}",
+                            "style2": "NameBlackPodium",
+                            "fg2": "{{Item.Team.Name}FG}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

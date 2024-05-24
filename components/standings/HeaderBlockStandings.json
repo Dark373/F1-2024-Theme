@@ -3,7 +3,6 @@
     "BlockType": "dock",
     "HorizontalAlignment": "Center",
     "VerticalAlignment": "Center",
-    "Width": 2024,
     "Items": [
         {
             "BlockType": "stack",
@@ -72,7 +71,7 @@
                                 {
                                     "BlockType": "text",
                                     "VerticalAlignment": "Center",
-                                    "Source": "[DRIVER]",
+                                    "Source": "<source>",
                                     "FontName": "{FontNameBlack}",
                                     "FontSize": 150,
                                     "Foreground": "{{g1}}"
@@ -100,7 +99,7 @@
             "ItemStackOptions": {
                 "ItemSource": "{Standings.Events}",
                 "Limit": 1,
-                "IndexStart": "{Season.SeasonCurrentNumberEvent, Converter=NumberSubtract, Parameter=1}",
+                "IndexStart": "{Season.SeasonCurrentNumberEventExcludingNonChampionship, Converter=NumberSubtract, Parameter=1}",
                 "ItemTemplate": {
                     "BlockType": "stack",
                     "Orientation": "Vertical",
@@ -111,7 +110,14 @@
                             "Source": "[POINTS AFTER THE]",
                             "FontName": "{FontNameDefault}",
                             "FontSize": 52,
-                            "Foreground": "{{g1}}"
+                            "Foreground": "{{g1}}",
+                            "Triggers": [
+                                {
+                                    "Condition": "{sta1, Converter=StringNotEquals, Parameter=Points}",
+                                    "Property": "Source",
+                                    "Value": "[STANDINGS AFTER]"
+                                }
+                            ]
                         },
                         {
                             "BlockType": "text",
@@ -120,7 +126,14 @@
                             "Source": "[{Item.Track.CircuitName, Converter=StringToUpperString} GP]",
                             "FontName": "{FontNameBold}",
                             "FontSize": 52,
-                            "Foreground": "{{g1}}"
+                            "Foreground": "{{g1}}",
+                            "Triggers": [
+                                {
+                                    "Condition": "{sta1, Converter=StringNotEquals, Parameter=Points}",
+                                    "Property": "Source",
+                                    "Value": "[THE] [{Item.Track.CircuitName, Converter=StringToUpperString} GP]"
+                                }
+                            ]
                         }
                     ]
                 }

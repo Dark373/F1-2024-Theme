@@ -24,6 +24,7 @@
                             "ComponentOptions": {
                                 "Vars": {
                                     "Halign": "Left",
+                                    "flagstyle": "DriverFlags",
                                     "fg1": "{{g1}}",
                                     "fg2": "{{g1}}",
                                     "style1": "NameBlack1",

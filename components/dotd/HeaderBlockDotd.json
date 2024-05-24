@@ -25,7 +25,7 @@
                 {
                     "BlockType": "text",
                     "VerticalAlignment": "Center",
-                    "Source": "[ROUND] {Event.Position, Converter=NumberSubtract, Parameter={cal2}}",
+                    "Source": "[ROUND] {Event.Position, Converter=NumberSubtract, Parameter={Season.SeasonOverallNumberEvents, Converter=NumberSubtract, Parameter={Season.SeasonOverallNumberEventsExcludingNonChampionship}}}",
                     "FontName": "{FontNameDefault}",
                     "Foreground": "{{g1}}",
                     "FontSize": "{DotdRoundCountHeaderFS}",
