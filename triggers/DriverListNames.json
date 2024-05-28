@@ -9,6 +9,7 @@
         "TriggerName": "Driver0Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
         "Value": "{Item.Driver0.Driver.{name1}}"
     },
@@ -35,6 +36,7 @@
         "TriggerName": "Driver1Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
         "Value": "{Item.Driver1.Driver.{name1}}"
     },
