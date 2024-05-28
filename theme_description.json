@@ -5,12 +5,26 @@
   "Version": "1.0.0",
   "Links": [],
   "DefaultLocalizationId": "en-GB",
+  "RequiredLogotypeVariants": {
+    "Team": 
+    [
+      "Dark",
+      "Light"
+    ]
+  },
   "LogotypeBehaviours": [
     {
       "Category": "Team",
       "Variant": "light",
       "UseFallbackSource": true,
       "UseFallbackVariant": false
+    },
+    {
+      "Category": "Team",
+      "Variant": "dark",
+      "UseFallbackSource": true,
+      "UseFallbackVariant": false,
+      "SetVariantByDefault": false
     }
   ]
 }
