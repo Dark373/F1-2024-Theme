@@ -5,18 +5,18 @@
     "WidthPercent": 100,
     "Items": [
         {
-            "BlockType": "stack",
+            "BlockType": "dock",
             "VerticalAlignment": "Center",
             "HorizontalAlignment": "Left",
             "WidthPercent": 100,
             "Items": [
                 {
-                    "BlockType": "stack",
-                    "HorizontalAlignment": "Center",
+                    "BlockType": "dock",
                     "VerticalAlignment": "Center",
                     "Items": [
                         {
                             "BlockType": "dock",
+                            "Height": 212,
                             "VerticalAlignment": "Center",
                             "ColorizeBackground": {
                                 "Enabled": false,
@@ -97,6 +97,7 @@
                 },
                 {
                     "BlockType": "stack",
+                    "Height": 212,
                     "Spacing": 60,
                     "VerticalAlignment": "Center",
                     "PaddingRight": 20,
@@ -104,10 +105,9 @@
                         {
                             "BlockType": "image",
                             "Background": "{Item.Team.Color}",
-                            "Padding": "0,4",
                             "PaddingLeft": 75,
                             "PaddingRight": 85,
-                            "Height": 200,
+                            "Height": 204,
                             "Width": 200,
                             "HorizontalAlignment": "Left",
                             "VerticalAlignment": "Center",
@@ -196,7 +196,7 @@
                 {
                     "BlockType": "stack",
                     "Width": "{StandingsDriverLineWidth, Converter=NumberSubtract, Parameter=1007}",
-                    "Height": "*",
+                    "Height": 212,
                     "PaddingRight": 40,
                     "HorizontalAlignment": "Left",
                     "VerticalAlignment": "Center",

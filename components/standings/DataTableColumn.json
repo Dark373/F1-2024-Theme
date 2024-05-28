@@ -1,23 +1,35 @@
 {
     "ComponentName": "DataTableColumn",
     "Width": "<w>",
-    "Height": 210,
+    "Height": 215,
     "BlockType": "stack",
     "HorizontalAlignment": "Center",
     "VerticalAlignment": "Center",
+    "Orientation": "Vertical",
     "Items": [
         {
-            "BlockType": "dock",
-            "VerticalAlignment": "Center",
+            "BlockType": "stack",
+            "Height": 215,
+            "Orientation": "Vertical",
             "Items": [
                 {
                     "BlockType": "text",
                     "Source": "<source>",
                     "Width": "<w>",
+                    "Height": 215,
                     "Style": "NameBlackDataTable",
                     "Foreground": "<fg>"
                 }
             ]
+        },
+        {
+            "BlockType": "shape",
+            "RenderIf": "{Item.Position, Converter=NumberNotEquals, Parameter={g6}}",
+            "WidthPercent": 100,
+            "Height": 3,
+            "ShapeOptions": {
+                "Fill": "{White}"
+            }
         }
     ],
     "Triggers": [

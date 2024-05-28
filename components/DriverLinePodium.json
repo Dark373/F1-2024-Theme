@@ -1,5 +1,5 @@
 {
-    "ComponentName": "DriverLine",
+    "ComponentName": "DriverLinePodium",
     "BlockType": "dock",
     "VerticalAlignment": "Center",
     "MarginTop": 8,
@@ -27,23 +27,22 @@
                     "BlockType": "text",
                     "Style": "<style1>",
                     "Foreground": "<fg1>",
-                    "Source": "{Item.Driver.{name1}, Converter=StringToUpperString}",
+                    "Source": "{Item.Driver.{podname1}, Converter=StringToUpperString}",
                     "Triggers": [
                         {
-                            "Trigger": "Name1"
+                            "Trigger": "PodName1"
                         },
                         {
-                            "Trigger": "Name2"
+                            "Trigger": "PodName2"
                         },
                         {
-                            "Trigger": "Name3"
+                            "Trigger": "PodName3"
                         }
                     ]
                 },
                 {
                     "BlockType": "text",
-                    "Padding": "0,1",
-                    "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                    "RenderIf": "{podname1, Converter=StringEquals, Parameter=Full Name}",
                     "Style": "<style2>",
                     "Foreground": "<fg2>",
                     "Source": "{Item.Driver.RealName, Converter=StringToUpperString}",

@@ -1,5 +1,5 @@
 {
-    "ComponentName": "DataTableLeftColumn",
+    "ComponentName": "TeamDTLeftColumn",
     "Width": "<w>",
     "Height": 215,
     "BlockType": "stack",
@@ -10,7 +10,7 @@
         {
             "BlockType": "stack",
             "Height": 215,
-            "Orientation": "Vertical",
+            "VerticalAlignment": "Center",
             "ColorizeBackground": {
                 "Enabled": false,
                 "Color": "F0F0F0"
@@ -27,7 +27,7 @@
             ],
             "Triggers": [
                 {
-                    "Condition": "{Item.Position, Converter=NumberEquals, Parameter={g7}}",
+                    "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
                     "Setters": [
                         {
                             "Property": "BackgroundImage",
@@ -40,7 +40,7 @@
                     ]
                 },
                 {
-                    "Condition": "{Item.Position, Converter=NumberEquals, Parameter={g6}}",
+                    "Condition": "{Item.Position, Converter=NumberEquals, Parameter={TeamCount}}",
                     "Setters": [
                         {
                             "Property": "BackgroundImage",
@@ -86,8 +86,8 @@
             "Value": "E4E4E4"
         },
         {
-            "Condition": "{Item.Position, Converter=NumberEquals, Parameter={g7}}",
-            "ConditionOr": "{Item.Position, Converter=NumberEquals, Parameter={g6}}",
+            "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+            "ConditionOr": "{Item.Position, Converter=NumberEquals, Parameter={TeamCount}}",
             "Property": "Background",
             "Value": "00000000"
         }

@@ -6,8 +6,6 @@
         {
             "BlockType": "text",
             "Style": "<style1>",
-            "MarginTop": 8,
-            "Height": 200,
             "Source": "<source>"
         },
         {

@@ -8,7 +8,7 @@
             "BlockType": "dock",
             "Width": "<w>",
             "Height": "<h>",
-            "BackgroundImage": "components/bg.podium.png",
+            "BackgroundImage": "<bgsource>",
             "ColorizeBackground": {
                 "Enabled": true,
                 "Color": "{Item.Team.Color}"
@@ -63,7 +63,7 @@
             "Items": [
                 {
                     "BlockType": "component",
-                    "Component": "DriverLine",
+                    "Component": "DriverLinePodium",
                     "ComponentOptions": {
                         "Vars": {
                             "render": "true",

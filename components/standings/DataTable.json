@@ -17,7 +17,7 @@
                 "Header": "[{sta3}]",
                 "Template": {
                     "BlockType": "component",
-                    "Component": "DataTableLeftColumn",
+                    "Component": "<LDT>",
                     "ComponentOptions": {
                         "Vars": {
                             "source": "{Item.{sta3}}",
@@ -187,11 +187,11 @@
                 "Header": "[{sta12}]",
                 "Template": {
                     "BlockType": "component",
-                    "Component": "DataTableRightColumn",
+                    "Component": "<RDT>",
                     "ComponentOptions": {
                         "Vars": {
                             "source": "{Item.{sta12}, Converter=NumberZeroToEmpty}",
-                            "w": 220
+                            "w": 240
                         }
                     },
                     "Triggers": [
