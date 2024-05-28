@@ -112,6 +112,15 @@
             "DefaultValue": 120
         },
         {
+            "Name": "podname1",
+            "PublicName": "Naming Conventions",
+            "Description": "Changes which name fields are used. When (Full Name) is active, both (Name) & (RealName) will be used.",
+            "Category": "Podium Results",
+            "Type": "Enum",
+            "EnumValues": ["Name", "RealName", "InGameName", "Full Name"],
+            "DefaultValue": "Name"
+        },
+        {
             "Name": "gri1",
             "PublicName": "Bar width",
             "Description": "Changes the width of the bar. Select a greater number, if driver names are too long to fit.",
@@ -201,6 +210,14 @@
             "Category": "Pole",
             "Type": "Integer",
             "DefaultValue": 719
+        },
+        {
+            "Name": "sta14",
+            "PublicName": "Is Champion",
+            "Description": "Renders golden font colour for champions.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": false
         },
         {
             "Name": "sta13",
@@ -368,6 +385,9 @@
         },
         {
             "Name": "Calendar"
+        },
+        {
+            "Name": "Podium Results"
         },
         {
             "Name": "The Grid"

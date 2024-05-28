@@ -49,6 +49,7 @@
     "WINS": "WINS",
     "PODIUMS": "PODIUMS",
     //standings
+    "TeamCount": 10,
     "StandingsDriverLineWidth": "2024",
     "StandingsTeamLineWidth": "2024",
     "ReserveStandingsFG": "000000",
@@ -66,7 +67,8 @@
     "DNFFG": "8B0000",
     "EventsFG": "000000",
 
-    //comparison stats
+    //comparison
+    "TotalPPBothDriversCanEarn": 24,
 
     "DarkGradient": "0E0F14",
     "LightGradient": "E9E9EB",
