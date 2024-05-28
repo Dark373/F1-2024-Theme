@@ -10,11 +10,24 @@
     },
     {
         "StyleName": "PodiumFlags",
-        "VerticalAlignment": "Center",
+        "VerticalAlignment": "Top",
         "HorizontalAlignment": "Left",
         "Background": "{Black}",
-        "Padding": "1,-13",
-        "MarginTop": -3,
+        "Padding": "1,-10",
         "Height": 66
+    },
+    {
+        "StyleName": "PodiumFlags2",
+        "VerticalAlignment": "Top",
+        "HorizontalAlignment": "Left",
+        "Background": "{Black}",
+        "Padding": "1,-10",
+        "MarginTop": 5,
+        "Height": 66
+    },
+    {
+        "StyleName": "CountryFlags",
+        "Background": "{Black}",
+        "Padding": "1,-17"
     }
 ]
