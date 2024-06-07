@@ -13,7 +13,6 @@
                 "Items": [
                     {
                         "BlockType": "dock",
-                        "Margin": "0,0,0,0",
                         "HorizontalAlignment": "Center",
                         "VerticalAlignment": "Center",
                         "Items": [
@@ -56,7 +55,7 @@
                         ]
                     },
                     {
-                        "BlockType": "stack",
+                        "BlockType": "dock",
                         "Margin": "0,-2700,0,0",
                         "Orientation": "Vertical",
                         "HorizontalAlignment": "Center",
@@ -69,86 +68,96 @@
                         },
                         "Items": [
                             {
-                                "BlockType": "component",
-                                "Margin": "0,2000,0,0",
-                                "Component": "/DriverLine",
-                                "ComponentOptions": {
-                                    "Vars": {
-                                        "render": "false",
-                                        "Halign": "Center",
-                                        "fg1": "{ChampColourFG}",
-                                        "fg2": "{ChampColourFG}",
-                                        "style1": "NameBlack1",
-                                        "style2": "NameBlack1"
-                                    }
-                                }
-                            },
-                            {
-                                "BlockType": "text",
-                                "Source": "[DRIVERS']",
-                                "FontName": "{FontNameBlack}",
-                                "FontSize": "{ChampTextFS}",
-                                "Foreground": "{ChampColourFG}",
-                                "HorizontalAlignment": "Center",
-                                "VerticalAlignment": "Center"
-                            },
-                            {
-                                "BlockType": "text",
-                                "Margin": "0,-35,0,0",
-                                "Source": "[CHAMPION]",
-                                "FontName": "{FontNameBlack}",
-                                "FontSize": "{ChampTextFS}",
-                                "Foreground": "{ChampColourFG}",
-                                "HorizontalAlignment": "Center",
-                                "VerticalAlignment": "Center"
-                            },
-                            {
-                                "BlockType": "dock",
-                                "Orientation": "Horizontal",
+                                "BlockType": "stack",
+                                "Width": 2160,
+                                "Orientation": "Vertical",
+                                "VerticalAlignment": "Bottom",
                                 "Items": [
                                     {
-                                        "BlockType": "image",
-                                        "Height": 140,
-                                        "HorizontalAlignment": "Left",
-                                        "VerticalAlignment": "Center",
-                                        "ImageOptions": {
-                                            "Path": "{Item.Team.LogotypePath}"
+                                        "BlockType": "component",
+                                        "Margin": "0,2000,0,0",
+                                        "Component": "/DriverLine",
+                                        "ComponentOptions": {
+                                            "Vars": {
+                                                "render": "false",
+                                                "flagstyle": "DriverFlags",
+                                                "Halign": "Center",
+                                                "fg1": "{ChampColourFG}",
+                                                "fg2": "{ChampColourFG}",
+                                                "style1": "NameBlack1",
+                                                "style2": "NameBlack1"
+                                            }
                                         }
                                     },
                                     {
                                         "BlockType": "text",
+                                        "Source": "[DRIVERS']",
+                                        "FontName": "{FontNameBlack}",
+                                        "FontSize": "{ChampTextFS}",
+                                        "Foreground": "{ChampColourFG}",
                                         "HorizontalAlignment": "Center",
-                                        "Source": "{cha1, Converter=StringToUpperString}",
-                                        "Style": "NameDefault1",
-                                        "Foreground": "{ChampColourFG}"
+                                        "VerticalAlignment": "Center"
                                     },
                                     {
-                                        "BlockType": "image",
-                                        "Height": 40,
-                                        "HorizontalAlignment": "Right",
-                                        "VerticalAlignment": "Center",
-                                        "ImageOptions": {
-                                            "Path": "logotypes/f1_logo.png",
-                                            "VerticalAlignment": "Center",
-                                            "HorizontalAlignment": "Right"
-                                        },
-                                        "Triggers": [
+                                        "BlockType": "text",
+                                        "Margin": "0,-35,0,0",
+                                        "Source": "[CHAMPION]",
+                                        "FontName": "{FontNameBlack}",
+                                        "FontSize": "{ChampTextFS}",
+                                        "Foreground": "{ChampColourFG}",
+                                        "HorizontalAlignment": "Center",
+                                        "VerticalAlignment": "Center"
+                                    },
+                                    {
+                                        "BlockType": "dock",
+                                        "Margin": "25,0,25,0",
+                                        "Orientation": "Horizontal",
+                                        "Items": [
                                             {
-                                                "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Ferrari}",
-                                                "ConditionAnd": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
-                                                "Property": "Source",
-                                                "Value": "logotypes/f1_logo.black.png"
+                                                "BlockType": "image",
+                                                "Height": 140,
+                                                "HorizontalAlignment": "Left",
+                                                "VerticalAlignment": "Center",
+                                                "ImageOptions": {
+                                                    "Path": "{Item.Team.LogotypePath}"
+                                                }
                                             },
                                             {
-                                                "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToFalse}",
-                                                "Setters": [
+                                                "BlockType": "text",
+                                                "HorizontalAlignment": "Center",
+                                                "Source": "{cha1, Converter=StringToUpperString}",
+                                                "Style": "NameDefault1",
+                                                "Foreground": "{ChampColourFG}"
+                                            },
+                                            {
+                                                "BlockType": "image",
+                                                "Height": 40,
+                                                "HorizontalAlignment": "Right",
+                                                "VerticalAlignment": "Center",
+                                                "ImageOptions": {
+                                                    "Path": "logotypes/f1_logo.png",
+                                                    "VerticalAlignment": "Center",
+                                                    "HorizontalAlignment": "Right"
+                                                },
+                                                "Triggers": [
                                                     {
+                                                        "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Ferrari}",
+                                                        "ConditionAnd": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
                                                         "Property": "Source",
-                                                        "Value": "{Season.LeagueInfo.LeagueLogo}"
+                                                        "Value": "logotypes/f1_logo.black.png"
                                                     },
                                                     {
-                                                        "Property": "Height",
-                                                        "Value": "{g4}"
+                                                        "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToFalse}",
+                                                        "Setters": [
+                                                            {
+                                                                "Property": "Source",
+                                                                "Value": "{Season.LeagueInfo.LeagueLogo}"
+                                                            },
+                                                            {
+                                                                "Property": "Height",
+                                                                "Value": "{g4}"
+                                                            }
+                                                        ]
                                                     }
                                                 ]
                                             }

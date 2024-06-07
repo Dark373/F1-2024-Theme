@@ -113,7 +113,7 @@
                         "Orientation": "Vertical",
                         "HorizontalAlignment": "Center",
                         "Width": 2160,
-                        "Height": 2000,
+                        "Height": 2015,
                         "BackgroundImage": "components/bg.pole.gradient.png",
                         "ColorizeBackground": {
                             "Enabled": true,
@@ -126,7 +126,7 @@
                                 "HorizontalAlignment": "Center",
                                 "Orientation": "Vertical",
                                 "Width": 2160,
-                                "Height": 2000,
+                                "Height": 2015,
                                 "BackgroundImage": "components/bg.middle.gradient.png",
                                 "ColorizeBackground": {
                                     "Enabled": true,
@@ -134,8 +134,122 @@
                                 },
                                 "Items": [
                                     {
+                                        "BlockType": "dock",
+                                        "Margin": "20,240,20,0",
+                                        "VerticalAlignment": "Bottom",
+                                        "Items": [
+                                            {
+                                                "BlockType": "dock",
+                                                "VerticalAlignment": "Center",
+                                                "MarginTop": 8,
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "stack",
+                                                        "Spacing": 12,
+                                                        "HorizontalAlignment": "Left",
+                                                        "VerticalAlignment": "Center",
+                                                        "Items": [
+                                                            {
+                                                                "BlockType": "image",
+                                                                "Style": "DriverFlags",
+                                                                "ImageOptions": {
+                                                                    "Path": "{Item.Driver0.Driver.Nationality.LogotypePath}"
+                                                                },
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "Flags"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "BlockType": "text",
+                                                                "Style": "NameChampLeft",
+                                                                "Source": "{Item.Driver0.Driver.{name1}, Converter=StringToUpperString}",
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "Driver0Name1"
+                                                                    },
+                                                                    {
+                                                                        "Trigger": "Driver0Name2"
+                                                                    },
+                                                                    {
+                                                                        "Trigger": "Driver0Name3"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "BlockType": "text",
+                                                                "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                                "Style": "NameChampLeft",
+                                                                "Source": "{Item.Driver0.Driver.RealName, Converter=StringToUpperString}",
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "Driver0Name4"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "BlockType": "dock",
+                                                "VerticalAlignment": "Center",
+                                                "MarginTop": 8,
+                                                "Items": [
+                                                    {
+                                                        "BlockType": "stack",
+                                                        "Spacing": 12,
+                                                        "HorizontalAlignment": "Left",
+                                                        "VerticalAlignment": "Center",
+                                                        "Items": [
+                                                            {
+                                                                "BlockType": "text",
+                                                                "Style": "NameChampRight",
+                                                                "Source": "{Item.Driver1.Driver.{name1}, Converter=StringToUpperString}",
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "Driver1Name1"
+                                                                    },
+                                                                    {
+                                                                        "Trigger": "Driver1Name2"
+                                                                    },
+                                                                    {
+                                                                        "Trigger": "Driver1Name3"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "BlockType": "text",
+                                                                "RenderIf": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                                "Style": "NameChampRight",
+                                                                "Source": "{Item.Driver1.Driver.RealName, Converter=StringToUpperString}",
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "Driver1Name4"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "BlockType": "image",
+                                                                "Style": "DriverFlags",
+                                                                "ImageOptions": {
+                                                                    "Path": "{Item.Driver1.Driver.Nationality.LogotypePath}"
+                                                                },
+                                                                "Triggers": [
+                                                                    {
+                                                                        "Trigger": "Flags"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
                                         "BlockType": "text",
-                                        "MarginTop": 280,
                                         "Source": "[CONSTRUCTORS']",
                                         "FontName": "{FontNameBlack}",
                                         "FontSize": "{ChampTextFS}",

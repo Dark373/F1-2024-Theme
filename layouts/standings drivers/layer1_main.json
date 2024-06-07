@@ -92,6 +92,11 @@
                                                 "ConditionAnd": "{Item.Position, Converter=NumberNotEquals, Parameter={g6}}",
                                                 "Property": "Background",
                                                 "Value": "{Season.MainLeagueCategory.Color}"
+                                            },
+                                            {
+                                                "Condition": "{sta14}",
+                                                "ComponentVar": "style1",
+                                                "Value": "NameBlackPointsChamp"
                                             }
                                         ]
                                     }
@@ -102,7 +107,7 @@
                             {
                                 "Condition": "{sta2}",
                                 "Property": "Margin",
-                                "Value": "0,26,0,0"
+                                "Value": "0,26,0,26"
                             }
                         ]
                     },
@@ -115,7 +120,9 @@
                                 "Component": "/standings/DataTable",
                                 "ComponentOptions": {
                                     "Vars": {
-                                        "source": "{Standings.Drivers}"
+                                        "source": "{Standings.Drivers}",
+                                        "LDT": "DataTableLeftColumn",
+                                        "RDT": "DataTableRightColumn"
                                     }
                                 }
                             }

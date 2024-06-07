@@ -157,7 +157,8 @@
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "stat": "{105, Converter=NumberSubtract, Parameter={{Item.Driver0.Position, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.GridSize}}}",
-                                                        "statvalue": "{Item.Driver0.Position}"
+                                                        "statvalue": "{Item.Driver0.Position}",
+                                                        "statvalue1": "[TH]"
                                                     }
                                                 },
                                                 "Triggers": [
@@ -166,6 +167,24 @@
                                                         "ConditionOr": "{Item.Driver0.Position, Converter=NumberGreater, Parameter={Season.GridSize}}",
                                                         "ComponentVar": "stat",
                                                         "Value": 1
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=1}",
+                                                        "ConditionOr": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=21}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ST]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=2}",
+                                                        "ConditionOr": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=22}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ND]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=3}",
+                                                        "ConditionOr": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=23}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[RD]"
                                                     }
                                                 ]
                                             },
@@ -175,7 +194,8 @@
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "stat": "{105, Converter=NumberSubtract, Parameter={{Item.Driver1.Position, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.GridSize}}}",
-                                                        "statvalue": "{Item.Driver1.Position}"
+                                                        "statvalue": "{Item.Driver1.Position}",
+                                                        "statvalue1": "[TH]"
                                                     }
                                                 },
                                                 "Triggers": [
@@ -184,6 +204,24 @@
                                                         "ConditionOr": "{Item.Driver1.Position, Converter=NumberGreater, Parameter={Season.GridSize}}",
                                                         "ComponentVar": "stat",
                                                         "Value": 1
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.Position, Converter=NumberEquals, Parameter=1}",
+                                                        "ConditionOr": "{Item.Driver1.Position, Converter=NumberEquals, Parameter=21}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ST]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.Position, Converter=NumberEquals, Parameter=2}",
+                                                        "ConditionOr": "{Item.Driver1.Position, Converter=NumberEquals, Parameter=22}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ND]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.Position, Converter=NumberEquals, Parameter=3}",
+                                                        "ConditionOr": "{Item.Driver1.Position, Converter=NumberEquals, Parameter=23}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[RD]"
                                                     }
                                                 ]
                                             }
@@ -231,7 +269,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.CountP1, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -296,7 +334,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.CountTop3, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -361,7 +399,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.CountTop10, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -419,7 +457,8 @@
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "stat": "{105, Converter=NumberSubtract, Parameter={{Item.Driver0.BestPos1, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.GridSize}}}",
-                                                        "statvalue": "{Item.Driver0.BestPos1}"
+                                                        "statvalue": "{Item.Driver0.BestPos1}",
+                                                        "statvalue1": "[TH]"
                                                     }
                                                 },
                                                 "Triggers": [
@@ -428,6 +467,24 @@
                                                         "ConditionOr": "{Item.Driver0.BestPos1, Converter=EmptyObjectToTrue}",
                                                         "ComponentVar": "stat",
                                                         "Value": 1
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=1}",
+                                                        "ConditionOr": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=21}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ST]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=2}",
+                                                        "ConditionOr": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=22}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ND]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=3}",
+                                                        "ConditionOr": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=23}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[RD]"
                                                     }
                                                 ]
                                             },
@@ -437,7 +494,8 @@
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "stat": "{105, Converter=NumberSubtract, Parameter={{Item.Driver1.BestPos1, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.GridSize}}}",
-                                                        "statvalue": "{Item.Driver1.BestPos1}"
+                                                        "statvalue": "{Item.Driver1.BestPos1}",
+                                                        "statvalue1": "[TH]"
                                                     }
                                                 },
                                                 "Triggers": [
@@ -446,6 +504,24 @@
                                                         "ConditionOr": "{Item.Driver1.BestPos1, Converter=EmptyObjectToTrue}",
                                                         "ComponentVar": "stat",
                                                         "Value": 1
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.BestPos1, Converter=NumberEquals, Parameter=1}",
+                                                        "ConditionOr": "{Item.Driver1.BestPos1, Converter=NumberEquals, Parameter=21}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ST]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.BestPos1, Converter=NumberEquals, Parameter=2}",
+                                                        "ConditionOr": "{Item.Driver1.BestPos1, Converter=NumberEquals, Parameter=22}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ND]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.BestPos1, Converter=NumberEquals, Parameter=3}",
+                                                        "ConditionOr": "{Item.Driver1.BestPos1, Converter=NumberEquals, Parameter=23}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[RD]"
                                                     }
                                                 ]
                                             }
@@ -486,7 +562,8 @@
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "stat": "{105, Converter=NumberSubtract, Parameter={{Item.Driver0.BestPosQual, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.GridSize}}}",
-                                                        "statvalue": "{Item.Driver0.BestPosQual}"
+                                                        "statvalue": "{Item.Driver0.BestPosQual}",
+                                                        "statvalue1": "[TH]"
                                                     }
                                                 },
                                                 "Triggers": [
@@ -494,7 +571,25 @@
                                                         "Condition": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=0}",
                                                         "ConditionOr": "{Item.Driver0.BestPosQual, Converter=EmptyObjectToTrue}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=1}",
+                                                        "ConditionOr": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=21}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ST]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=2}",
+                                                        "ConditionOr": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=22}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ND]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=3}",
+                                                        "ConditionOr": "{Item.Driver0.BestPosQual, Converter=NumberEquals, Parameter=23}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[RD]"
                                                     }
                                                 ]
                                             },
@@ -504,7 +599,8 @@
                                                 "ComponentOptions": {
                                                     "Vars": {
                                                         "stat": "{105, Converter=NumberSubtract, Parameter={{Item.Driver1.BestPosQual, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.GridSize}}}",
-                                                        "statvalue": "{Item.Driver1.BestPosQual}"
+                                                        "statvalue": "{Item.Driver1.BestPosQual}",
+                                                        "statvalue1": "[TH]"
                                                     }
                                                 },
                                                 "Triggers": [
@@ -513,6 +609,24 @@
                                                         "ConditionOr": "{Item.Driver1.BestPosQual, Converter=EmptyObjectToTrue}",
                                                         "ComponentVar": "stat",
                                                         "Value": 1
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.BestPosQual, Converter=NumberEquals, Parameter=1}",
+                                                        "ConditionOr": "{Item.Driver1.BestPosQual, Converter=NumberEquals, Parameter=21}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ST]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.BestPosQual, Converter=NumberEquals, Parameter=2}",
+                                                        "ConditionOr": "{Item.Driver1.BestPosQual, Converter=NumberEquals, Parameter=22}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[ND]"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Driver1.BestPosQual, Converter=NumberEquals, Parameter=3}",
+                                                        "ConditionOr": "{Item.Driver1.BestPosQual, Converter=NumberEquals, Parameter=23}",
+                                                        "ComponentVar": "statvalue1",
+                                                        "Value": "[RD]"
                                                     }
                                                 ]
                                             }
@@ -560,7 +674,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.RaceFastestLapCount, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -625,7 +739,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.CountQualP1, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -690,7 +804,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.RaceDriverDayCount, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -755,7 +869,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.PenaltyPoints, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },
@@ -820,7 +934,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.CountDnf, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },

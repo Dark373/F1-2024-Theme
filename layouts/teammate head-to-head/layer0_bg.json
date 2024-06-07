@@ -22,6 +22,14 @@
                             }
                         ]
                     }
+                ],
+                "Triggers": [
+                    {
+                        "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                        "ConditionAnd": "{g2}",
+                        "Property": "Opacity",
+                        "Value": 60
+                    }
                 ]
             }
         }

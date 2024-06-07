@@ -40,7 +40,7 @@
                                         "Orientation": "Vertical",
                                         "ItemStackOptions": {
                                             "ItemSource": "{Session.Drivers}",
-                                            "Template": {
+                                            "ItemTemplate": {
                                                 "BlockType": "component",
                                                 "Component": "/the grid/DriverLineGrid",
                                                 "ComponentOptions": {
@@ -66,6 +66,7 @@
                                         "Items": [
                                             {
                                                 "BlockType": "text",
+                                                "Padding": "0,5",
                                                 "Source": "{Season.Name, Converter=StringToUpperString}",
                                                 "FontSize": 90,
                                                 "Foreground": "{{g1}}",
@@ -88,6 +89,7 @@
                                             },
                                             {
                                                 "BlockType": "text",
+                                                "Padding": "0,5",
                                                 "Source": "[{Session.Track.CircuitName, Converter=StringToUpperString} GP]",
                                                 "FontSize": 90,
                                                 "Foreground": "{{g1}}",
@@ -98,9 +100,10 @@
                                             },
                                             {
                                                 "Name": "leagueLogo",
+                                                "Padding": "0,5",
                                                 "BlockType": "image",
                                                 "VerticalAlignment": "Center",
-                                                "Height": "{LogoSize}",
+                                                "Height": "{g4}",
                                                 "Margin": "0, -6, 0, 0",
                                                 "Source": "{Season.LeagueInfo.LeagueLogo}",
                                                 "Triggers": [
@@ -126,7 +129,7 @@
                                         "Orientation": "Vertical",
                                         "ItemStackOptions": {
                                             "ItemSource": "{Session.Drivers}",
-                                            "Template": {
+                                            "ItemTemplate": {
                                                 "BlockType": "component",
                                                 "Component": "/the grid/DriverLineGrid",
                                                 "ComponentOptions": {

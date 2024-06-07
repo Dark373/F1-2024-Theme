@@ -92,6 +92,11 @@
                                                 "ConditionAnd": "{Item.Position, Converter=NumberNotEquals, Parameter=1}",
                                                 "Property": "Background",
                                                 "Value": "{Season.MainLeagueCategory.Color}"
+                                            },
+                                            {
+                                                "Condition": "{sta14}",
+                                                "ComponentVar": "style1",
+                                                "Value": "NameBlackPointsChamp"
                                             }
                                         ]
                                     }
@@ -115,7 +120,9 @@
                                 "Component": "/standings/DataTable",
                                 "ComponentOptions": {
                                     "Vars": {
-                                        "source": "{Standings.Teams}"
+                                        "source": "{Standings.Teams}",
+                                        "LDT": "TeamDTLeftColumn",
+                                        "RDT": "TeamDTRightColumn"
                                     }
                                 }
                             }

@@ -1,26 +1,68 @@
 {
     "BlockRoot": {
         "BlockType": "stack",
-        "Width": 2879,
-        "Height": 1620,
-        "Background": "131227",
+        "Width": 2160,
+        "RenderIf": "{g1, Converter=StringNotEquals, Parameter=No Background}",
+        "Orientation": "Vertical",
+        "Background": "{Season.MainLeagueCategory.Color}",
         "Items": [
             {
                 "BlockType": "stack",
-                "BackgroundImage": "bg/bg.sprint.png",
                 "ColorizeBackground": {
-                    "Enabled": true,
-                    "Color": "09081D"
+                    "Enabled": false,
+                    "Color": "[{g1}]"
                 },
                 "Items": [
                     {
-                        "BlockType": "shape",
-                        "Height": 10000,
-                        "Width": 10000,
-                        "Opacity": 0,
-                        "ShapeOptions": {
-                            "Fill": "{White}"
-                        }
+                        "BlockType": "image",
+                        "RenderIf": "{Session.RaceType, Converter=StringNotEquals, Parameter=sprint}",
+                        "Source": "bg/bg.{g1}.png",
+                        "Triggers": [
+                            {
+                                "Condition": "{g2}",
+                                "Property": "Source",
+                                "Value": "bg/bg.{g1}.plain.png"
+                            },
+                            {
+                                "Condition": "{Session.RaceType, Converter=StringEquals, Parameter=sprint}",
+                                "ConditionAnd": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                                "Property": "RenderIf",
+                                "Value": true
+                            }
+                        ]
+                    },
+                    {
+                        "BlockType": "image",
+                        "RenderIf": "{Session.RaceType, Converter=StringEquals, Parameter=sprint}",
+                        "Source": "bg/placeholder.png"
+                    }
+                ],
+                "Triggers": [
+                    {
+                        "Condition": "{Session.RaceType, Converter=StringEquals, Parameter=sprint}",
+                        "ConditionAnd": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                        "Setters": [
+                            {
+                                "Property": "BackgroundImage",
+                                "Value": "bg/bg.sprint.png"
+                            },
+                            {
+                                "Property": "ColorizeBackground.Enabled",
+                                "Value": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Triggers": [
+            {
+                "Condition": "{Session.RaceType, Converter=StringEquals, Parameter=sprint}",
+                "ConditionAnd": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
+                "Setters": [
+                    {
+                        "Property": "Background",
+                        "Value": "[{g1}2]"
                     }
                 ]
             }
