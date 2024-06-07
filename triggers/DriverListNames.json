@@ -52,5 +52,115 @@
         "Condition": "{name2}",
         "Property": "Source",
         "Value": "{Item.Driver1.Driver.Name, Converter=StringToUpperString}"
+    },
+    //
+    {
+        "TriggerName": "Line0Name1",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Line0Name2",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.{name1}}"
+    },
+    {
+        "TriggerName": "Line0Name3",
+        "Condition": "{name2}",
+        "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.RealName, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Line0Name4",
+        "Condition": "{name2}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Line1Name1",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Line1Name2",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.{name1}}"
+    },
+    {
+        "TriggerName": "Line1Name3",
+        "Condition": "{name2}",
+        "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.RealName, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "Line1Name4",
+        "Condition": "{name2}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.Name, Converter=StringToUpperString}"
+    },
+    //
+    {
+        "TriggerName": "SecLine0Name1",
+        "Condition": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "SecLine0Name2",
+        "Condition": "{lnname1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.{lnname1}}"
+    },
+    {
+        "TriggerName": "SecLine0Name3",
+        "Condition": "{name2}",
+        "ConditionAnd": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.RealName, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "SecLine0Name4",
+        "Condition": "{name2}",
+        "Property": "Source",
+        "Value": "{Item.Line0.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "SecLine1Name1",
+        "Condition": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.Name, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "SecLine1Name2",
+        "Condition": "{lnname1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.{lnname1}}"
+    },
+    {
+        "TriggerName": "SecLine1Name3",
+        "Condition": "{name2}",
+        "ConditionAnd": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.RealName, Converter=StringToUpperString}"
+    },
+    {
+        "TriggerName": "SecLine1Name4",
+        "Condition": "{name2}",
+        "Property": "Source",
+        "Value": "{Item.Line1.Driver.Name, Converter=StringToUpperString}"
     }
 ]
