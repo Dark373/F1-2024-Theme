@@ -2,6 +2,13 @@
     "Name": "English",
     "Id": "en-GB",
     "Strings": {
+        //global
+        "Dark": "0E0F14",
+        "Light": "E9E9EB",
+        "Purple": "09081D",
+        "Dark2": "14141C",
+        "Light2": "FFFFFF",
+        "Purple2": "131227",
         //team names
         "MCLAREN": "McLAREN",
         //abbreviations
@@ -19,6 +26,38 @@
         "PODIUMP3": "PODIUM",
         "ON LAP": "ON LAP",
 
+        //lineups
+        "DRIVER LINE-UP": "DRIVER LINE-UP",
+        "LINE-UP": "LINE-UP",
+
+        //sprint
+        "BAHRAIN SPRINT": "BAHRAIN SPRINT",
+        "JEDDAH SPRINT" : "SAUDI ARABIAN SPRINT",
+        "MELBOURNE SPRINT": "AUSTRALIAN SPRINT",
+        "SUZUKA SPRINT" : "JAPANESE SPRINT",
+        "SHANGHAI SPRINT" : "CHINESE SPRINT",
+        "MIAMI SPRINT": "MIAMI SPRINT",
+        "IMOLA SPRINT": "EMILIA-ROMAGNA SPRINT",
+        "MONACO SPRINT": "SPRINT DE MONACO",
+        "MONTREAL SPRINT" : "SPRINT DU CANADA",
+        "BARCELONA SPRINT" : "SPRINT DE ESPAÑA",
+        "SPIELBERG SPRINT" : "AUSTRIAN SPRINT",
+        "SILVERSTONE SPRINT" : "BRITISH SPRINT",
+        "HUNGARORING SPRINT" : "HUNGARIAN SPRINT",
+        "SPA-FRANCORCHAMPS SPRINT" : "BELGIAN SPRINT",
+        "ZANDVOORT SPRINT" : "DUTCH SPRINT",
+        "MONZA SPRINT" : "SPRINT D'ITALIA",
+        "BAKU SPRINT" : "AZERBAIJAN SPRINT",
+        "MARINA BAY SPRINT": "SINGAPORE SPRINT",
+        "AUSTIN SPRINT" : "UNITED STATES SPRINT",
+        "MEXICO SPRINT": "SPRINT DE MÉXICO",
+        "INTERLAGOS SPRINT" : "SPRINT DE SÃO PAULO",
+        "LOSAIL SPRINT": "QATAR SPRINT",
+        "LAS VEGAS SPRINT": "LAS VEGAS SPRINT",
+        "YAS MARINA SPRINT" : "ABU DHABI SPRINT",
+        "PAUL RICARD SPRINT" : "SPRINT DE FRANCE",
+        "PORTIMÃO SPRINT" : "SPRINT DE PORTUGAL",
+
         //gp
         "BAHRAIN GP": "BAHRAIN GP",
         "JEDDAH GP" : "SAUDI ARABIAN GP",
@@ -26,7 +65,7 @@
         "SUZUKA GP" : "JAPANESE GP",
         "SHANGHAI GP" : "CHINESE GP",
         "MIAMI GP": "MIAMI GP",
-        "IMOLA GP": "GP DELL'EMILIA-ROMAGNA",
+        "IMOLA GP": "EMILIA-ROMAGNA GP",
         "MONACO GP": "GP DE MONACO",
         "MONTREAL GP" : "GP DU CANADA",
         "BARCELONA GP" : "GP DE ESPAÑA",
@@ -60,6 +99,12 @@
         "October": "OCT",
         "November": "NOV",
         "December": "DEC",
+        "19 MAR": "19 - 21 MAR",
+
+        //champion
+        "CHAMPION": "CHAMPION",
+        "1 WINS": "1 WIN",
+        "1 PODIUMS": "1 PODIUM",
 
         //standings
         "DRIVER": "DRIVER",
@@ -82,7 +127,6 @@
         "PointsToLeaderDiff": "GAP",            
 
         "PRE-SEASON": "PRE-SEASON",
-        "DRIVERS'": "DRIVERS'",
-        "CHAMPION": "CHAMPION"
+        "DRIVERS'": "DRIVERS'"
     }
 }
