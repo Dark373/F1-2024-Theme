@@ -23,7 +23,7 @@
             "Style": "NameBlack1",
             "Foreground": "{ChampColourFG}",
             "HorizontalAlignment": "Center",
-            "Source": "{Item.CountP1} [WINS]",
+            "Source": "[{Item.CountP1} [WINS]]",
             "Triggers": [
                 {
                     "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
@@ -38,7 +38,7 @@
             "Style": "NameBlack1",
             "Foreground": "{ChampColourFG}",
             "HorizontalAlignment": "Right",
-            "Source": "{Item.CountTop3} [PODIUMS]",
+            "Source": "[{Item.CountTop3} [PODIUMS]]",
             "Triggers": [
                 {
                     "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",

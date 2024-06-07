@@ -1,0 +1,62 @@
+{
+    "ComponentName": "HeaderBlockOfficial",
+    "Width": 3840,
+    "Height": 527,
+    "BlockType": "stack",
+    "HorizontalAlignment": "Center",
+    "VerticalAlignment": "Top",
+    "Orientation": "Vertical",
+    "BackgroundImage": "components/lineup.header.png",
+    "ColorizeBackground": {
+        "Enabled": true,
+        "Color": "{Season.MainLeagueCategory.Color}"
+    },
+    "Items": [
+        {
+            "BlockType": "text",
+            "Margin": "50,50,0,0",
+            "Source": "{Season.Name, Converter=StringToUpperString} [DRIVER LINE-UP]",
+            "Style": "NameDefault1",
+            "FontName": "{FontNameBold}",
+            "Foreground": "{SeasonSmallFG}"
+        },
+        {
+            "BlockType": "image",
+            "MarginTop": -50,
+            "MarginRight": 50,
+            "Height": 60,
+            "HorizontalAlignment": "Right",
+            "VerticalAlignment": "Center",
+            "ImageOptions": {
+                "Path": "logotypes/f1_logo.png",
+                "VerticalAlignment": "Center",
+                "HorizontalAlignment": "Right"
+            },
+            "Triggers": [
+                {
+                    "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Ferrari}",
+                    "ConditionAnd": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                    "Property": "Source",
+                    "Value": "logotypes/f1_logo.black.png"
+                },
+                {
+                    "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToFalse}",
+                    "Setters": [
+                        {
+                            "Property": "Source",
+                            "Value": "{Season.LeagueInfo.LeagueLogo}"
+                        },
+                        {
+                            "Property": "Height",
+                            "Value": "{g4}"
+                        },
+                        {
+                            "Property": "MarginRight",
+                            "Value": "{g4, Converter=NumberAdd, Parameter=30}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -147,7 +147,7 @@
                             "FontName": "{FontNameItalic}",
                             "VerticalAlignment": "Center",
                             "FontSize": 24,
-                            "Source": "{Item.Date, Converter=DateToDayOfMonth} [{Item.Date, Converter=DateToMonthInWords}]",
+                            "Source": "[{Item.Date, Converter=DateToDayOfMonth} [{Item.Date, Converter=DateToMonthInWords}]]",
                             "Triggers": [
                                 {
                                     "Condition": "{g1, Converter=StringNotEquals, Parameter=Light}",
@@ -253,7 +253,7 @@
                     "ItemStackOptions": {
                         "ItemSource": "{Item.Races}",
                         "Limit": 1,
-                        "Template": {
+                        "ItemTemplate": {
                             "BlockType": "stack",
                             "Items": [
                                 {

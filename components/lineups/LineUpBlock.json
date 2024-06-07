@@ -1,0 +1,40 @@
+{
+    "ComponentName": "LineUpBlock",
+    "BlockType": "itemstack",
+    "ItemStackOptions": {
+        "ItemSource": "{Lineups.Teams}",
+        "Limit": 1,
+        "IndexStart": "<index>",
+        "ItemTemplate": {
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Source": "<source>",
+                    "Height": 690,
+                    "Margin": "0,0,0,-400",
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center"
+                },
+                {
+                    "BlockType": "stack",
+                    "HorizontalAlignment": "Center",
+                    "BackgroundImage": "components/lineup.block.png",
+                    "Height": 124,
+                    "Width": 745,
+                    "ColorizeBackground": {
+                        "Enabled": true,
+                        "Color": "{Item.Team.Color}"
+                    },
+                    "Items": [
+                        {
+                            "BlockType": "component",
+                            "Component": "<comp>"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
