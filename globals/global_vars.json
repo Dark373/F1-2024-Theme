@@ -70,6 +70,9 @@
     //comparison
     "TotalPPBothDriversCanEarn": 24,
 
+    //lineups
+    "SeasonSmallFG": "FFFFFF",
+
     "DarkGradient": "0E0F14",
     "LightGradient": "E9E9EB",
     "PurpleGradient": "09081D"

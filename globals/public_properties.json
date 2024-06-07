@@ -121,6 +121,56 @@
             "DefaultValue": "Name"
         },
         {
+            "Name": "ln1",
+            "PublicName": "Enable Secondary Names",
+            "Description": "Choose to display a secondary line of driver names below the main driver line.",
+            "Category": "Line-ups",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
+            "Name": "lnname1",
+            "PublicName": "Secondary Naming Conventions",
+            "Description": "Changes which name fields are used. When (Full Name) is active, both (Name) & (RealName) will be used.",
+            "Category": "Line-ups",
+            "Type": "Enum",
+            "EnumValues": ["Name", "RealName", "InGameName", "Full Name"],
+            "DefaultValue": "Name"
+        },
+        {
+            "Name": "ln2",
+            "PublicName": "Name Font Size",
+            "Description": "Affects the font size for drivers on the official line up render.",
+            "Category": "Line-ups",
+            "Type": "Integer",
+            "DefaultValue": 52
+        },
+        {
+            "Name": "ln3",
+            "PublicName": "Font Size: Season Name",
+            "Description": "Affects the font size for the season name. Change when using different lengths of the season name. Default: 216.",
+            "Category": "Line-ups",
+            "Type": "Integer",
+            "MaximumValue": 260,
+            "DefaultValue": 216
+        },
+        {
+            "Name": "ln4",
+            "PublicName": "Font Size: DRIVER",
+            "Description": "Affects the font size for the word: DRIVER. Change when using different length translations of the word. Default: 180.",
+            "Category": "Line-ups",
+            "Type": "Integer",
+            "DefaultValue": 180
+        },
+        {
+            "Name": "ln5",
+            "PublicName": "Font Size: LINE-UP",
+            "Description": "Affects the font size for the word: LINE-UP. Change when using different length translations of the phraze. Default: 171.",
+            "Category": "Line-ups",
+            "Type": "Integer",
+            "DefaultValue": 171
+        },
+        {
             "Name": "gri1",
             "PublicName": "Bar width",
             "Description": "Changes the width of the bar. Select a greater number, if driver names are too long to fit.",
@@ -145,6 +195,14 @@
             "Type": "Enum",
             "EnumValues": ["Fastest Lap", "Winner", "PodiumP2", "PodiumP3", "Points", "Position"],
             "DefaultValue": "Fastest Lap"
+        },
+        {
+            "Name": "var8",
+            "PublicName": "Is Sprint Session",
+            "Description": "Alters the background used.",
+            "Category": "Variable Information",
+            "Type": "Bool",
+            "DefaultValue": false
         },
         {
             "Name": "var2",
@@ -210,6 +268,14 @@
             "Category": "Pole",
             "Type": "Integer",
             "DefaultValue": 719
+        },
+        {
+            "Name": "pol2",
+            "PublicName": "Is Sprint Qualifying",
+            "Description": "Alters the background used.",
+            "Category": "Pole",
+            "Type": "Bool",
+            "DefaultValue": false
         },
         {
             "Name": "sta14",
@@ -388,6 +454,9 @@
         },
         {
             "Name": "Podium Results"
+        },
+        {
+            "Name": "Line-ups"
         },
         {
             "Name": "The Grid"
