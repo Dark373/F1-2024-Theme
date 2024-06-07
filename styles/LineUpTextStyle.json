@@ -1,0 +1,18 @@
+[
+    {
+        "StyleName": "LP-1",
+        "FontName": "{FontNameBlack}",
+        "FontSize": "{ln2}",
+        "Foreground": "{[{Item.Team.Name}FG]}",
+        "HorizontalAlignment": "Center",
+        "VerticalAlignment": "Center"
+    },
+    {
+        "StyleName": "LP-2",
+        "FontName": "{FontNameDefault}",
+        "FontSize": 30,
+        "Foreground": "{[{Item.Team.Name}FG]}",
+        "HorizontalAlignment": "Center",
+        "VerticalAlignment": "Center"
+    }
+]
