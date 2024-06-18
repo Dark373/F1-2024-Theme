@@ -9,8 +9,10 @@
         "Dark2": "14141C",
         "Light2": "FFFFFF",
         "Purple2": "131227",
-        //team names
+
+        //team names (see global_vars.json for more team names)
         "MCLAREN": "McLAREN",
+
         //abbreviations
         "UNITED STATES OF AMERICA": "USA",
         "UNITED ARAB EMIRATES": "ABU DHABI",
@@ -18,7 +20,7 @@
 
         //calendar
         "CALENDAR": "CALENDAR",
-
+        
         //var info
         "POLE": "POLE",
         "WINNER": "WINNER",
@@ -86,6 +88,34 @@
         "PAUL RICARD GP" : "GP DE FRANCE",
         "PORTIMÃO GP" : "GP DE PORTUGAL",
 
+        //gp extended name
+        "BAHRAIN GRAND PRIX": "GULF AIR BAHRAIN GRAND PRIX",
+        "JEDDAH GRAND PRIX" : "STC SAUDI ARABIAN GRAND PRIX",
+        "MELBOURNE GRAND PRIX": "ROLEX AUSTRALIAN GRAND PRIX",
+        "SUZUKA GRAND PRIX" : "MSC CRUISES JAPANESE GRAND PRIX",
+        "SHANGHAI GRAND PRIX" : "LENOVO CHINESE GRAND PRIX",
+        "MIAMI GRAND PRIX": "CYRPTO.COM MIAMI GRAND PRIX",
+        "IMOLA GRAND PRIX": "MSC CRUISES GRAN PREMIO DELL'EMILIA-ROMAGNA",
+        "MONACO GRAND PRIX": "GRAND PRIX DE MONACO",
+        "MONTREAL GRAND PRIX" : "AWS GRAND PRIX DU CANADA",
+        "BARCELONA GRAND PRIX" : "ARAMCO GRAN PREMIO DE ESPAÑA",
+        "SPIELBERG GRAND PRIX" : "QATAR AIRWAYS AUSTRIAN GRAND PRIX",
+        "SILVERSTONE GRAND PRIX" : "QATAR AIRWAYS BRITISH GRAND PRIX",
+        "HUNGARORING GRAND PRIX" : "HUNGARIAN GRAND PRIX",
+        "SPA-FRANCORCHAMPS GRAND PRIX" : "ROLEX BELGIAN GRAND PRIX",
+        "ZANDVOORT GRAND PRIX" : "HEINEKEN DUTCH GRAND PRIX",
+        "MONZA GRAND PRIX" : "PIRELLI GRAN PREMIO D'ITALIA",
+        "BAKU GRAND PRIX" : "QATRA AIRWAYS AZERBAIJAN GRAND PRIX",
+        "MARINA BAY GRAND PRIX": "SINGAPORE AIRLINES SINGAPORE GRAND PRIX",
+        "AUSTIN GRAND PRIX" : "PIRELLI UNITED STATES GRAND PRIX",
+        "MEXICO GRAND PRIX": "GRAN PREMIO DE LA CIUDAD DE MÉXICO",
+        "INTERLAGOS GRAND PRIX" : "LENOVO GRANDE PRÊMIO DE SÃO PAULO",
+        "LOSAIL GRAND PRIX": "QATAR AIRWAYS QATAR GRAND PRIX",
+        "LAS VEGAS GRAND PRIX": "HEINEKEN SILVER LAS VEGAS GRAND PRIX",
+        "YAS MARINA GRAND PRIX" : "ETIHAD AIRWAYS ABU DHABI GRAND PRIX",
+        "PAUL RICARD GRAND PRIX" : "GRAND PRIX DE FRANCE",
+        "PORTIMÃO GRAND PRIX" : "GRANDE PRÉMIO DE PORTUGAL",
+
         //month codes
         "January": "JAN",
         "February": "FEB",
@@ -99,7 +129,20 @@
         "October": "OCT",
         "November": "NOV",
         "December": "DEC",
-        "19 MAR": "19 - 21 MAR",
+        //date manipulation examples
+        "18 JUN": "18 - 20 JUN",
+        "25 JUN": "25 - 27 JUN",
+        "02 JUL": "02 - 04 JUL",
+        "09 JUL": "09 - 11 JUL",
+        "16 JUL": "16 - 18 JUL",
+        "23 JUL": "23 - 25 JUL",
+        "30 JUL": "30 JUL - 01 AUG",
+        "06 AUG": "06 - 08 AUG",
+        "13 AUG": "13 - 15 AUG",
+        "20 AUG": "20 - 22 AUG",
+        "27 AUG": "27 - 29 AUG",
+        "03 SEP": "03 - 05 SEP",
+        "10 SEP": "10 - 12 SEP",
 
         //champion
         "CHAMPION": "CHAMPION",
