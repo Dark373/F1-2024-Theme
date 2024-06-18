@@ -67,20 +67,50 @@
                                         "Component": "RightStatsBarTeam",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "stat": "{{Item.Points, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={35, Converter=NumberMultiply, Parameter={Season.SeasonOverallNumberEvents}}}",
+                                                "stat": "{{Item.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={35, Converter=NumberMultiply, Parameter={Season.SeasonOverallNumberEvents}}}",
                                                 "statvalue": "{Item.Points}"
                                             }
-                                        }
+                                        },
+                                        "Triggers": [
+                                            {
+                                                "Condition": "{Item.Points.IntValue, Converter=NumberEquals, Parameter=0}",
+                                                "Setters": [
+                                                    {
+                                                        "ComponentVar": "stat",
+                                                        "Value": 2
+                                                    },
+                                                    {
+                                                        "ComponentVar": "statvalue",
+                                                        "Value": "0"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
                                     {
                                         "BlockType": "component",
                                         "Component": "LeftStatsBarTeam",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "stat": "{{Item.Points, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={35, Converter=NumberMultiply, Parameter={Season.SeasonOverallNumberEvents}}}",
+                                                "stat": "{{Item.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={35, Converter=NumberMultiply, Parameter={Season.SeasonOverallNumberEvents}}}",
                                                 "statvalue": "{Item.Points}"
                                             }
-                                        }
+                                        },
+                                        "Triggers": [
+                                            {
+                                                "Condition": "{Item.Points.IntValue, Converter=NumberEquals, Parameter=0}",
+                                                "Setters": [
+                                                    {
+                                                        "ComponentVar": "stat",
+                                                        "Value": 2
+                                                    },
+                                                    {
+                                                        "ComponentVar": "statvalue",
+                                                        "Value": "0"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -669,7 +699,7 @@
                                             {
                                                 "Condition": "{Item.PenaltyPoints, Converter=NumberEquals, Parameter=0}",
                                                 "ComponentVar": "stat",
-                                                "Value": 1
+                                                "Value": 2
                                             }
                                         ]
                                     },
@@ -732,8 +762,8 @@
                                         },
                                         "Triggers": [
                                             {
-                                                "Condition": "{Item.CountDnf, Converter=NumberEquals, Parameter=0}",
-                                                "Property": "stat",
+                                                "Condition": "{stat, Converter=NumberEquals, Parameter=0}",
+                                                "ComponentVar": "stat",
                                                 "Value": 1
                                             }
                                         ]
@@ -749,7 +779,7 @@
                                         },
                                         "Triggers": [
                                             {
-                                                "Condition": "{Item.CountDnf, Converter=NumberEquals, Parameter=0}",
+                                                "Condition": "{stat, Converter=NumberEquals, Parameter=0}",
                                                 "ComponentVar": "stat",
                                                 "Value": 1
                                             }

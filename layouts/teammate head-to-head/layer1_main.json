@@ -75,17 +75,17 @@
                                                 "Component": "/comparison/RightStatsBar",
                                                 "ComponentOptions": {
                                                     "Vars": {
-                                                        "stat": "{{Item.Driver0.Points, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Points}}",
+                                                        "stat": "{{Item.Driver0.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Points.IntValue}}",
                                                         "statvalue": "{Item.Driver0.Points}"
                                                     }
                                                 },
                                                 "Triggers": [
                                                     {
-                                                        "Condition": "{Item.Driver0.Points, Converter=EmptyObjectToTrue}",
+                                                        "Condition": "{Item.Driver0.Points.IntValue, Converter=NumberEquals, Parameter=0}",
                                                         "Setters": [
                                                             {
                                                                 "ComponentVar": "stat",
-                                                                "Value": 1
+                                                                "Value": 2
                                                             },
                                                             {
                                                                 "ComponentVar": "statvalue",
@@ -100,13 +100,13 @@
                                                 "Component": "/comparison/LeftStatsBar",
                                                 "ComponentOptions": {
                                                     "Vars": {
-                                                        "stat": "{{Item.Driver1.Points, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Points}}",
+                                                        "stat": "{{{Item.Driver1.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Points.IntValue}}}",
                                                         "statvalue": "{Item.Driver1.Points}"
                                                     }
                                                 },
                                                 "Triggers": [
                                                     {
-                                                        "Condition": "{Item.Driver1.Points, Converter=EmptyObjectToTrue}",
+                                                        "Condition": "{Item.Driver1.Points.IntValue, Converter=NumberLess, Parameter=1}",
                                                         "Setters": [
                                                             {
                                                                 "ComponentVar": "stat",
@@ -166,7 +166,7 @@
                                                         "Condition": "{Item.Driver0.Position, Converter=EmptyObjectToTrue}",
                                                         "ConditionOr": "{Item.Driver0.Position, Converter=NumberGreater, Parameter={Season.GridSize}}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     },
                                                     {
                                                         "Condition": "{Item.Driver0.Position, Converter=NumberEquals, Parameter=1}",
@@ -466,7 +466,7 @@
                                                         "Condition": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=0}",
                                                         "ConditionOr": "{Item.Driver0.BestPos1, Converter=EmptyObjectToTrue}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     },
                                                     {
                                                         "Condition": "{Item.Driver0.BestPos1, Converter=NumberEquals, Parameter=1}",
@@ -999,7 +999,7 @@
                                                     {
                                                         "Condition": "{Item.Driver0.EventsCount, Converter=NumberEquals, Parameter=0}",
                                                         "ComponentVar": "stat",
-                                                        "Value": 1
+                                                        "Value": 2
                                                     }
                                                 ]
                                             },

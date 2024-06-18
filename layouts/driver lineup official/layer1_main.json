@@ -1,7 +1,6 @@
 {
     "BlockRoot": {
         "BlockType": "stack",
-      //  "Spacing": -80,
         "HorizontalAlignment": "Center",
         "Height": 2160,
         "Width": 3840,
@@ -26,37 +25,16 @@
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Left",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 0,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 0
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -68,80 +46,37 @@
                                             "IndexStart": 0,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 0,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 0
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             },
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Right",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 1,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 1
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -153,43 +88,21 @@
                                             "IndexStart": 1,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{LN{g1}Logo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 1,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 1
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             }
@@ -203,37 +116,16 @@
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Left",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 2,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 2
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -245,80 +137,37 @@
                                             "IndexStart": 2,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 2,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 2
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             },
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Right",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 3,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 3
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -330,43 +179,21 @@
                                             "IndexStart": 3,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 3,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 3
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             }
@@ -381,37 +208,16 @@
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Left",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 4,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 4
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -423,43 +229,21 @@
                                             "IndexStart": 4,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 4,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 4
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             },
@@ -535,37 +319,16 @@
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Right",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 5,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 5
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -577,43 +340,21 @@
                                             "IndexStart": 5,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 5,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 5
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             }
@@ -628,37 +369,16 @@
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Left",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 6,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 6
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -670,80 +390,37 @@
                                             "IndexStart": 6,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 6,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 6
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             },
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Right",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 7,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 7
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -755,43 +432,21 @@
                                             "IndexStart": 7,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 7,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 7
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             }
@@ -806,37 +461,16 @@
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Left",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 8,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 8
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -848,80 +482,37 @@
                                             "IndexStart": 8,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 8,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 8
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             },
                             {
                                 "BlockType": "stack",
                                 "HorizontalAlignment": "Right",
-                                "Spacing": -182,
+                                "Spacing": -171,
                                 "Items": [
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L0LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 9,
-                                                "source": "avatars/{Item.Team.Name}_1.png",
-                                                "comp": "Line0",
-                                                "n1": "{Item.Line0.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 9
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line0.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     },
                                     {
                                         "BlockType": "itemstack",
@@ -933,43 +524,21 @@
                                             "IndexStart": 9,
                                             "ItemTemplate": {
                                                 "BlockType": "image",
-                                                "Height": 252,
-                                                "Width": 252,
+                                                "Height": 230,
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}"
+                                                    "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
                                                 }
                                             }
                                         }
                                     },
                                     {
                                         "BlockType": "component",
-                                        "Component": "LineUpBlock",
+                                        "Component": "L1LineUpBlock",
                                         "ComponentOptions": {
                                             "Vars": {
-                                                "index": 9,
-                                                "source": "avatars/{Item.Team.Name}_2.png",
-                                                "comp": "Line1",
-                                                "n1": "{Item.Line1.Driver.{name1}, Converter=StringToUpperString}"
+                                                "index": 9
                                             }
-                                        },
-                                        "Triggers": [
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ComponentVar": "n1",
-                                                "Value": "?"
-                                            },
-                                            {
-                                                "Condition": "{Item.Line1.Driver.{name1}, Converter=EmptyObjectToTrue}",
-                                                "ConditionAnd": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder0.png"
-                                            },
-                                            {
-                                                "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
-                                                "ComponentVar": "source",
-                                                "Value": "avatars/placeholder1.png"
-                                            }
-                                        ]
+                                        }
                                     }
                                 ]
                             }

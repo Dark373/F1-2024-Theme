@@ -1,0 +1,128 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Margin": "20,40,20,0",
+        "Orientation": "Horizontal",
+        "Items": [
+            {
+                "BlockType": "stack",
+                "Orientation": "Vertical",
+                "Items": [
+                    //header block
+                    {
+                        "MarginBottom": 10,
+                        "BlockType": "component",
+                        "Component": "headerBlockSession",
+                        "ComponentOptions": {
+                            "Vars": {
+                                "source1": "[{Session.SessionType, Converter=StringToUpperString} CLASSIFICATION]"
+                            }
+                        }
+                    },
+                    {
+                        "BlockType": "stack",
+                        "Background": "{P1BarSecondColor}",
+                        "Margin": "0, 15, 0, 0",
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "QualP1Table"
+                            }
+                        ]
+                    },
+                    {
+                        "BlockType": "stack",
+                        "Margin": "0, -108, 0, 0",
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "QualMainTable"
+                            }
+                        ]
+                    },
+                    {
+                        "BlockType": "stack",
+                        "MarginTop": 30,
+                        "WidthPercent": 100,
+                        "Width": "*",
+                        "Background": "{FLFooterBG}",
+                        "Items": [
+                            {
+                                "ComponentName": "Footer",
+                                "RenderIf": "{QualFooter}",
+                                "BlockType": "stack",
+                                "Padding": "24,8,24,8",
+                                "VerticalAlignment": "Center",
+                                "Items": [
+                                    {
+                                        "Name": "Qualifying",
+                                        "BlockType": "stack",
+                                        "Margin": "0,8,0,0",
+                                        "Spacing": 120,
+                                        "Items": [
+                                            //quali
+                                            {
+                                                "Name": "txt1",
+                                                "BlockType": "text",
+                                                "Source": "[AVAILABLE TYRES:]",
+                                                "VerticalAlignment": "Center",
+                                                "FontName": "{FontNameDefault}",
+                                                "Foreground": "#C5C7C9",
+                                                "FontSize": 28
+                                            },
+                                            {
+                                                "Name": "txt1",
+                                                "BlockType": "text",
+                                                "Source": "[SOFT]",
+                                                "VerticalAlignment": "Center",
+                                                "FontName": "{FontNameDefault}",
+                                                "Foreground": "#E93324",
+                                                "FontSize": 28
+                                            },
+                                            {
+                                                "Name": "txt1",
+                                                "BlockType": "text",
+                                                "Source": "[MEDIUM]",
+                                                "VerticalAlignment": "Center",
+                                                "FontName": "{FontNameDefault}",
+                                                "Foreground": "#F3FD54",
+                                                "FontSize": 28
+                                            },
+                                            {
+                                                "Name": "txt1",
+                                                "BlockType": "text",
+                                                "Source": "[HARD]",
+                                                "VerticalAlignment": "Center",
+                                                "FontName": "{FontNameDefault}",
+                                                "Foreground": "{White}",
+                                                "FontSize": 28
+                                            },
+                                            {
+                                                "Name": "txt1",
+                                                "BlockType": "text",
+                                                "Source": "[INTERMEDIATE]",
+                                                "VerticalAlignment": "Center",
+                                                "FontName": "{FontNameDefault}",
+                                                "Foreground": "#6EBE4F",
+                                                "FontSize": 28
+                                            },
+                                            {
+                                                "Name": "txt1",
+                                                "BlockType": "text",
+                                                "Source": "[WET]",
+                                                "VerticalAlignment": "Center",
+                                                "FontName": "{FontNameDefault}",
+                                                "Foreground": "#518ED4",
+                                                "FontSize": 28
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "BlockRoot": {
+        "BlockType": "stack",
+        "Margin": "20,40,20,0",
+        "Orientation": "Horizontal",
+        "Items": [
+            {
+                "BlockType": "stack",
+                "Orientation": "Vertical",
+                "Items": [
+                    //header block
+                    {
+                        "MarginBottom": 10,
+                        "BlockType": "component",
+                        "Component": "headerBlockSession",
+                        "ComponentOptions": {
+                            "Vars": {
+                                "source1": "[{Session.SessionType, Converter=StringToUpperString} CLASSIFICATION]"
+                            }
+                        }
+                    },
+                    {
+                        "BlockType": "stack",
+                        "Background": "{P1BarSecondColor}",
+                        "Margin": "0, 15, 0, 0",
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "P1Table",
+                                "ComponentOptions": {
+                                    "Vars": {
+                                        "itemsource": "{Session.Drivers}"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "BlockType": "stack",
+                        "Margin": "0, -108, 0, 0",
+                        "Items": [
+                            {
+                                "BlockType": "component",
+                                "Component": "MainTable",
+                                "ComponentOptions": {
+                                    "Vars": {
+                                        "itemsource": "{Session.Drivers}"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "BlockType": "stack",
+                        "MarginTop": 30,
+                        "WidthPercent": 100,
+                        "Width": "*",
+                        "Background": "{FLFooterBG}",
+                        "Items": [
+                            {
+                                "BlockType": "itemstack",
+                                "HorizontalAlignment": "Left",
+                                "Orientation": "Horizontal",
+                                "ItemStackOptions": {
+                                    "ItemSource": "{Session.Drivers}",
+                                    "FilterMember": "IsRaceFastestLap",
+                                    "FilterMemberValue": "True",
+                                    "ItemTemplate": {
+                                        "BlockType": "component",
+                                        "Component": "Footer"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -333,7 +333,7 @@
                                                 "HorizontalAlignment": "Center",
                                                 "VerticalAlignment": "Center",
                                                 "ImageOptions": {
-                                                    "Path": "{Item.Team.LogotypePath}",
+                                                    "Path": "{Item.Team.DarkLogotypePath}",
                                                     "HorizontalAlignment": "Center",
                                                     "VerticalAlignment": "Center"
                                                 }

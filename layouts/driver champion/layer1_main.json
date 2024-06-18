@@ -76,7 +76,7 @@
                                     {
                                         "BlockType": "component",
                                         "Margin": "0,2000,0,0",
-                                        "Component": "/DriverLine",
+                                        "Component": "DriverLine",
                                         "ComponentOptions": {
                                             "Vars": {
                                                 "render": "false",

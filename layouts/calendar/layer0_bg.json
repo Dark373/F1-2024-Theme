@@ -6,6 +6,8 @@
             {
                 "BlockType": "image",
                 "Source": "bg/bg.{g1}.png",
+                "Width": 4800,
+                "Height": 2700,
                 "Triggers": [
                     {
                         "Condition": "{g2}",
