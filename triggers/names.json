@@ -46,5 +46,33 @@
         "ConditionAnd": "{podname1, Converter=StringEquals, Parameter=Full Name}",
         "Property": "Source",
         "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
+    },
+    //default
+    {
+        "TriggerName": "DefaultName1",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Driver.Name}"
+    },
+    {
+        "TriggerName": "DefaultName2",
+        "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
+        "ConditionAnd": "{name3, Converter=BoolReverse}",
+        "Property": "Source",
+        "Value": "{Item.Driver.{name1}}"
+    },
+    {
+        "TriggerName": "DefaultName3",
+        "Condition": "{name2}",
+        "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
+        "Property": "Source",
+        "Value": "{Item.Driver.RealName}"
+    },
+    {
+        "TriggerName": "DefaultName4",
+        "Condition": "{name2}",
+        "Property": "Source",
+        "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
     }
 ]
