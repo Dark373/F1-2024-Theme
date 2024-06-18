@@ -14,5 +14,21 @@
         "Foreground": "{[{Item.Team.Name}FG]}",
         "HorizontalAlignment": "Center",
         "VerticalAlignment": "Center"
+    },
+    {
+        "StyleName": "LP-BN",
+        "FontName": "{FontNameBlack}",
+        "FontSize": "{BannerDriverNameFS}",
+        "Foreground": "{[{Item.Team.Name}FG]}",
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Center"
+    },
+    {
+        "StyleName": "LP-BN1",
+        "FontName": "{FontNameDefault}",
+        "FontSize": 60,
+        "Foreground": "{[{Item.Team.Name}FG]}",
+        "HorizontalAlignment": "Left",
+        "VerticalAlignment": "Bottom"
     }
 ]

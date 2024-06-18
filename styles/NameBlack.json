@@ -54,7 +54,7 @@
     {
         "StyleName": "NameBlackStandings",
         "FontName": "{FontNameBlack}",
-        "FontSize": "{g8, Converter=NumberAdd, Parameter=30}",
+        "FontSize": "{g8, Converter=NumberAdd, Parameter=8}",
         "HorizontalAlignment": "Left",
         "VerticalAlignment": "Center"
     
@@ -72,7 +72,7 @@
     {
         "StyleName": "NameBlackPoints",
         "MarginTop": 8,
-        "Height": 204,
+        "Height": 194,
         "Width": 367,
         "FontName": "{FontNameBlack}",
         "Foreground": "{PointsStandingsFG}",
@@ -83,7 +83,7 @@
     },
     {
         "StyleName": "NameBlackPointsChamp",
-        "Height": 208,
+        "Height": 194,
         "Width": 367,
         "FontName": "{FontNameBlack}",
         "Foreground": "{ChampColourFG}",

@@ -29,5 +29,14 @@
         "StyleName": "CountryFlags",
         "Background": "{Black}",
         "Padding": "1,-17"
+    },
+    {
+        "StyleName": "V1Flags",
+        "VerticalAlignment": "Center",
+        "HorizontalAlignment": "Left",
+        "Background": "{Black}",
+        "Padding": "1,-6",
+        "MarginRight": 12,
+        "Height": 40
     }
 ]
