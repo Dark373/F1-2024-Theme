@@ -20,7 +20,7 @@
                             "BlockType": "shape",
                             "Height": 100,
                             "Width": 1000,
-                            "WidthPercent": "<stat>",
+                            "WidthPercent": "{<stat>, Converter=NumberAdd, Parameter=1}",
                             "VerticalAlignment": "Top",
                             "HorizontalAlignment": "Left",
                             "ShapeOptions": {

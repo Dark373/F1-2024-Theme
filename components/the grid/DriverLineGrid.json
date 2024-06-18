@@ -115,7 +115,16 @@
                                     "Trigger": "Name1"
                                 },
                                 {
+                                    "Trigger": "Name2"
+                                },
+                                {
                                     "Trigger": "Name3"
+                                },
+                                {
+                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                    "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
                                 }
                             ]
                         },
@@ -131,6 +140,12 @@
                             "Triggers": [
                                 {
                                     "Trigger": "Name4"
+                                },
+                                {
+                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                    "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                    "Property": "RenderIf",
+                                    "Value": false
                                 }
                             ]
                         }
@@ -158,7 +173,7 @@
                                     "Value": 75
                                 },
                                 {
-                                    "Condition": "{Item.Time, Converter=StringEquals, Parameter=0.000}",
+                                    "Condition": "{Item.Time, Converter=EmptyObjectToTrue}",
                                     "Property": "Source",
                                     "Value": "   - . - - -"
                                 }

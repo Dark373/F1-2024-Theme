@@ -64,6 +64,12 @@
                                                 },
                                                 {
                                                     "Trigger": "Driver0Name3"
+                                                },
+                                                {
+                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver0.Driver.Name, Converter=StringToUpperString}"
                                                 }
                                             ]
                                         },
@@ -79,6 +85,12 @@
                                             "Triggers": [
                                                 {
                                                     "Trigger": "Driver0Name4"
+                                                },
+                                                {
+                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "ConditionAnd": "{Item.Driver0.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                                    "Property": "RenderIf",
+                                                    "Value": false
                                                 }
                                             ]
                                         }
@@ -112,6 +124,12 @@
                                                 },
                                                 {
                                                     "Trigger": "Driver1Name3"
+                                                },
+                                                {
+                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver1.Driver.Name, Converter=StringToUpperString}"
                                                 }
                                             ]
                                         },
@@ -127,6 +145,12 @@
                                             "Triggers": [
                                                 {
                                                     "Trigger": "Driver1Name4"
+                                                },
+                                                {
+                                                    "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "ConditionAnd": "{Item.Driver1.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                                    "Property": "RenderIf",
+                                                    "Value": false
                                                 }
                                             ]
                                         }

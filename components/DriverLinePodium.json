@@ -37,6 +37,12 @@
                         },
                         {
                             "Trigger": "PodName3"
+                        },
+                        {
+                            "Condition": "{podname1, Converter=StringEquals, Parameter=Full Name}",
+                            "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
+                            "Property": "Source",
+                            "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
                         }
                     ]
                 },
@@ -49,6 +55,12 @@
                     "Triggers": [
                         {
                             "Trigger": "Name4"
+                        },
+                        {
+                            "Condition": "{podname1, Converter=StringEquals, Parameter=Full Name}",
+                            "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
+                            "Property": "RenderIf",
+                            "Value": false
                         }
                     ]
                 }

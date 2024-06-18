@@ -1,0 +1,56 @@
+{
+    "ComponentName": "V1TeamLine",
+    "BlockType": "dock",
+    "VerticalAlignment": "Center",
+    "Width": 850,
+    "Items": [
+        {
+            "BlockType": "stack",
+            "HorizontalAlignment": "Left",
+            "VerticalAlignment": "Center",
+            "Items": [
+                {
+                    "BlockType": "image",
+                    "Height": 40,
+                    "Width": 40,
+                    "MarginRight": 25,
+                    "Padding": "12, 4",
+                    "Background": "<bg>",
+                    "VerticalAlignment": "Center",
+                    "ImageOptions": {
+                        "Path": "{Item.Team.LogotypePath}",
+                        "VerticalAlignment": "Center"
+                    }
+                },
+                {
+                    "BlockType": "text",
+                    "Source": "{{Item.Team.Name, Converter=StringToUpperString}}",
+                    "Style": "<teamstyle>",
+                    "Triggers": [
+                        {
+                            "Condition": "{{Item.Team.Name, Converter=StringToUpperString}, Converter=EmptyObjectToTrue}",
+                            "Property": "Source",
+                            "Value": "{Item.Team.Name, Converter=StringToUpperString}"
+                        },
+                        {
+                            "Condition": "{TeamColourFG}",
+                            "Property": "Foreground",
+                            "Value": "{{Item.Team.Name}FG2}"
+                        },
+                        {
+                            "Condition": "{{Item.Team.Name}FG2, Converter=EmptyObjectToTrue}",
+                            "ConditionAnd": "{TeamColourFG}",
+                            "Property": "Foreground",
+                            "Value": "{Item.Team.Color}"
+                        },
+                        {
+                            "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                            "Property": "Foreground",
+                            "Value": "{SessionP1FG}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

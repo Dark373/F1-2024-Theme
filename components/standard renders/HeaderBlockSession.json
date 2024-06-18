@@ -1,0 +1,90 @@
+{
+    "ComponentName": "headerBlockSession",
+    "Name": "headerBlock",
+    "BlockType": "dock",
+    "Orientation": "Horizontal",
+    "Items": [
+        //headerLeft
+        {
+            "Name": "headerLeftPart",
+            "Spacing": 20,
+            "BlockType": "stack",
+            "HorizontalAlignment": "Left",
+            "Orientation": "Vertical",
+            "Items": [
+                //league name
+                {
+                    "BlockType": "stack",
+                    "VerticalAlignment": "Center",
+                    "MarginBottom": 5,
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "VerticalAlignment": "Center",
+                            "Source": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.Name, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024",
+                            "FontName": "{FontNameBlack}",
+                            "FontSize": 40,
+                            "Foreground": "{White}",
+                            "Triggers": [
+                                {
+                                    "Condition": "{g5, Converter=StringEquals, Parameter=Category Name}",
+                                    "Property": "Source",
+                                    "Value": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.MainLeagueCategory.Name, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024"
+                                },
+                                {
+                                    "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
+                                    "Property": "Source",
+                                    "Value": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.MainLeagueCategory.ShortName, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                //session
+                {
+                    "Name": "headerSessionLine",
+                    "BlockType": "stack",
+                    "VerticalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "text",
+                            "VerticalAlignment": "Center",
+                            "Source": "<source1>",
+                            "FontName": "{FontNameBold}",
+                            "FontSize": 70,
+                            "Foreground": "ABACB1",
+                            "Triggers": [
+                                {
+                                    "Condition": "{Item.SessionType, Converter=StringEquals, Parameter=race}",
+                                    "Property": "Source",
+                                    "Value": "[{Session.RaceType, Converter=StringToUpperString} CLASSIFICATION]"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        //headerRight
+        {
+            "Name": "headerRightPart",
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "HorizontalAlignment": "Right",
+            "Items": [
+                {
+                    "BlockType": "stack",
+                    "Items": [
+                        {
+                            "Name": "leagueLogo",
+                            "BlockType": "image",
+                            "Height": "{g4}",
+                            "Margin": "0, 0, 0, 0",
+                            "Source": "{Season.LeagueInfo.LeagueLogo}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

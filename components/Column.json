@@ -2,17 +2,24 @@
     "BlockType": "stack",
     "ComponentName": "Column",
     "Orientation": "Vertical",
+    "HorizontalAlignment": "Center",
     "Items": [
         {
-            "BlockType": "text",
-            "Style": "<style1>",
-            "Source": "<source>"
+            "BlockType": "stack",
+            "Orientation": "Vertical",
+            "Items": [
+                {
+                    "BlockType": "text",
+                    "Style": "<style1>",
+                    "Source": "<source>"
+                }
+            ]
         },
         {
             "BlockType": "shape",
-            "RenderIf": "{Item.Position, Converter=NumberNotEquals, Parameter={g6}}",
+            "RenderIf": "<renderif>",
             "WidthPercent": 100,
-            "Height": 3,
+            "Height": 8,
             "ShapeOptions": {
                 "Fill": "{White}"
             }

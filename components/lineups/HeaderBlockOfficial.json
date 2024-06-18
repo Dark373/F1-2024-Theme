@@ -15,7 +15,7 @@
         {
             "BlockType": "text",
             "Margin": "50,50,0,0",
-            "Source": "{Season.Name, Converter=StringToUpperString} [DRIVER LINE-UP]",
+            "Source": "{HeaderText}",
             "Style": "NameDefault1",
             "FontName": "{FontNameBold}",
             "Foreground": "{SeasonSmallFG}"
@@ -34,12 +34,6 @@
             },
             "Triggers": [
                 {
-                    "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Ferrari}",
-                    "ConditionAnd": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
-                    "Property": "Source",
-                    "Value": "logotypes/f1_logo.black.png"
-                },
-                {
                     "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToFalse}",
                     "Setters": [
                         {
@@ -49,10 +43,6 @@
                         {
                             "Property": "Height",
                             "Value": "{g4}"
-                        },
-                        {
-                            "Property": "MarginRight",
-                            "Value": "{g4, Converter=NumberAdd, Parameter=30}"
                         }
                     ]
                 }

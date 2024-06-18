@@ -20,7 +20,7 @@
                     "Items": [
                         {
                             "BlockType": "component",
-                            "Component": "/DriverLine",
+                            "Component": "DriverLine",
                             "ComponentOptions": {
                                 "Vars": {
                                     "Halign": "Left",
