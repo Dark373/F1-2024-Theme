@@ -9,21 +9,30 @@
     "Team": 
     [
       "Dark",
-      "Light"
+      "Light",
+      "Alternative"
     ]
   },
   "LogotypeBehaviours": [
     {
       "Category": "Team",
-      "Variant": "light",
+      "Variant": "Alternative",
       "UseFallbackSource": true,
-      "UseFallbackVariant": false
+      "UseFallbackVariant": true,
+      "SetVariantByDefault": false
     },
     {
       "Category": "Team",
-      "Variant": "dark",
+      "Variant": "Light",
       "UseFallbackSource": true,
-      "UseFallbackVariant": false,
+      "UseFallbackVariant": true,
+      "SetVariantByDefault": false
+    },
+    {
+      "Category": "Team",
+      "Variant": "Dark",
+      "UseFallbackSource": true,
+      "UseFallbackVariant": true,
       "SetVariantByDefault": false
     }
   ]
