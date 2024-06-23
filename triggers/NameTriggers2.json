@@ -8,6 +8,7 @@
     {
         "TriggerName": "VarName2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",

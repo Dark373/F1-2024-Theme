@@ -8,6 +8,7 @@
     {
         "TriggerName": "Driver0Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -35,6 +36,7 @@
     {
         "TriggerName": "Driver1Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -63,6 +65,7 @@
     {
         "TriggerName": "Line0Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -90,6 +93,7 @@
     {
         "TriggerName": "Line1Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -118,6 +122,7 @@
     {
         "TriggerName": "SecLine0Name2",
         "Condition": "{lnname1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -145,6 +150,7 @@
     {
         "TriggerName": "SecLine1Name2",
         "Condition": "{lnname1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",

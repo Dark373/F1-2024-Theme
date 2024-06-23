@@ -121,6 +121,32 @@
             "DefaultValue": 2
         },
         {
+            "Name": "DriverCardFS",
+            "PublicName": "Standard Renders: Name Font Size",
+            "Description": "Determines the font size of the name on the driver cards associated with standard renders.",
+            "Category": "Driver Global",
+            "Type": "Integer",
+            "DefaultValue": 60
+        },
+        {
+            "Name": "DriverWidth",
+            "PublicName": "Driver Name Width",
+            "Description": "Changes the width of the driver line. Default: 500. For standard renders only.",
+            "Category": "Driver Global",
+            "Type": "Integer",
+            "MinimumValue": 200,
+            "DefaultValue": 500
+        },
+        {
+            "Name": "TeamWidth",
+            "PublicName": "Team Name Width",
+            "Description": "Changes the width of the team line. Default: 850. For standard renders only.",
+            "Category": "Driver Global",
+            "Type": "Integer",
+            "MinimumValue": 200,
+            "DefaultValue": 850
+        },
+        {
             "Name": "cal1",
             "PublicName": "Render Calendar Second Column",
             "Description": "Spilts the total rounds in two columns. Toggle off for all rounds to render in a single column; Advised for very short seasons.",
@@ -346,12 +372,37 @@
             "DefaultValue": false
         },
         {
+            "Name": "StaColouredText",
+            "PublicName": "Render Coloured Font Text",
+            "Description": "Renders coloured font text such as gold for total P1.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
             "Name": "sta13",
             "PublicName": "Team Colour Background",
             "Description": "Renders team colour behind the driver name.",
             "Category": "Standings",
             "Type": "Bool",
             "DefaultValue": true
+        },
+        {
+            "Name": "StaDriverCard",
+            "PublicName": "Render Driver Cards",
+            "Description": "Displays driver cards on the left-hand side.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
+            "Name": "StaSecondDriverCard",
+            "PublicName": "Render Second Driver Card",
+            "Description": "Displays a second driver cards on the left-hand side.",
+            "Category": "Standings",
+            "Type": "Enum",
+            "EnumValues": ["Do Not Render", "Driver Leader", "Team Leader"],
+            "DefaultValue": "Do Not Render"
         },
         {
             "Name": "sta1",
@@ -371,6 +422,14 @@
             "DefaultValue": false
         },
         {
+            "Name": "StaGain",
+            "PublicName": "Render Points Gain",
+            "Description": "Points gained from the previous race.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
             "Name": "sta3",
             "PublicName": "First Data Table Column.",
             "Description": "Default: Points Interval",
@@ -378,6 +437,14 @@
             "Type": "Enum",
             "EnumValues": ["PointsToAboveDiff", "PointsToLeaderDiff"],
             "DefaultValue": "PointsToAboveDiff"
+        },
+        {
+            "Name": "StaInterval",
+            "PublicName": "Render Gap To Above",
+            "Description": "Renders a column with points gap to above.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
         },
         {
             "Name": "sta4",
@@ -396,9 +463,33 @@
             "DefaultValue": true
         },
         {
+            "Name": "StaTop5",
+            "PublicName": "Render Top 5",
+            "Description": "Renders the amount of top 5 finishes",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
             "Name": "sta6",
             "PublicName": "Render Top 10",
             "Description": "Renders the amount of top 10 finishes",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "StaBest",
+            "PublicName": "Render Best Finishing Position",
+            "Description": "Renders the highest finishing position.",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "StaBestQ",
+            "PublicName": "Render Best Grid Position",
+            "Description": "Renders the highest grid position.",
             "Category": "Standings",
             "Type": "Bool",
             "DefaultValue": true
@@ -439,6 +530,14 @@
             "Name": "sta11",
             "PublicName": "Render DNF",
             "Description": "Renders the amount of times a driver did not finish",
+            "Category": "Standings",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "StaEvents",
+            "PublicName": "Render Events Total",
+            "Description": "Renders the amount of events the driver attended.",
             "Category": "Standings",
             "Type": "Bool",
             "DefaultValue": true
@@ -505,13 +604,21 @@
             "DefaultValue": 1
         },
         {
-            "Name": "DriverWidth",
-            "PublicName": "Driver Name Width",
-            "Description": "Changes the width of the driver line. Default: 500.",
+            "Name": "RaceDriverCard",
+            "PublicName": "Render Driver Cards",
+            "Description": "Displays driver cards on the left-hand side.",
             "Category": "Race Results",
-            "Type": "Integer",
-            "MinimumValue": 200,
-            "DefaultValue": 500
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
+            "Name": "RaceSecondDriverCard",
+            "PublicName": "Render Second Driver Card",
+            "Description": "Displays a second driver cards on the left-hand side.",
+            "Category": "Race Results",
+            "Type": "Enum",
+            "EnumValues": ["Do Not Render", "Fastest Lap", "Driver Of The Day"],
+            "DefaultValue": "Do Not Render"
         },
         {
             "Name": "RaceDOTD",
@@ -610,12 +717,37 @@
             "DefaultValue": false
         },
         {
+            "Name": "QualDriverCard",
+            "PublicName": "Render Driver Cards",
+            "Description": "Displays driver cards on the left-hand side.",
+            "Category": "Qualifying Results",
+            "Type": "Bool",
+            "DefaultValue": false
+        },
+        {
+            "Name": "QualSecondDriverCard",
+            "PublicName": "Render Second Driver Card",
+            "Description": "Displays a second driver cards on the left-hand side.",
+            "Category": "Qualifying Results",
+            "Type": "Enum",
+            "EnumValues": ["Do Not Render", "Lap Time", "Second"],
+            "DefaultValue": "Do Not Render"
+        },
+        {
             "Name": "QualTime",
             "PublicName": "Render Gap",
             "Description": "",
             "Category": "Qualifying Results",
             "Type": "Bool",
             "DefaultValue": true
+        },
+        {
+            "Name": "QualKPH",
+            "PublicName": "Render Maximum Speed",
+            "Description": "",
+            "Category": "Qualifying Results",
+            "Type": "Bool",
+            "DefaultValue": false
         },
         {
             "Name": "QualTyre",

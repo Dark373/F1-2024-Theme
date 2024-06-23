@@ -8,6 +8,7 @@
     {
         "TriggerName": "Name2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -35,6 +36,7 @@
     {
         "TriggerName": "PodName2",
         "Condition": "{podname1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{podname1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{podname1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",
@@ -57,6 +59,7 @@
     {
         "TriggerName": "DefaultName2",
         "Condition": "{name1, Converter=StringEquals, Parameter=Name}",
+        "ConditionOr": "{name1, Converter=StringEquals, Parameter=RealName}",
         "ConditionOr": "{name1, Converter=StringEquals, Parameter=InGameName}",
         "ConditionAnd": "{name3, Converter=BoolReverse}",
         "Property": "Source",

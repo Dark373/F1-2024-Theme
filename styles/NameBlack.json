@@ -82,17 +82,6 @@
     
     },
     {
-        "StyleName": "NameBlackPointsChamp",
-        "Height": 194,
-        "Width": 367,
-        "FontName": "{FontNameBlack}",
-        "Foreground": "{ChampColourFG}",
-        "FontSize": 128,
-        "HorizontalAlignment": "Center",
-        "VerticalAlignment": "Center"
-    
-    },
-    {
         "StyleName": "NameBlackCom",
         "FontName": "{FontNameBlack}",
         "FontSize": 120,
