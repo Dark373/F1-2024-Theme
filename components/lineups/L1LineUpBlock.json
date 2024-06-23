@@ -27,6 +27,11 @@
                             "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
                             "Property": "Source",
                             "Value": "avatars/placeholder1.png"
+                        },
+                        {
+                            "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+                            "Property": "Source",
+                            "Value": "avatars/{Item.Line1.Driver.Name}.png"
                         }
                     ]
                 },

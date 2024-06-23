@@ -61,9 +61,16 @@
                             "VerticalAlignment": "Center",
                             "HorizontalAlignment": "Center",
                             "ImageOptions": {
-                                "Path": "{Item.Team.LogotypePath}",
+                                "Path": "{Item.Team.LightLogotypePath}",
                                 "VerticalAlignment": "Center"
-                            }
+                            },
+                            "Triggers": [
+                                {
+                                    "Condition": "{Item.Team.LightLogotypePath, Converter=EmptyObjectToTrue}",
+                                    "Property": "ImageOptions.Path",
+                                    "Value": "avatars/placeholder1.png"
+                                }
+                            ]
                         }
                     ]
                 },

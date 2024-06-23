@@ -108,6 +108,7 @@
                             "BlockType": "text",
                             "VerticalAlignment": "Center",
                             "Source": "[POINTS AFTER THE]",
+                            "HorizontalAlignment": "Right",
                             "FontName": "{FontNameDefault}",
                             "FontSize": 52,
                             "Foreground": "{{g1}}",

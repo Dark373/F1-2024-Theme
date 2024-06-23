@@ -21,7 +21,7 @@
                 },
                 {
                     "BlockType": "text",
-                    "Source": "{Session.FastestLapDriver.Name}",
+                    "Source": "{Session.FastestLapDriver.{name1}}",
                     "VerticalAlignment": "Center",
                     "FontName": "{FontNameItalic}",
                     "Foreground": "{FooterFG}",
@@ -30,13 +30,13 @@
                         {
                             "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
                             "Property": "Source",
-                            "Value": "{Session.FastestLapDriver.Name, Converter=StringToUpperString}"
+                            "Value": "{Session.FastestLapDriver.Name}"
                         },
                         {
                             "Condition": "{name2}",
                             "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
                             "Property": "Source",
-                            "Value": "{Session.FastestLapDriver.RealName, Converter=StringToUpperString}"
+                            "Value": "{Session.FastestLapDriver.RealName}"
                         },
                         {
                             "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
@@ -164,7 +164,7 @@
                         },
                         {
                             "BlockType": "text",
-                            "Source": "{Session.DriverDayDriver.Name}",
+                            "Source": "{Session.DriverDayDriver.{name1}}",
                             "VerticalAlignment": "Center",
                             "FontName": "{FontNameItalic}",
                             "Foreground": "{FooterFG}",
@@ -173,13 +173,13 @@
                                 {
                                     "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
                                     "Property": "Source",
-                                    "Value": "{Session.DriverDayDriver.Name, Converter=StringToUpperString}"
+                                    "Value": "{Session.DriverDayDriver.Name}"
                                 },
                                 {
                                     "Condition": "{name2}",
                                     "ConditionAnd": "{name1, Converter=StringEquals, Parameter=Full Name}",
                                     "Property": "Source",
-                                    "Value": "{Session.DriverDayDriver.RealName, Converter=StringToUpperString}"
+                                    "Value": "{Session.DriverDayDriver.RealName}"
                                 },
                                 {
                                     "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
@@ -215,6 +215,13 @@
                     ]
                 }
             }
+        }
+    ],
+    "Triggers": [
+        {
+            "Condition": "{name1, Converter=StringNotEquals, Parameter=Full Name}",
+            "Property": "Padding",
+            "Value": "24,21,24,20"
         }
     ]
 }

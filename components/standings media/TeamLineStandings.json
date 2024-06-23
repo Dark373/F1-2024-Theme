@@ -143,6 +143,11 @@
                                             "Value": "logotypes/reserve.png"
                                         }
                                     ]
+                                },
+                                {
+                                    "Condition": "{Item.Team.LightLogotypePath, Converter=EmptyObjectToTrue}",
+                                    "Property": "ImageOptions.Path",
+                                    "Value": "avatars/placeholder1.png"
                                 }
                             ]
                         }

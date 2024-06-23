@@ -1,5 +1,5 @@
 {
-    "ComponentName": "QualMainTable",
+    "ComponentName": "CombinedQualMainTable",
     "BlockType": "table",
     "TableOptions": {
         "ItemsSource": "{Session.Drivers}",
@@ -56,7 +56,7 @@
                 }
             },
             {
-                "Header": "[TIME]",
+                "Header": "[Q1]",
                 "Template": {
                     "BlockType": "component",
                     "Component": "MainColumn",
@@ -67,7 +67,7 @@
                             "font": "{FontNameItalic}",
                             "w": "150",
                             "pad": "20,0",
-                            "source": "{Item.AbsoluteTime}"
+                            "source": "{Item.QualQ1Time}"
                         }
                     },
                     "Triggers": [
@@ -82,6 +82,113 @@
                             "Value": "[No Time]"
                         }
                     ]
+                }
+            },
+            {
+                "Header": "[LAPS]",
+                "Template": {
+                    "RenderIf": "{QualLaps}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionFG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "40,0",
+                            "source": "{Item.LapsCountQ1}"
+                        }
+                    }
+                }
+            },
+            {
+                "Header": "[Q2]",
+                "Template": {
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionFG}",
+                            "font": "{FontNameItalic}",
+                            "w": "150",
+                            "pad": "20,0",
+                            "source": "{Item.QualQ2Time}"
+                        }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.IsOverallFastestLap}",
+                            "ComponentVar": "fg",
+                            "Value": "{SessionFastestLapFG}"
+                        },
+                        {
+                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
+                            "ComponentVar": "source",
+                            "Value": "[No Time]"
+                        }
+                    ]
+                }
+            },
+            {
+                "Header": "[LAPS]",
+                "Template": {
+                    "RenderIf": "{QualLaps}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionFG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "40,0",
+                            "source": "{Item.LapsCountQ2}"
+                        }
+                    }
+                }
+            },
+            {
+                "Header": "[Q3]",
+                "Template": {
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionFG}",
+                            "font": "{FontNameItalic}",
+                            "w": "150",
+                            "pad": "20,0",
+                            "source": "{Item.QualQ3Time}"
+                        }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
+                            "ComponentVar": "source",
+                            "Value": "[No Time]"
+                        }
+                    ]
+                }
+            },
+            {
+                "Header": "[LAPS]",
+                "Template": {
+                    "RenderIf": "{QualLaps}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionFG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "40,0",
+                            "source": "{Item.LapsCountQ3}"
+                        }
+                    }
                 }
             },
             {
@@ -101,11 +208,6 @@
                         }
                     },
                     "Triggers": [
-                        {
-                            "Condition": "{Item.IsRaceFastestLap}",
-                            "ComponentVar": "fg",
-                            "Value": "{SessionFastestLapFG}"
-                        },
                         {
                             "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
                             "ComponentVar": "source",
@@ -134,7 +236,7 @@
                     ]
                 }
             },
-            {
+                        {
                 "Header": "[KPH]",
                 "Template": {
                     "RenderIf": "{QualKPH}",
@@ -148,114 +250,6 @@
                             "w": "50",
                             "pad": "40,0",
                             "source": "{Item.MaxSpeed}"
-                        }
-                    }
-                }
-            },
-            {
-                "Header": "[S1]",
-                "Template": {
-                    "RenderIf": "{QualSector}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionFG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "5,0",
-                            "source": "{Item.FastestLapSector1}"
-                        }
-                    },
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.IsOverallFastestSector1}",
-                            "ComponentVar": "fg",
-                            "Value": "{SessionFastestLapFG}"
-                        },
-                        {
-                            "Condition": "{Item.FastestLapSector1, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "- - . - - -"
-                        }
-                    ]
-                }
-            },
-            {
-                "Header": "[S2]",
-                "Template": {
-                    "RenderIf": "{QualSector}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionFG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "5,0",
-                            "source": "{Item.FastestLapSector2}"
-                        }
-                    },
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.IsOverallFastestSector2}",
-                            "ComponentVar": "fg",
-                            "Value": "{SessionFastestLapFG}"
-                        },
-                        {
-                            "Condition": "{Item.FastestLapSector2, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "- - . - - -"
-                        }
-                    ]
-                }
-            },
-            {
-                "Header": "[S3]",
-                "Template": {
-                    "RenderIf": "{QualSector}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionFG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "5,0",
-                            "source": "{Item.FastestLapSector3}"
-                        }
-                    },
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.IsOverallFastestSector3}",
-                            "ComponentVar": "fg",
-                            "Value": "{SessionFastestLapFG}"
-                        },
-                        {
-                            "Condition": "{Item.FastestLapSector2, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "- - . - - -"
-                        }
-                    ]
-                }
-            },
-            {
-                "Header": "[LAPS]",
-                "Template": {
-                    "RenderIf": "{QualLaps}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionFG}",
-                            "font": "{FontNameItalic}",
-                            "w": "50",
-                            "pad": "40,0",
-                            "source": "{Item.LapsCount}"
                         }
                     }
                 }

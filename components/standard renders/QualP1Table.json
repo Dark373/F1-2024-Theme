@@ -129,6 +129,24 @@
             {
                 "Header": "",
                 "Template": {
+                    "RenderIf": "{QualKPH}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionP1FG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "40,0",
+                            "source": "{Item.MaxSpeed}"
+                        }
+                    }
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
                     "RenderIf": "{QualSector}",
                     "BlockType": "component",
                     "Component": "MainColumn",

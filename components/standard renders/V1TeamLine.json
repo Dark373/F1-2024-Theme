@@ -2,7 +2,7 @@
     "ComponentName": "V1TeamLine",
     "BlockType": "dock",
     "VerticalAlignment": "Center",
-    "Width": 850,
+    "Width": "{TeamWidth}",
     "Items": [
         {
             "BlockType": "stack",
@@ -20,15 +20,47 @@
                     "ImageOptions": {
                         "Path": "{Item.Team.LogotypePath}",
                         "VerticalAlignment": "Center"
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                            "Property": "ImageOptions.Path",
+                            "Value": "{Item.Team.LightLogotypePath}"
+                        },
+                        {
+                            "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                            "Property": "ImageOptions.Path",
+                            "Value": "logotypes/reserve__light.png"
+                        },
+                        {
+                            "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                            "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                            "Setters": [
+                                {
+                                    "Property": "ImageOptions.Path",
+                                    "Value": "logotypes/reserve.png"
+                                },
+                                {
+                                    "Property": "Background",
+                                    "Value": "{Season.MainLeagueCategory.Color}"
+                                }
+                            ]
+                        },
+                        {
+                            "Condition": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
+                            "ConditionAnd": "{Item.SeatPosition, Converter=NumberNotEquals, Parameter=0}",
+                            "Property": "Source",
+                            "Value": "avatars/placeholder1.png"
+                        }
+                    ]
                 },
                 {
                     "BlockType": "text",
-                    "Source": "{{Item.Team.Name, Converter=StringToUpperString}}",
+                    "Source": "{Standard {Item.Team.Name, Converter=StringToUpperString}}",
                     "Style": "<teamstyle>",
                     "Triggers": [
                         {
-                            "Condition": "{{Item.Team.Name, Converter=StringToUpperString}, Converter=EmptyObjectToTrue}",
+                            "Condition": "{Standard {Item.Team.Name, Converter=StringToUpperString}, Converter=EmptyObjectToTrue}",
                             "Property": "Source",
                             "Value": "{Item.Team.Name, Converter=StringToUpperString}"
                         },

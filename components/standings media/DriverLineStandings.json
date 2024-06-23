@@ -121,6 +121,11 @@
                                     },
                                     "Triggers": [
                                         {
+                                            "Condition": "{Item.Team.LightLogotypePath, Converter=EmptyObjectToTrue}",
+                                            "Property": "ImageOptions.Path",
+                                            "Value": "avatars/placeholder1.png"
+                                        },
+                                        {
                                             "Condition": "{{Item.Team.Name}LogoSize, Converter=EmptyObjectToTrue}",
                                             "Property": "Height",
                                             "Value": 204
@@ -144,6 +149,13 @@
                                             ]
                                         }
                                     ]
+                                }
+                            ],
+                            "Triggers": [
+                                {
+                                    "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                                    "Property": "Background",
+                                    "Value": "{Season.MainLeagueCategory.Color}"
                                 }
                             ]
                         },

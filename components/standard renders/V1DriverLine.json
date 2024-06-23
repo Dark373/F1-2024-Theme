@@ -27,6 +27,7 @@
                 {
                     "BlockType": "text",
                     "Style": "<style1>",
+                    "Padding": "1,0",
                     "Source": "{Item.Driver.{name1}}",
                     "Triggers": [
                         {
@@ -43,6 +44,11 @@
                             "ConditionAnd": "{Item.Driver.RealName, Converter=EmptyObjectToTrue}",
                             "Property": "Source",
                             "Value": "{Item.Driver.Name}"
+                        },
+                        {
+                            "Condition": "{name1, Converter=StringNotEquals, Parameter=Full Name}",
+                            "Property": "MarginTop",
+                            "Value": 8
                         }
                     ]
                 },

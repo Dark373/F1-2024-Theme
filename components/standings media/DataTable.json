@@ -21,7 +21,7 @@
                     "ComponentOptions": {
                         "Vars": {
                             "source": "+{Item.{sta3}}",
-                            "w": 220
+                            "w": 290
                         }
                     },
                     "Triggers": [
@@ -53,14 +53,18 @@
                     "ComponentOptions": {
                         "Vars": {
                             "source": "+{Item.PointsToLeaderDiff}",
-                            "w": 280,
+                            "w": 290,
                             "fg": "{Col2FG}"
                         }
                     },
                     "Triggers": [
                         {
                             "Condition": "{Item.PointsToLeaderDiff.IntValue, Converter=NumberEquals, Parameter=0}",
-                            "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                            "ComponentVar": "source",
+                            "Value": "+0"
+                        },
+                        {
+                            "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
                             "ComponentVar": "source",
                             "Value": ""
                         }
@@ -113,6 +117,21 @@
                 }
             },
             {
+                "Header": "[TOP 5]",
+                "Template": {
+                    "RenderIf": "{StaTop5}",
+                    "BlockType": "component",
+                    "Component": "DataTableColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "source": "{Item.CountTop5, Converter=NumberZeroToEmpty}",
+                            "w": 220,
+                            "fg": "{CountTop5}"
+                        }
+                    }
+                }
+            },
+            {
                 "Header": "[TOP 10]",
                 "Template": {
                     "RenderIf": "{sta6}",
@@ -123,6 +142,51 @@
                             "source": "{Item.CountTop10, Converter=NumberZeroToEmpty}",
                             "w": 220,
                             "fg": "{Top10FG}"
+                        }
+                    }
+                }
+            },
+            {
+                "Header": "[BEST]",
+                "Template": {
+                    "RenderIf": "{StaBest}",
+                    "BlockType": "component",
+                    "Component": "DataTableColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "source": "{Item.BestPos1, Converter=NumberZeroToEmpty}",
+                            "w": 220,
+                            "fg": "{BestPos1}"
+                        }
+                    }
+                }
+            },
+            {
+                "Header": "[BEST Q]",
+                "Template": {
+                    "RenderIf": "{StaBestQ}",
+                    "BlockType": "component",
+                    "Component": "DataTableColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "source": "{Item.BestPos1, Converter=NumberZeroToEmpty}",
+                            "w": 220,
+                            "fg": "{Black}"
+                        }
+                    }
+                }
+            },
+            {
+                "Header": "[DOTD]",
+                "Template": {
+                    "RenderIf": "{sta9}",
+                    "BlockType": "component",
+                    "Component": "DataTableColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "source": "{Item.RaceDriverDayCount, Converter=NumberZeroToEmpty}",
+                            "w": 220,
+                            "fg": "{DOTDFG}"
                         }
                     }
                 }
@@ -153,21 +217,6 @@
                             "source": "{Item.CountQualP1, Converter=NumberZeroToEmpty}",
                             "w": 220,
                             "fg": "{PoleFG}"
-                        }
-                    }
-                }
-            },
-            {
-                "Header": "[DOTD]",
-                "Template": {
-                    "RenderIf": "{sta9}",
-                    "BlockType": "component",
-                    "Component": "DataTableColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "source": "{Item.RaceDriverDayCount, Converter=NumberZeroToEmpty}",
-                            "w": 220,
-                            "fg": "{DOTDFG}"
                         }
                     }
                 }

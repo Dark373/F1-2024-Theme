@@ -21,22 +21,10 @@
                         {
                             "BlockType": "text",
                             "VerticalAlignment": "Center",
-                            "Source": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.Name, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024",
+                            "Source": "<source0>",
                             "FontName": "{FontNameBlack}",
                             "FontSize": 40,
-                            "Foreground": "{White}",
-                            "Triggers": [
-                                {
-                                    "Condition": "{g5, Converter=StringEquals, Parameter=Category Name}",
-                                    "Property": "Source",
-                                    "Value": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.MainLeagueCategory.Name, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024"
-                                },
-                                {
-                                    "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
-                                    "Property": "Source",
-                                    "Value": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.MainLeagueCategory.ShortName, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024"
-                                }
-                            ]
+                            "Foreground": "{White}"
                         }
                     ]
                 },

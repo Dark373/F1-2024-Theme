@@ -84,7 +84,14 @@
                             "pad": "0,0",
                             "source": "{Item.Time}"
                         }
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Time, Converter=EmptyObjectToTrue}",
+                            "ComponentVar": "source",
+                            "Value": "- - . - - -"
+                        }
+                    ]
                 }
             },
             {
