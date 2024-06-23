@@ -5,7 +5,7 @@
         "Orientation": "Vertical",
         "Items": [
             {
-                "BlockType": "stack",
+                "BlockType": "dock",
                 "Width": "*",
                 "Items": [
                     {
@@ -16,13 +16,6 @@
                                 "source": "[DRIVER]"
                             }
                         }
-                    }
-                ],
-                "Triggers": [
-                    {
-                        "Condition": "{sta2}",
-                        "Property": "Width",
-                        "Value": "{StandingsDriverLineWidth}"
                     }
                 ]
             },
@@ -60,6 +53,7 @@
                                             "Vars": {
                                                 "source": "{Item.{sta1}}",
                                                 "style1": "NameBlackPoints",
+                                                "fg": "{PointsStandingsFG}",
                                                 "renderif": "{Item.Position, Converter=NumberNotEquals, Parameter={g6}}"
                                             }
                                         },
@@ -104,8 +98,9 @@
                                             },
                                             {
                                                 "Condition": "{sta14}",
-                                                "ComponentVar": "style1",
-                                                "Value": "NameBlackPointsChamp"
+                                                "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                                                "ComponentVar": "fg",
+                                                "Value": "{ChampColourFG}"
                                             }
                                         ]
                                     }

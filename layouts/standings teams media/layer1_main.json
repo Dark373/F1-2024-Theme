@@ -5,7 +5,7 @@
         "Orientation": "Vertical",
         "Items": [
             {
-                "BlockType": "stack",
+                "BlockType": "dock",
                 "Width": "*",
                 "Items": [
                     {
@@ -16,13 +16,6 @@
                                 "source": "[TEAM]"
                             }
                         }
-                    }
-                ],
-                "Triggers": [
-                    {
-                        "Condition": "{sta2}",
-                        "Property": "Width",
-                        "Value": "{StandingsTeamLineWidth}"
                     }
                 ]
             },
@@ -60,13 +53,15 @@
                                             "Vars": {
                                                 "source": "{Item.{sta1}}",
                                                 "style1": "NameBlackPoints",
+                                                "fg": "{PointsStandingsFG}",
                                                 "renderif": "{Item.Position, Converter=NumberNotEquals, Parameter={TeamCount}}"
                                             }
                                         },
                                         "Triggers": [
                                             {
-                                                "Condition": "{{sta1}, Converter=EmptyObjectToTrue}",
-                                                "Property": "Source",
+                                                "Condition": "{Item.Points.IntValue, Converter=NumberEquals, Parameter=0}",
+                                                "ConditionAnd": "{sta1, Converter=StringEquals, Parameter=Points}",
+                                                "ComponentVar": "source",
                                                 "Value": "0"
                                             },
                                             {
@@ -103,8 +98,9 @@
                                             },
                                             {
                                                 "Condition": "{sta14}",
-                                                "ComponentVar": "style1",
-                                                "Value": "NameBlackPointsChamp"
+                                                "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                                                "ComponentVar": "fg",
+                                                "Value": "{ChampColourFG}"
                                             }
                                         ]
                                     }

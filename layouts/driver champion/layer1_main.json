@@ -51,6 +51,11 @@
                                         "Value": "0,100,0,505"
                                     }
                                 ]
+                            },
+                            {
+                                "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                                "Property": "Source",
+                                "Value": "avatars/Ferrari_0.png"
                             }
                         ]
                     },

@@ -336,14 +336,34 @@
                                                     "Path": "{Item.Team.DarkLogotypePath}",
                                                     "HorizontalAlignment": "Center",
                                                     "VerticalAlignment": "Center"
-                                                }
+                                                },
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
+                                                        "ConditionAnd": "{Item.SeatPosition, Converter=NumberNotEquals, Parameter=0}",
+                                                        "Property": "ImageOptions.Path",
+                                                        "Value": "avatars/placeholder1.png"
+                                                    },
+                                                    {
+                                                        "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                                                        "Property": "ImageOptions.Path",
+                                                        "Value": "logotypes/reserve.png"
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "BlockType": "text",
                                                 "PaddingLeft": 40,
                                                 "Padding": "0,1",
                                                 "Style": "TeamNamePodium",
-                                                "Source": "[{Item.Team.Name, Converter=StringToUpperString}]"
+                                                "Source": "[{Item.Team.Name, Converter=StringToUpperString}]",
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                                                        "Property": "Source",
+                                                        "Value": "[RESERVE]"
+                                                    }
+                                                ]
                                             }
                                         ],
                                         "Triggers": [

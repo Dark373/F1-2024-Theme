@@ -205,7 +205,7 @@
                                                                 "Value": "{{g1}}"
                                                             },
                                                             {
-                                                                "Condition": "{F1Numbers{Item.Team.Name}, Converter=StringEquals, Parameter=F1Numbers}",
+                                                                "Condition": "{F1Numbers{Item.Team.Name}, Converter=EmptyObjectToTrue}",
                                                                 "Setters": [
                                                                     {
                                                                         "Property": "FontName",

@@ -29,6 +29,7 @@
                     },
                     {
                         "Condition": "{cha2, Converter=StringEquals, Parameter=Category}",
+                        "ConditionOr": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
                         "Property": "Background",
                         "Value": "{Season.MainLeagueCategory.Color}"
                     },

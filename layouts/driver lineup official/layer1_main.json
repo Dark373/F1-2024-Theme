@@ -49,7 +49,14 @@
                                                 "Height": 230,
                                                 "ImageOptions": {
                                                     "Path": "{Item.Team.{{g1}LNLogo}LogotypePath}"
-                                                }
+                                                },
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Item.Team.{{g1}LNLogo}LogotypePath, Converter=EmptyObjectToTrue}",
+                                                        "Property": "ImageOptions.Path",
+                                                        "Value": "avatars/placeholder1.png"
+                                                    }
+                                                ]
                                             }
                                         }
                                     },
@@ -91,7 +98,14 @@
                                                 "Height": 230,
                                                 "ImageOptions": {
                                                     "Path": "{Item.Team.{LN{g1}Logo}LogotypePath}"
-                                                }
+                                                },
+                                                "Triggers": [
+                                                    {
+                                                        "Condition": "{Item.Team.{{g1}LNLogo}LogotypePath, Converter=EmptyObjectToTrue}",
+                                                        "Property": "ImageOptions.Path",
+                                                        "Value": "avatars/placeholder1.png"
+                                                    }
+                                                ]
                                             }
                                         }
                                     },

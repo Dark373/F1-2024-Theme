@@ -65,6 +65,12 @@
                                                                 "Value": "0,700,0,905"
                                                             }
                                                         ]
+                                                    },
+                                                    {
+                                                        "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                                                        "ConditionAnd": "{g3, Converter=StringEquals, Parameter=No Avatars}",
+                                                        "Property": "Source",
+                                                        "Value": "{Item.Team.LightLogotypePath}"
                                                     }
                                                 ]
                                             }
@@ -82,6 +88,11 @@
                                             "Color": "{Item.Team.Color}"
                                         },
                                         "Triggers": [
+                                            {
+                                                "Condition": "{Item.Team.Name, COnverter=EmptyObjectToTrue}",
+                                                "Property": "ColorizeBackground.Color",
+                                                "Value": "{Season.MainLeagueCategory.Color}"
+                                            },
                                             {
                                                 "Condition": "{g1, Converter=StringNotEquals, Parameter=Custom Colour}",
                                                 "Property": "ColorizeBackground.Color",
@@ -189,7 +200,14 @@
                                                         "VerticalAlignment": "Center",
                                                         "ImageOptions": {
                                                             "Path": "{Item.Team.LogotypePath}"
-                                                        }
+                                                        },
+                                                        "Triggers": [
+                                                            {
+                                                                "Condition": "{g1, Converter=StringEquals, Parameter=Custom Colour}",
+                                                                "Property": "ImageOptions.Path",
+                                                                "Value": "{Item.Team.LightLogotypePath}"
+                                                            }
+                                                        ]
                                                     },
                                                     {
                                                         "BlockType": "image",

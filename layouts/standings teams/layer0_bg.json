@@ -1,18 +1,11 @@
 {
     "BlockRoot": {
+        "Name": "root",
         "BlockType": "stack",
-        "Background": "{Season.MainLeagueCategory.Color}",
         "Items": [
             {
-                "BlockType": "image",
-                "Source": "bg/bg.{g1}.png",
-                "Triggers": [
-                    {
-                        "Condition": "{g2}",
-                        "Property": "Source",
-                        "Value": "bg/bg.{g1}.plain.png"
-                    }
-                ]
+                "BlockType": "image", 
+                "Source": "bg/bg.Purple.png"
             }
         ]
     }

@@ -245,6 +245,12 @@
                                                                 "Triggers": [
                                                                     {
                                                                         "Trigger": "Driver1Name4"
+                                                                    },
+                                                                    {
+                                                                        "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
+                                                                        "ConditionAnd": "{Item.Driver1.Driver.RealName, Converter=EmptyObjectToTrue}",
+                                                                        "Property": "RenderIf",
+                                                                        "Value": false
                                                                     }
                                                                 ]
                                                             },
@@ -257,12 +263,6 @@
                                                                 "Triggers": [
                                                                     {
                                                                         "Trigger": "Flags"
-                                                                    },
-                                                                    {
-                                                                        "Condition": "{name1, Converter=StringEquals, Parameter=Full Name}",
-                                                                        "ConditionAnd": "{Item.Driver1.Driver.RealName, Converter=EmptyObjectToTrue}",
-                                                                        "Property": "RenderIf",
-                                                                        "Value": false
                                                                     }
                                                                 ]
                                                             }
@@ -310,7 +310,7 @@
                                 "HorizontalAlignment": "Center",
                                 "VerticalAlignment": "Center",
                                 "ImageOptions": {
-                                    "Path": "cars/{Item.Team.Name}.png"
+                                    "Path": "{Item.Team.LiveryPath}"
                                 }
                             },
                             {
