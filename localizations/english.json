@@ -130,24 +130,16 @@
         "November": "NOV",
         "December": "DEC",
         //date manipulation examples
-        "18 JUN": "18 - 20 JUN",
-        "25 JUN": "25 - 27 JUN",
-        "02 JUL": "02 - 04 JUL",
-        "09 JUL": "09 - 11 JUL",
-        "16 JUL": "16 - 18 JUL",
-        "23 JUL": "23 - 25 JUL",
-        "30 JUL": "30 JUL - 01 AUG",
-        "06 AUG": "06 - 08 AUG",
-        "13 AUG": "13 - 15 AUG",
-        "20 AUG": "20 - 22 AUG",
-        "27 AUG": "27 - 29 AUG",
-        "03 SEP": "03 - 05 SEP",
-        "10 SEP": "10 - 12 SEP",
 
         //champion
         "CHAMPION": "CHAMPION",
         "1 WINS": "1 WIN",
         "1 PODIUMS": "1 PODIUM",
+
+        //session
+        "FASTEST": "FASTEST",
+        "DOTD": "DOTD",
+        "(+1 point)": "(+1 point)",
 
         //standings
         "DRIVER": "DRIVER",
