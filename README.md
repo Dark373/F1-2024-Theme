@@ -23,3 +23,19 @@ Driver Name: Dark373
 Image Name: Dark373.png
 
 Add your images here -> theme/images/avatars
+
+## CUSTOM TEAMS
+This theme was desgined to support teams outside of F1. All you need to do is add the team logos.
+
+Add the team logos here -> RacingLeagueTools_v095_preview-7_v2\images\logotypes\teams
+
+## GLOBAL VARIABLES
+All variables are stored in global_vars.json within the theme folder. Example of what variables exist:
+
+- Team Name Varients
+- Driver/Team Foregrounds
+- Team Logo Size
+- Font Colours
+- Font Sizes
+
+To add support for custom teams, simply observe prexisting examples used for the F1 teams.
