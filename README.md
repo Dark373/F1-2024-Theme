@@ -45,4 +45,4 @@ Found in the theme folder.
 
 Localisation is used to manipulate text. Or similpy used to translate text. Edit the right-hand side of the variables.
 
-If you wish to add permenant support for your language, please make a copy of the englishjson and edit the file. Once completed, send the file to Dark373 on discord.
+If you wish to add permenant support for your language, please make a copy of the english.json and edit the file. Once completed, send the file to Dark373 on discord.
