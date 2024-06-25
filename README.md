@@ -3,6 +3,10 @@ RLT theme in the style of the official F1 2024 graphics
 ## APPLY A CATEGORY TO YOUR SEASON
 (see image)
 
+Step 1: Create a category
+
+Step 2: Apply category to the season
+
 Color#1 -> Dictates the main colour of renders.
 
 Color#2 -> Dictates the main color of the white (default) bar for P1.
