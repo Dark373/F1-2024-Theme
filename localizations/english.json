@@ -20,7 +20,12 @@
 
         //calendar
         "CALENDAR": "CALENDAR",
-        
+
+        //dotd
+        "ROUND": "ROUND",
+        "OF THE": "OF THE",
+        "DAY": "DAY",
+
         //var info
         "POLE": "POLE",
         "WINNER": "WINNER",
@@ -28,9 +33,30 @@
         "PODIUMP3": "PODIUM",
         "ON LAP": "ON LAP",
 
+        //numerical
+        "ST": "ST",
+        "ND": "ND",
+        "RD": "RD",
+        "TH": "TH",
+        "1ST": "1ST",
+        "2ND": "2ND",
+        "3RD": "3RD",
+
         //lineups
         "DRIVER LINE-UP": "DRIVER LINE-UP",
         "LINE-UP": "LINE-UP",
+
+        //head-to-head
+        "HEAD-TO-HEAD": "HEAD-TO-HEAD",
+        "CHAMPIONSHIP POSITION": "CHAMPIONSHIP POSITION",
+        "WINS": "WINS",
+        "PODIUMS": "PODIUMS",
+        "TOP 10 FINISHES": "TOP 10 FINISHES",
+        "BEST RACE FINISH": "BEST RACE FINISH",
+        "HIGHEST GRID POSITION": "HIGHEST GRID POSITION",
+        "FASTEST LAPS": "FASTEST LAPS",
+        "POLES": "POLES",
+        "PENALTY POINTS": "PENALTY POINTS",        
 
         //sprint
         "BAHRAIN SPRINT": "BAHRAIN SPRINT",
@@ -136,12 +162,56 @@
         "1 WINS": "1 WIN",
         "1 PODIUMS": "1 PODIUM",
 
-        //session
-        "FASTEST": "FASTEST",
+        //standard renders
+        "POINTS": "POINTS",
+        "GAIN": "GAIN",
+        "INT.": "INT.",
+        "GAP": "GAP",
+        "P1": "P1",
+        "P2": "P2",
+        "P3": "P3",
+        "TOP 5": "TOP 5",
+        "TOP 10": "TOP 10",
+        "BEST": "BEST",
+        "BEST Q": "BEST Q",
         "DOTD": "DOTD",
+        "FL": "FL",
+        "PP": "PP",
+        "DNF": "DNF",
+        "EVENTS": "EVENTS",
+        //
+        "MAIN CLASSIFICATION": "RACE CLASSIFICATION",
+        "QUALIFICATION CLASSIFICATION": "QUALIFICATION CLASSIFICATION",
+        "SPRINT CLASSIFICATION": "SPRINT CLASSIFICATION",
+        "TIME": "TIME",
+        "LAPS": "LAPS",
+        "GRID": "GRID",
+        "STOPS": "STOPS",
+        "KPH": "KPH",
+        "OVER.": "OVER.",
+        "PEN.": "PEN.",
+        "STEW.": "STEW.",
+        "GAME": "GAME",
+        "FASTEST": "FASTEST",
+        "LAP": "LAP",
+        "TYRE": "TYRE",
+        "S1": "S1",
+        "S2": "S2",
+        "S3": "S3",
+        "No Time": "No Time",
         "(+1 point)": "(+1 point)",
+        //tyres
+        "AVAILABLE TYRES:": "AVAILABLE TYRES:",
+        "SOFT": "SOFT",
+        "MEDIUM": "MEDIUM",
+        "HARD": "HARD",
+        "INTERMEDIATE": "INTERMEDIATE",
+        "WET": "WET",
 
         //standings
+        "DRIVERS' CHAMPIONSHIP": "DRIVERS' CHAMPIONSHIP",
+        "CONSTRUCTORS' CHAMPIONSHIP": "CONSTRUCTORS' CHAMPIONSHIP",
+        "POINTS AFTER THE": "POINTS AFTER THE",
         "DRIVER": "DRIVER",
         "TEAM": "TEAM",
         "STANDINGS": "STANDINGS",
@@ -159,7 +229,42 @@
         "CountDnf": "DNF",
         "EventsCount": "EVENTS",
         "PointsToAboveDiff": "INT.",
-        "PointsToLeaderDiff": "GAP",            
+        "PointsToLeaderDiff": "GAP", 
+        "C": "C",
+        "c": "c",
+
+        //session stats
+        "PURE RACE PACE": "PURE RACE PACE",
+        "CONSISTENCY RATING": "CONSISTENCY RATING",
+        "ATTACK RATING": "ATTACK RATING",
+        "DEFENCE RATING": "DEFENCE RATING",
+        "TOP BATTLES": "TOP BATTLES",
+        "LONGEST STINTS": "LONGEST STINTS",
+        "RATING": "RATING",
+        "BATTLES": "BATTLES",
+        "WIN %": "WIN%",
+        "QUALITY": "QUALITY",
+        "LOST POS": "LOST POS",
+        "PURE TIME": "PURE TIME",
+        "TYRE COMPOUND USAGE": "TYRE USAGE",
+        "OVERTAKES": "OVERT.",
+        "AVG DIFF": "AVG DIFF",
+
+        //season stats
+        "PTS": "PTS",
+        "RACES": "RACES",
+        "POS.": "POS.",
+        "QUALS": "QUALS",
+        "%": "%",
+        "TYRES": "TYRES",
+        "STATISTICS": "STATISTICS",
+        "SEASON PENALTIES": "SEASON PENALTIES",
+        "DURATION": "DURATION",
+        "HOT DURATION": "HOT DUR.",
+        "OVERTAKE": "OVERT.",
+        "TYRES A": "TYRE A",
+        "TYRES B": "TYRE B",
+        "PenaltyDescription": "PPA - Active penalty points, WA - Active warnings, PTS - Penalty time (seconds) by stewards, PPS - Penalty positions by stewards, PTG - Penalty time (seconds) by game, PPO - Penalty points overall, WO - Warnings overall",
 
         "PRE-SEASON": "PRE-SEASON",
         "DRIVERS'": "DRIVERS'"
