@@ -27,7 +27,7 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "1008"
+                                        "h": "{SingleSessionDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
@@ -39,7 +39,7 @@
                                     {
                                         "Condition": "{RaceSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
                                         "ComponentVar": "h",
-                                        "Value": 894
+                                        "Value": "{DoubleSessionDriverCardLength}"
                                     }
                                 ]
                             }
@@ -64,7 +64,7 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "1008"
+                                        "h": "{SingleSessionDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
@@ -81,7 +81,7 @@
                                     {
                                         "Condition": "{RaceSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
                                         "ComponentVar": "h",
-                                        "Value": 894
+                                        "Value": "{DoubleSessionDriverCardLength}"
                                     }
                                 ]
                             }
@@ -114,6 +114,11 @@
                                 "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
                                 "ComponentVar": "source0",
                                 "Value": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.MainLeagueCategory.ShortName, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024"
+                            },
+                            {
+                                "Condition": "{Session.SessionType, Converter=StringEquals, Parameter=race}",
+                                "ComponentVar": "source1",
+                                "Value": "[{Session.RaceType, Converter=StringToUpperString} CLASSIFICATION]"
                             }
                         ]
                     },

@@ -27,7 +27,7 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "{{StaSecondDriverCard}teamname}",
                                         "teamlogo": "{{StaSecondDriverCard}teamlogo}",
-                                        "h": "980"
+                                        "h": "{TeamStandingsDriverCardHeight}"
                                     }
                                 }
                             }

@@ -1,5 +1,6 @@
 {
     "BlockRoot": {
+        "RenderIf": "{g1, Converter=StringNotEquals, Parameter=No Background}",
         "Name": "root",
         "BlockType": "stack",
         "Items": [

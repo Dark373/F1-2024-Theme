@@ -27,7 +27,7 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "930"
+                                        "h": "{SingleStandingsDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
@@ -39,7 +39,7 @@
                                     {
                                         "Condition": "{StaSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
                                         "ComponentVar": "h",
-                                        "Value": 862
+                                        "Value": "{DoubleStandingsDriverCardLength}"
                                     }
                                 ]
                             }

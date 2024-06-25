@@ -27,7 +27,7 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "1008"
+                                        "h": "{SingleSessionDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
@@ -39,7 +39,7 @@
                                     {
                                         "Condition": "{QualSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
                                         "ComponentVar": "h",
-                                        "Value": 894
+                                        "Value": "{DoubleSessionDriverCardLength}"
                                     }
                                 ]
                             }
@@ -65,7 +65,7 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "1008"
+                                        "h": "{SingleSessionDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
@@ -77,7 +77,7 @@
                                     {
                                         "Condition": "{QualSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
                                         "ComponentVar": "h",
-                                        "Value": 894
+                                        "Value": "{DoubleSessionDriverCardLength}"
                                     }
                                 ]
                             }

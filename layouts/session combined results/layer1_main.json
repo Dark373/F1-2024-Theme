@@ -26,7 +26,8 @@
                                         "ftsize": "{1STCardFS}",
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
-                                        "teamlogo": "false"
+                                        "teamlogo": "false",
+                                        "h": "{DoubleSessionDriverCardLength}"
                                     }
                                 }
                             }
@@ -50,7 +51,8 @@
                                         "ftsize": "{{RaceSecondDriverCard}FS}",
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
-                                        "teamlogo": "false"
+                                        "teamlogo": "false",
+                                        "h": "{DoubleSessionDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
@@ -77,7 +79,8 @@
                         "ComponentOptions": {
                             "Vars": {
                                 "source0": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.Name, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024",
-                                "source1": "[{Session.SessionType, Converter=StringToUpperString} CLASSIFICATION]"
+                                "source1": "[{Session.SessionType, Converter=StringToUpperString} CLASSIFICATION]",
+                                  "logo": "{Season.LeagueInfo.LeagueLogo}"
                             }
                         },
                         "Triggers": [
@@ -90,6 +93,11 @@
                                 "Condition": "{g5, Converter=StringEquals, Parameter=Category Short Name}",
                                 "ComponentVar": "source0",
                                 "Value": "{Season.LeagueInfo.LeagueShortName, Converter=StringToUpperString} {Season.MainLeagueCategory.ShortName, Converter=StringToUpperString} [{Session.Track.CircuitName, Converter=StringToUpperString} GRAND PRIX] 2024"
+                            },
+                            {
+                                "Condition": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToTrue}",
+                                "ComponentVar": "logo",
+                                "Value": "{Session.Track.Nation.LogotypePath}"
                             }
                         ]
                     },
