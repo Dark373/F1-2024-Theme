@@ -385,7 +385,7 @@
             "Description": "Renders team colour behind the driver name.",
             "Category": "Standings",
             "Type": "Bool",
-            "DefaultValue": true
+            "DefaultValue": false
         },
         {
             "Name": "StaDriverCard",
@@ -780,6 +780,71 @@
             "Category": "Qualifying Results",
             "Type": "Bool",
             "DefaultValue": false
+        },
+        {
+            "Name": "PenOrder",
+            "PublicName": "Penalty Order",
+            "Description": "Choose how the list is ordered by decending.",
+            "Category": "Penalty Statistics",
+            "Type": "Enum",
+            "EnumValues": ["PenaltyPointsActive", "PenaltyPointsOverall", "PenaltySeconds", "PenaltyIngameSeconds"],
+            "DefaultValue": "PenaltyPointsActive"
+        },
+        {
+            "Name": "PenPPA",
+            "PublicName": "Active Penalty Points",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "PenWA",
+            "PublicName": "Active Warnings",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "PenPTS",
+            "PublicName": "Penalty Seconds",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "PenPPS",
+            "PublicName": "Penalty Positions",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "PenPTG",
+            "PublicName": "In-Game Penalty",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "PenPPO",
+            "PublicName": "Total Penalty Points",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
+        },
+        {
+            "Name": "PenWO",
+            "PublicName": "Total Warnings",
+            "Description": "",
+            "Category": "Penalty Statistics",
+            "Type": "Bool",
+            "DefaultValue": true
         }
     ],
     "Categories": [
@@ -818,6 +883,9 @@
         },
         {
             "Name": "Standings"
+        },
+        {
+            "Name": "Penalty Statistics"
         },
         {
             "Name": "Head-To-Head"

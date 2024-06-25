@@ -8,6 +8,14 @@
     "FontNameBoldItalic": "Magistral-BoldItalic",
     "FontSizeDefault": 30,
     "ForegroundDefault": "FFFFFF",
+    // "ForegroundDefault": "ABACB1",
+    "BackgroundDefault": "13151D",
+    "Dark": "FFFFFF",
+    "Purple": "FFFFFF",
+    "Light": "000000",
+    "Custom Colour": "FFFFFF",
+    "White": "FFFFFF",
+    "Black": "000000",
     "PosIncreaseFG": "07FF00",
     "PosStandingsIncreaseFG": "009200",
     "PosDecreaseFG": "DB0200",
@@ -17,13 +25,13 @@
     "Standard RACING BULLS": "RB HONDA RBPT",
     "Standard ASTON MARTIN": "ASTON MARTIN ARAMCO MERCEDES",
     "Standard ALPINE": "ALPINE RENAULT",
-    "Standard ALFA ROMEO":"ALFA ROMEO FERRARI",
+    "Standard ALFA ROMEO": "ALFA ROMEO FERRARI",
     "Standard HAAS": "HAAS FERRARI",
     "Standard ALPHATAURI": "ALPHATAURI HONDA RBPT",
     "Standard WILLIAMS": "WILLIAMS MERCEDES",
     "Standard SAUBER": "KICK SAUBER FERRARI",
     "Standard ": "RESERVE",
-    //team colours
+    //standard renders team colours
     "Red BullFG2": "1E5BC6",
     "WilliamsFG2": "00A3E0",
     "AlpineFG2": "E73895",
@@ -34,14 +42,6 @@
     "PurpleLNLogo": "Alternative",
     "Custom ColourLNLogo": "Alternative",
     "No BackgroundLNLogo": "Alternative",
-   // "ForegroundDefault": "ABACB1",
-    "BackgroundDefault": "13151D",
-    "Dark": "FFFFFF",
-    "Purple": "FFFFFF",
-    "Light": "000000",
-    "Custom Colour": "FFFFFF",
-    "White": "FFFFFF",
-    "Black": "000000",
     //calendar
     "RoundCountFG": "FFFFFF",
     "PurpleVerticalBarColour": "2E2D3D",
@@ -49,7 +49,17 @@
     "DarkVerticalBarColour": "252525",
     "Custom ColourVerticalBarColour": "252525",
     "No BackgroundVerticalBarColour": "252525",
-    //dotd
+    //dotd / main colours
+    "RedBullMain": "15185F",
+    "MercedesMain": "27F4D2",
+    "FerrariMain": "FE0000",
+    "McLarenMain": "FD8000",
+    "AstonMartinMain": "00594F",
+    "AlpineMain": "E73895",
+    "WilliamsMain": "0000FE",
+    "RacingBullsMain": "1534CC",
+    "SauberMain": "00E701",
+    "HaasMain": "FFFFFF",
     "RedBullSecondary": "DB0A40",
     "FerrariSecondary": "000000",
     "MercedesSecondary": "000000",
@@ -91,6 +101,7 @@
     "Red BullLogoSizeTeamStandings": 360,
     "Aston MartinLogoSizeTeamStandings": 570,
     "Racing BullsLogoSizeTeamStandings": 260,
+    "WilliamsLogoSizeTeamStandings": 350,
     "SauberLogoSizeTeamStandings": 300,
     "ReserveStandingsFG": "000000",
     "PointsStandingsFG": "FFFFFF",
@@ -112,7 +123,6 @@
     "Team": "Teams",
     "Team Leaderteamname": "true",
     "Team Leaderteamlogo": "true",
-
     //standings colours
     "CountP1": "FFD700",
     "CountP2": "C0C0C0",
@@ -127,12 +137,15 @@
     "PenaltyPoints": "BC0505",
     "CountDnf": "ED484A",
     "EventsCount": "ABACB1",
-
     //podium
     "PodiumDriverCardLogoSize": 600,
     "PodiumDriverCardLogoMargin": "0,280,0,0",
-
-    //session
+    //standard renders
+    "TeamStandingsDriverCardHeight": 980,
+    "SingleStandingsDriverCardLength": 930,
+    "DoubleStandingsDriverCardLength": 862,
+    "SingleSessionDriverCardLength": 1008,
+    "DoubleSessionDriverCardLength": 894,
     "SessionP1FG": "000000",
     "SessionFG": "ABACB1",
     "NameSessionFG": "FFFFFF",
@@ -159,10 +172,8 @@
     "Secondsource0": 2,
     "Secondsource1": "[ND]",
     "SecondFS": 80,
-
     //comparison
     "TotalPPBothDriversCanEarn": 24,
-
     //lineups
     "SeasonSmallFG": "FFFFFF",
     "HeaderText": "{Season.Name, Converter=StringToUpperString} [DRIVER LINE-UP]",
@@ -174,8 +185,6 @@
     "SauberLineUpFG": "000000",
     "Aston MartinLineUpFG": "CEDC00",
     "AlpineLineUpFG": "0C1E2C",
-    "WilliamsLineUpFG": "2242BD",
-
     //fonts
     "F1NumbersAlfa Romeo": "F1NumbersAlfa Romeo",
     "F1NumbersAlphaTauri": "F1NumbersAlphaTauri",
@@ -189,7 +198,6 @@
     "F1NumbersRed Bull": "F1NumbersRed Bull",
     "F1NumbersSauber": "F1NumbersSauber",
     "F1NumbersWilliams": "F1NumbersWilliams",
-
     "DarkGradient": "0E0F14",
     "LightGradient": "E9E9EB",
     "PurpleGradient": "09081D"
