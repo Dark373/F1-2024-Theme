@@ -15,7 +15,6 @@
             {
                 "Header": "",
                 "Template": {
-                    "RenderIf": "{RacePosJump}",
                     "BlockType": "component",
                     "Component": "MainColumn",
                     "ComponentOptions": {
@@ -27,12 +26,20 @@
                             "pad": "12,0",
                             "source": "{Item.Position}"
                         }
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Status, Converter=StringEquals, Parameter=DSQ}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
                 }
             },
             {
                 "Header": "",
                 "Template": {
+                    "RenderIf": "{RacePosJump}",
                     "BlockType": "component",
                     "Component": "PositionJump",
                     "ComponentOptions": {
@@ -52,7 +59,8 @@
                     "ComponentOptions": {
                         "Vars": {
                             "style1": "FirstNameDefault",
-                            "style2": "SecondNameDefault"
+                            "style2": "SecondNameDefault",
+                            "width": "{DriverWidth}"
                         }
                     }
                 }

@@ -53,7 +53,8 @@
                     "ComponentOptions": {
                         "Vars": {
                             "style1": "FirstNameDefault",
-                            "style2": "SecondNameDefault"
+                            "style2": "SecondNameDefault",
+                            "width": "{DriverWidth}"
                         }
                     }
                 }

@@ -1,5 +1,5 @@
 {
-    "ComponentName": "CombinedQualP1Table",
+    "ComponentName": "P1PenaltyTable",
     "BlockType": "table",
     "BackgroundImage": "bg/bg.p1.bar.png",
     "ColorizeBackground": {
@@ -7,7 +7,8 @@
         "Color": "{Season.MainLeagueCategory.SecondaryColor}"
     },
     "TableOptions": {
-        "ItemsSource": "{Session.Drivers}",
+        "ItemsSource": "<itemsource>",
+        "OrderByDescending": "{PenOrder}",
         "Limit": 1,
         "HeaderTemplate": {
             "BlockType": "text",
@@ -28,14 +29,7 @@
                             "pad": "12,0",
                             "source": "{Item.Position}"
                         }
-                    },
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.Status, Converter=StringEquals, Parameter=DSQ}",
-                            "Property": "Opacity",
-                            "Value": 0
-                        }
-                    ]
+                    }
                 }
             },
             {
@@ -43,6 +37,7 @@
                 "Template": {
                     "BlockType": "component",
                     "Component": "V1DriverLine",
+                    "WidthStretch": true,
                     "ComponentOptions": {
                         "Vars": {
                             "style1": "P1FirstNameDefault",
@@ -62,34 +57,12 @@
                             "bg": "{Item.Team.Color}",
                             "teamstyle": "P1TeamDefault"
                         }
-                    }
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionP1FG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "20,0",
-                            "source": "{Item.QualQ1Time}"
-                        }
                     },
                     "Triggers": [
                         {
-                            "Condition": "{Item.IsRaceFastestLap}",
-                            "ComponentVar": "fg",
-                            "Value": "{SessionFastestLapFG}"
-                        },
-                        {
-                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "[No Time]"
+                            "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                            "ComponentVar": "bg",
+                            "Value": "{Season.MainLeagueCategory.Color}"
                         }
                     ]
                 }
@@ -97,7 +70,7 @@
             {
                 "Header": "",
                 "Template": {
-                    "RenderIf": "{QualLaps}",
+                    "RenderIf": "{PenPPA}",
                     "BlockType": "component",
                     "Component": "MainColumn",
                     "ComponentOptions": {
@@ -106,122 +79,15 @@
                             "fg": "{SessionP1FG}",
                             "font": "{FontNameItalic}",
                             "w": "50",
-                            "pad": "40,0",
-                            "source": "{Item.LapsCountQ1}"
-                        }
-                    }
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionP1FG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "20,0",
-                            "source": "{Item.QualQ2Time}"
+                            "pad": "30,0",
+                            "source": "{Item.PenaltyPointsActive}"
                         }
                     },
                     "Triggers": [
                         {
-                            "Condition": "{Item.IsRaceFastestLap}",
-                            "ComponentVar": "fg",
-                            "Value": "{SessionFastestLapFG}"
-                        },
-                        {
-                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "[No Time]"
-                        }
-                    ]
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "RenderIf": "{QualLaps}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionP1FG}",
-                            "font": "{FontNameItalic}",
-                            "w": "50",
-                            "pad": "40,0",
-                            "source": "{Item.LapsCountQ2}"
-                        }
-                    }
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionFastestLapFG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "20,0",
-                            "source": "{Item.QualQ3Time}"
-                        }
-                    },
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "[No Time]"
-                        }
-                    ]
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "RenderIf": "{QualLaps}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionP1FG}",
-                            "font": "{FontNameItalic}",
-                            "w": "50",
-                            "pad": "40,0",
-                            "source": "{Item.LapsCountQ3}"
-                        }
-                    }
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "RenderIf": "{QualTime}",
-                    "BlockType": "component",
-                    "Component": "MainColumn",
-                    "ComponentOptions": {
-                        "Vars": {
-                            "style": "P1Default",
-                            "fg": "{SessionP1FG}",
-                            "font": "{FontNameItalic}",
-                            "w": "150",
-                            "pad": "20,0",
-                            "source": "{Item.Time}"
-                        }
-                    },
-                    "Triggers": [
-                        {
-                            "Condition": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                            "Condition": "{Item.PenaltyPointsActive, Converter=NumberEquals, Parameter=0}",
                             "Property": "Opacity",
-                            "Value": "0"
+                            "Value": 0
                         }
                     ]
                 }
@@ -229,7 +95,7 @@
             {
                 "Header": "",
                 "Template": {
-                    "RenderIf": "{QualKPH}",
+                    "RenderIf": "{PenWA}",
                     "BlockType": "component",
                     "Component": "MainColumn",
                     "ComponentOptions": {
@@ -238,35 +104,15 @@
                             "fg": "{SessionP1FG}",
                             "font": "{FontNameItalic}",
                             "w": "50",
-                            "pad": "40,0",
-                            "source": "{Item.MaxSpeed}"
+                            "pad": "20,0",
+                            "source": "{Item.PenaltyWarningsActive}"
                         }
-                    }
-                }
-            },
-            {
-                "Header": "",
-                "Template": {
-                    "RenderIf": "{QualTyre}",
-                    "BlockType": "dock",
-                    "Width": "114",
-                    "Padding": "0,-5",
-                    "VerticalAlignment": "Center",
-                    "HorizontalAlignment": "Center",
-                    "Items": [
+                    },
+                    "Triggers": [
                         {
-                            "BlockType": "image",
-                            "Source": "tyres/tyres_{Item.FastestLapTyres}_dark.png",
-                            "VerticalAlignment": "Center",
-                            "HorizontalAlignment": "Center",
-                            "Height": 50,
-                            "Triggers": [
-                                {
-                                    "Condition": "{Item.FastestLapTyres, Converter=EmptyObjectToTrue}",
-                                    "Property": "Source",
-                                    "Value": "avatars/placeholder1.png"
-                                }
-                            ]
+                            "Condition": "{Item.PenaltyWarningsActive, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Opacity",
+                            "Value": 0
                         }
                     ]
                 }
@@ -274,29 +120,124 @@
             {
                 "Header": "",
                 "Template": {
-                    "RenderIf": "{QualPoints}",
+                    "RenderIf": "{PenPTS}",
                     "BlockType": "component",
                     "Component": "MainColumn",
                     "ComponentOptions": {
                         "Vars": {
                             "style": "P1Default",
                             "fg": "{SessionP1FG}",
-                            "font": "{FontNameBold}",
+                            "font": "{FontNameItalic}",
                             "w": "50",
-                            "pad": "50,0",
-                            "source": "{Item.DriverPointsString}"
+                            "pad": "30,0",
+                            "source": "{Item.PenaltySeconds}"
                         }
                     },
                     "Triggers": [
                         {
-                            "Condition": "{Item.DriverPointsString, Converter=EmptyObjectToFalse}",
-                            "ComponentVar": "source",
-                            "Value": "+{Item.DriverPointsString}"
-                        },
+                            "Condition": "{Item.PenaltySeconds, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "RenderIf": "{PenPPS}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionP1FG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "30,0",
+                            "source": "{Item.PenaltyPositions}"
+                        }
+                    },
+                    "Triggers": [
                         {
-                            "Condition": "{Item.DriverPointsString, Converter=EmptyObjectToTrue}",
-                            "ComponentVar": "source",
-                            "Value": "0"
+                            "Condition": "{Item.PenaltyPositions, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "RenderIf": "{PenPTG}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionP1FG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "30,0",
+                            "source": "{Item.PenaltyIngameSeconds}"
+                        }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.PenaltyIngameSeconds, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "RenderIf": "{PenPPO}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionP1FG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "30,0",
+                            "source": "{Item.PenaltyPointsOverall}"
+                        }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.PenaltyPointsOverall, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "Header": "",
+                "Template": {
+                    "RenderIf": "{PenWO}",
+                    "BlockType": "component",
+                    "Component": "MainColumn",
+                    "ComponentOptions": {
+                        "Vars": {
+                            "style": "P1Default",
+                            "fg": "{SessionP1FG}",
+                            "font": "{FontNameItalic}",
+                            "w": "50",
+                            "pad": "20,0",
+                            "source": "{Item.PenaltyWarningsOverall}"
+                        }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.PenaltyWarningsOverall, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Opacity",
+                            "Value": 0
                         }
                     ]
                 }

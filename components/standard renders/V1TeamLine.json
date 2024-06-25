@@ -45,12 +45,6 @@
                                     "Value": "{Season.MainLeagueCategory.Color}"
                                 }
                             ]
-                        },
-                        {
-                            "Condition": "{Item.Team.LogotypePath, Converter=EmptyObjectToTrue}",
-                            "ConditionAnd": "{Item.SeatPosition, Converter=NumberNotEquals, Parameter=0}",
-                            "Property": "Source",
-                            "Value": "avatars/placeholder1.png"
                         }
                     ]
                 },

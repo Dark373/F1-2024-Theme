@@ -3,7 +3,7 @@
     "BlockType": "dock",
     "PaddingLeft": 12,
     "PaddingRight": 55,
-    "Width": "{DriverWidth}",
+    "Width": "<width>",
     "Height": 40,
     "Items": [
         {

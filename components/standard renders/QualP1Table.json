@@ -28,7 +28,14 @@
                             "pad": "12,0",
                             "source": "{Item.Position}"
                         }
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Status, Converter=StringEquals, Parameter=DSQ}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
                 }
             },
             {
@@ -39,7 +46,8 @@
                     "ComponentOptions": {
                         "Vars": {
                             "style1": "P1FirstNameDefault",
-                            "style2": "P1SecondNameDefault"
+                            "style2": "P1SecondNameDefault",
+                            "width": "{DriverWidth}"
                         }
                     }
                 }
@@ -121,7 +129,14 @@
                             "Source": "tyres/tyres_{Item.FastestLapTyres}_dark.png",
                             "VerticalAlignment": "Center",
                             "HorizontalAlignment": "Center",
-                            "Height": 50
+                            "Height": 50,
+                            "Triggers": [
+                                {
+                                    "Condition": "{Item.FastestLapTyres, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "avatars/placeholder1.png"
+                                }
+                            ]
                         }
                     ]
                 }

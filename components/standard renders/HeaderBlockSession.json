@@ -40,14 +40,7 @@
                             "Source": "<source1>",
                             "FontName": "{FontNameBold}",
                             "FontSize": 70,
-                            "Foreground": "ABACB1",
-                            "Triggers": [
-                                {
-                                    "Condition": "{Item.SessionType, Converter=StringEquals, Parameter=race}",
-                                    "Property": "Source",
-                                    "Value": "[{Session.RaceType, Converter=StringToUpperString} CLASSIFICATION]"
-                                }
-                            ]
+                            "Foreground": "ABACB1"
                         }
                     ]
                 }
@@ -67,7 +60,6 @@
                             "Name": "leagueLogo",
                             "BlockType": "image",
                             "Height": "{g4}",
-                            "Margin": "0, 0, 0, 0",
                             "Source": "{Season.LeagueInfo.LeagueLogo}"
                         }
                     ]

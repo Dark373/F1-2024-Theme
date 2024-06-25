@@ -35,7 +35,23 @@
                                     "Style": "NameBlackStandings",
                                     "Foreground": "{Black}",
                                     "VerticalAlignment": "Center",
-                                    "FontSize": 100
+                                    "FontSize": 100,
+                                    "Triggers": [
+                                        {
+                                            "Condition": "{sta14}",
+                                            "ConditionAnd": "{Item.Position, Converter=NumberEquals, Parameter=1}",
+                                            "Setters": [
+                                                {
+                                                    "Property": "Foreground",
+                                                    "Value": "{ChampColourFG}"
+                                                },
+                                                {
+                                                    "Property": "Source",
+                                                    "Value": "[C]"
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ],
                             "Triggers": [

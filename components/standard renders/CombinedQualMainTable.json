@@ -26,7 +26,14 @@
                             "pad": "12,0",
                             "source": "{Item.Position}"
                         }
-                    }
+                    },
+                    "Triggers": [
+                        {
+                            "Condition": "{Item.Status, Converter=StringEquals, Parameter=DSQ}",
+                            "Property": "Opacity",
+                            "Value": 0
+                        }
+                    ]
                 }
             },
             {
@@ -37,7 +44,8 @@
                     "ComponentOptions": {
                         "Vars": {
                             "style1": "FirstNameDefault",
-                            "style2": "SecondNameDefault"
+                            "style2": "SecondNameDefault",
+                            "width": "{DriverWidth}"
                         }
                     }
                 }
@@ -217,26 +225,6 @@
                 }
             },
             {
-                "Header": "[TYRE]",
-                "Template": {
-                    "RenderIf": "{QualTyre}",
-                    "BlockType": "dock",
-                    "Width": "114",
-                    "Padding": "0,-5",
-                    "VerticalAlignment": "Center",
-                    "HorizontalAlignment": "Center",
-                    "Items": [
-                        {
-                            "BlockType": "image",
-                            "Source": "tyres/tyres_{Item.FastestLapTyres}.png",
-                            "VerticalAlignment": "Center",
-                            "HorizontalAlignment": "Center",
-                            "Height": 50
-                        }
-                    ]
-                }
-            },
-                        {
                 "Header": "[KPH]",
                 "Template": {
                     "RenderIf": "{QualKPH}",
@@ -252,6 +240,33 @@
                             "source": "{Item.MaxSpeed}"
                         }
                     }
+                }
+            },
+            {
+                "Header": "[TYRE]",
+                "Template": {
+                    "RenderIf": "{QualTyre}",
+                    "BlockType": "dock",
+                    "Width": "114",
+                    "Padding": "0,-5",
+                    "VerticalAlignment": "Center",
+                    "HorizontalAlignment": "Center",
+                    "Items": [
+                        {
+                            "BlockType": "image",
+                            "Source": "tyres/tyres_{Item.FastestLapTyres}.png",
+                            "VerticalAlignment": "Center",
+                            "HorizontalAlignment": "Center",
+                            "Height": 50,
+                            "Triggers": [
+                                {
+                                    "Condition": "{Item.FastestLapTyres, Converter=EmptyObjectToTrue}",
+                                    "Property": "Source",
+                                    "Value": "avatars/placeholder1.png"
+                                }
+                            ]
+                        }
+                    ]
                 }
             },
             {

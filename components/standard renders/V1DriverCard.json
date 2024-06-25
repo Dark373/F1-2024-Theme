@@ -21,7 +21,7 @@
                     "VerticalAlignment": "Center",
                     "BackgroundImage": "bg/bg.p1.avatar.png",
                     "Width": 500,
-                    "Height": 1200,
+                    "Height": "<h>",
                     "Items": [
                         {
                             "BlockType": "stack",
