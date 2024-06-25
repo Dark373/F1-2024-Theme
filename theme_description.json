@@ -1,10 +1,21 @@
 {
-  "ThemeId": "Dark373.F1_2024_test",
-  "Name": "F1 2024 Test Build",
+  "ThemeId": "Dark373.F1_2024_Theme",
+  "Name": "F1 2024 Theme",
   "Author": "Dark373",
   "Version": "1.0.0",
-  "Links": [],
   "DefaultLocalizationId": "en-GB",
+  "Links": [
+    {
+      "Type": "SupportAuthor",
+      "Url": "https://www.paypal.me/373Dark?locale.x=en_GB",
+      "Caption": "Support Me"
+    },
+    {
+      "Type": "ThemeIssueReport",
+      "Url": "https://github.com/Dark373/F1-2024-Theme/issues",
+      "Caption": "Bug Report"
+    }
+  ],
   "RequiredLogotypeVariants": {
     "Team": 
     [
