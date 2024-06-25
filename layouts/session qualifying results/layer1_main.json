@@ -219,7 +219,7 @@
         ],
         "Triggers": [
             {
-                "Condition": "{RaceDriverCard}",
+                "Condition": "{QualDriverCard}",
                 "Property": "Margin",
                 "Value": "0,40,20,0"
             }
