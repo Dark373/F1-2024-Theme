@@ -66,3 +66,19 @@ Localisation is used to manipulate text. Or similpy used to translate text. Edit
 If you wish to add permenant support for your language, please make a copy of the english.json and edit the file. Once completed, send the file to Dark373 on discord.
 
 ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/e7132488-2ce9-43fc-9c82-6abd1a815119) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/29d3609f-c30d-4b75-912c-2594a5a362fd)
+
+## ACCURATE TEAM COLOURS
+*set of instructions to mirror the real life colour schemes*
+### STEP 1
+- Open the global_vars.json file in the theme folders.
+- Locate the "dotd / main colours" header (see image)
+### STEP 2
+Add colours into your database (second image)
+- Color #1: Main
+- Color #2: Secondary
+Copy and paste the hex codes into your database. 
+
+This is completely at your discretion.
+
+![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/eb7fa983-ebb8-43f1-b69d-618348d25776) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/d7b21296-ef67-457d-a2e1-f0ed8a346339)
+
