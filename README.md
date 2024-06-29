@@ -43,6 +43,24 @@ To add support for custom teams, simply observe prexisting examples used for the
 ## LOCALISATION
 Found in the theme folder.
 
+## HOW TO - CUSTOM TEAMS
+*using Audi as the example*
+### STEP 1
+Create your team in the app.
+Name: Audi
+UniqueId: audi.2024
+*only 2 fields with significance*
+### STEP 2
+Add the logo into the apps image folder.
+Path: RacingLeagueTools_v095_preview-7_v2\images\logotypes\teams\F1_2024
+Image name: audi.2024.png
+**And thats it. The following steps are for team names that need a black/darker font colour.**
+### STEP 1
+- Open the global_vars.json file in the theme.
+- Locate "team foreground colours" header
+- Create one for your team: "AudiFG": "000000",
+**Some renders have separate variables for foreground, such as the line-up render. (see second image)**
+
 Localisation is used to manipulate text. Or similpy used to translate text. Edit the right-hand side of the variables.
 
 If you wish to add permenant support for your language, please make a copy of the english.json and edit the file. Once completed, send the file to Dark373 on discord.
