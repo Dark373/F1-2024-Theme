@@ -6,6 +6,7 @@ RLT theme in the style of the official F1 2024 graphics
 Step 1: Create a category
 
 Step 2: Apply category to the season
+You can apply a category to the season by right-clicking on the desired season in the calendar page.
 
 Color#1 -> Dictates the main colour of renders.
 
