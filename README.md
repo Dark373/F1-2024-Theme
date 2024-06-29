@@ -82,3 +82,26 @@ This is completely at your discretion.
 
 ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/eb7fa983-ebb8-43f1-b69d-618348d25776) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/d7b21296-ef67-457d-a2e1-f0ed8a346339)
 
+## HOW TO - ADD LOGO VARIANTS
+In some cases, the logo is the same colour as the team logo. So how do we change that?
+Haas will be used as the example.
+### STEP 1
+Prepare your logo.
+Use the internet to find a suitable logo, or using software, recolour the logo.
+All logos must have a 1:1 ratio with height and width. standard is 256x256 but they could be any size.
+### STEP 2
+Name the logo. Logos should be named after the team uniqueId (can be found in the teams page).
+Haas: haas.2024
+New image: haas.2024__light
+### STEP 3
+Save the image.
+Path: F1-2024-Theme/images/logotypes/teams 
+### STEP 4
+Restart your app.
+
+You cam do this for dark, light, alternative logotypes within the theme.
+Alternative is used in official lineups render
+
+![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/addfa5a2-80d5-4bf3-8fa6-3d5c5c254831) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/3b91586d-8018-4589-a47e-e4809b000e0a) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/35abd69a-f2df-4ca8-9f8c-173ae0c8f4cd)
+
+
