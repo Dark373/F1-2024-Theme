@@ -28,6 +28,8 @@ Add your images here -> theme/images/avatars
 
 Note that all custom images must be a 1:1 ratio between height and width. All images must be a .png file type.
 
+It is advised that the canvas size of your image is to be much larger than your image. Using the default avatars, try lining up your image to the silhouette of the driver (using layers) to get a perfect fit.
+
 ## GLOBAL VARIABLES
 All variables are stored in global_vars.json within the theme folder. Example of what variables exist:
 
