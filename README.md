@@ -26,6 +26,8 @@ Image Name: Dark373.png
 
 Add your images here -> theme/images/avatars
 
+Note that all custom images must be a 1:1 ratio between height and width. All images must be a .png file type.
+
 ## GLOBAL VARIABLES
 All variables are stored in global_vars.json within the theme folder. Example of what variables exist:
 
