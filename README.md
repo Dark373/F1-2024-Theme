@@ -64,5 +64,5 @@ Image name: audi.2024.png
 Localisation is used to manipulate text. Or similpy used to translate text. Edit the right-hand side of the variables.
 
 If you wish to add permenant support for your language, please make a copy of the english.json and edit the file. Once completed, send the file to Dark373 on discord.
-![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/e7132488-2ce9-43fc-9c82-6abd1a815119) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/29d3609f-c30d-4b75-912c-2594a5a362fd)
 
+![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/e7132488-2ce9-43fc-9c82-6abd1a815119) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/29d3609f-c30d-4b75-912c-2594a5a362fd)
