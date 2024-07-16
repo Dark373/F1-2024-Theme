@@ -1,0 +1,80 @@
+[
+    {
+        "TriggerName": "AvatarDescription",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+        "ConditionAnd": "{Item.Driver.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "avatars/{Item.Driver.Description}.png"
+    },
+    {
+        "TriggerName": "AvatarReserve",
+        "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+        "ConditionAnd": "{Item.Driver.Description, Converter=EmptyObjectToTrue}",
+        "Property": "Source",
+        "Value": "avatars/Reserve.png"
+    },
+    {
+        "TriggerName": "AvatarReserveDefault",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Default Avatars}",
+        "ConditionAnd": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+        "Property": "Source",
+        "Value": "avatars/Reserve.png"
+    },
+    {
+        "TriggerName": "AvatarL0",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+        "ConditionAnd": "{Item.Line0.Driver.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "avatars/{Item.Line0.Driver.Description}.png"
+    },
+    {
+        "TriggerName": "AvatarL0Reserve",
+        "Condition": "{Item.Line0.Team.Name, Converter=EmptyObjectToTrue}",
+        "ConditionAnd": "{Item.Line0.Driver.Description, Converter=EmptyObjectToTrue}",
+        "Property": "Source",
+        "Value": "avatars/Reserve.png"
+    },
+    {
+        "TriggerName": "AvatarL0ReserveDefault",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Default Avatars}",
+        "ConditionAnd": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+        "Property": "Source",
+        "Value": "avatars/Reserve.png"
+    },
+    {
+        "TriggerName": "AvatarL1",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+        "ConditionAnd": "{Item.Line1.Driver.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "avatars/{Item.Line1.Driver.Description}.png"
+    },
+    {
+        "TriggerName": "AvatarL1Reserve",
+        "Condition": "{Item.Line1.Team.Name, Converter=EmptyObjectToTrue}",
+        "ConditionAnd": "{Item.Line1.Driver.Description, Converter=EmptyObjectToTrue}",
+        "Property": "Source",
+        "Value": "avatars/Reserve.png"
+    },
+    {
+        "TriggerName": "AvatarL1ReserveDefault",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Default Avatars}",
+        "ConditionAnd": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+        "Property": "Source",
+        "Value": "avatars/Reserve.png"
+    },
+    //
+    {
+        "TriggerName": "AvatarDriver0",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+        "ConditionAnd": "{Item.Driver0.Driver.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "avatars/{Item.Driver0.Driver.Description}.png"
+    },
+    {
+        "TriggerName": "AvatarDriver1",
+        "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
+        "ConditionAnd": "{Item.Driver01.Driver.Description, Converter=EmptyObjectToFalse}",
+        "Property": "Source",
+        "Value": "avatars/{Item.Driver1.Driver.Description}.png"
+    }
+]
