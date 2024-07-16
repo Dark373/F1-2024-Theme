@@ -1,5 +1,7 @@
 # F1-2024-Theme
-RLT theme in the style of the official F1 2024 graphics
+RLT theme in the style of the official F1 2024 graphics.
+
+Credit to Hines J for the FIA Penalty Renders (Driver Penalties) & (Event Penalties)
 ## APPLY A CATEGORY TO YOUR SEASON
 (see image)
 
