@@ -101,7 +101,7 @@ Path: F1-2024-Theme/images/logotypes/teams
 ### STEP 4
 Restart your app.
 
-You cam do this for dark, light, alternative logotypes within the theme.
+You can do this for dark, light, alternative logotypes within the theme.
 Alternative is used in official lineups render
 
 ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/addfa5a2-80d5-4bf3-8fa6-3d5c5c254831) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/3b91586d-8018-4589-a47e-e4809b000e0a) ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/35abd69a-f2df-4ca8-9f8c-173ae0c8f4cd)
