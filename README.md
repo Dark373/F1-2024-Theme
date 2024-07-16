@@ -18,17 +18,18 @@ Users can switch between "Season Name", "Category Name" and "Category Short Name
 ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/76cb3b7a-2e75-4971-8b0b-74982164ab37)
 
 ## DRIVER AVATARS
-Setting Driver Avatars option to "Custom Avatars" means the theme will search for images named after the driver. Example: 
+Setting Driver Avatars option to "Custom Avatars" means the theme will search for images named after the driver description. Example: 
 
-Driver Name: Dark373
+Driver Description: SomeText
 
-Image Name: Dark373.png
+Image Name: SomeText.png
 
 Add your images here -> theme/images/avatars
 
 Note that all custom images must be a 1:1 ratio between height and width. All images must be a .png file type.
 
 It is advised that the canvas size of your image is to be much larger than your image. Using the default avatars, try lining up your image to the silhouette of the driver (using layers) to get a perfect fit.
+![image](https://github.com/user-attachments/assets/6432b89b-8986-4669-8da7-577f13e2d80f)
 
 ## GLOBAL VARIABLES
 All variables are stored in global_vars.json within the theme folder. Example of what variables exist:
