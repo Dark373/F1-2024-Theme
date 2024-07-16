@@ -45,6 +45,8 @@ To add support for custom teams, simply observe prexisting examples used for the
 ## LOCALISATION
 Found in the theme folder.
 
+Allows for translations or variations of given text. Edit the right-hand side of each line with the translation.
+
 ## HOW TO - CUSTOM TEAMS
 *using Audi as the example*
 ### STEP 1
