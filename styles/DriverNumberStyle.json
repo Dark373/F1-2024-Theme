@@ -1,6 +1,0 @@
-{
-    "StyleName": "BannerNS",
-    "FontSize": 1200,
-    "FontName": "{F1Numbers{Item.Team.Name}}",
-    "Foreground": "{Item.Team.Color}"
-}
