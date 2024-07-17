@@ -774,7 +774,7 @@
                                         "ComponentOptions": {
                                             "Vars": {
                                                 "stat": "{{Item.CountDnf, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Season.SeasonOverallNumberEvents}}",
-                                                "statvalue": "{Item.PenaltyPoints}"
+                                                "statvalue": "{Item.CountDnf}"
                                             }
                                         },
                                         "Triggers": [
