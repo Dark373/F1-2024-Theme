@@ -71,7 +71,7 @@
                 },
                 {
                     "BlockType": "text",
-                    "Source": "{{Item.{{{Type}}}.Name, Converter=StringToUpperString}}",
+                    "Source": "[{Item.{{{Type}}}.Name, Converter=StringToUpperString}]",
                     "VerticalAlignment": "Center",
                     "FontName": "{FontNameDefault}",
                     "Foreground": "{FooterFG}",
@@ -89,9 +89,15 @@
                             "Value": "{Item.Team.Color}"
                         },
                         {
-                            "Condition": "{{Item.{{{Type}}}.Name, Converter=StringToUpperString}, Converter=EmptyObjectToTrue}",
+                            "Condition": "{Item.{{{Type}}}.Name, Converter=EmptyObjectToTrue}",
+                            "ConditionAnd": "{TeamColourFG}",
+                            "Property": "Foreground",
+                            "Value": "{{ReserveStandardRendersColouredFG}}"
+                        },
+                        {
+                            "Condition": "{Item.{{{Type}}}.Name, Converter=EmptyObjectToTrue}",
                             "Property": "Source",
-                            "Value": "{Item.{{{Type}}}.Name, Converter=StringToUpperString}"
+                            "Value": "[RESERVE]"
                         }
                     ]
                 },
