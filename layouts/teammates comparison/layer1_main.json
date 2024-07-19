@@ -28,7 +28,7 @@
                                 "Items": [
                                     {
                                         "BlockType": "shape",
-                                        "WidthPercent": "{{Item.Driver1.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={{Item.Driver0.Points.IntValue, Converter=NumberAdd, Parameter=1}, Converter=NumberAdd, Parameter={{Item.Driver1.Points.IntValue}, Converter=NumberAdd, Parameter=1}}}",
+                                        "WidthPercent": "{{Item.Driver1.Points.FloatValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Driver0.Points.FloatValue, Converter=NumberAdd, Parameter={Item.Driver1.Points.FloatValue}}}",
                                         "HorizontalAlignment": "Right",
                                         "Height": 160,
                                         "BackgroundImage": "components/horizontal.gradient.png",
