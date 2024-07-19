@@ -39,13 +39,13 @@
                     "BlockType": "stack",
                     "VerticalAlignment": "Center",
                     "Background": "{SprintCalendarEventBG#2}",
-                    "Width": 900,
+                    "Width": 1000,
                     "Height": 105,
                     "Items": [
                         {
                             "BlockType": "stack",
                             "BackgroundImage": "components/bg.sprint.calendar.png",
-                            "Width": 900,
+                            "Width": 1000,
                             "Height": 105,
                             "Spacing": 20,
                             "VerticalAlignment": "Center",
