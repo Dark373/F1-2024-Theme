@@ -10,7 +10,7 @@
             "Items": [
                 {
                     "BlockType": "text",
-                    "Source": "{{Item.Driver0.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Points.IntValue}}%",
+                    "Source": "{{Item.Driver0.Points.FloatValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Driver0.Points.FloatValue, Converter=NumberAdd, Parameter={Item.Driver1.Points.FloatValue}}}%",
                     "Style": "LP-1",
                     "FontName": "{FontNameBlack}",
                     "FontSize": 90,
@@ -20,6 +20,11 @@
                             "Condition": "{TeamColourFG, Converter=BoolReverse}",
                             "Property": "Foreground",
                             "Value": "{{Item.Team.Name}DefaultFG}"
+                        },
+                                    {
+                            "Condition": "{Item.Driver0.Points.IntValue, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Source",
+                            "Value": "0%"
                         },
                         {
                             "Condition": "{Comparison, Converter=StringNotEquals, Parameter=Points}",
@@ -474,7 +479,7 @@
             "Items": [
                 {
                     "BlockType": "text",
-                    "Source": "{{Item.Driver1.Points.IntValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Points.IntValue}}%",
+                    "Source": "{{{Item.Driver1.Points.FloatValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Driver0.Points.FloatValue, Converter=NumberAdd, Parameter={Item.Driver1.Points.FloatValue}}}, Converter=NumberSubtract, Parameter=1}%",
                     "Style": "LP-1",
                     "FontName": "{FontNameBlack}",
                     "FontSize": 90,
@@ -484,6 +489,11 @@
                             "Condition": "{TeamColourFG, Converter=BoolReverse}",
                             "Property": "Foreground",
                             "Value": "{{Item.Team.Name}DefaultFG}"
+                        },
+                                           {
+                            "Condition": "{Item.Driver1.Points.IntValue, Converter=NumberEquals, Parameter=0}",
+                            "Property": "Source",
+                            "Value": "0%"
                         },
                         {
                             "Condition": "{Comparison, Converter=StringNotEquals, Parameter=Points}",
