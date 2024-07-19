@@ -28,9 +28,9 @@
                                 "Items": [
                                     {
                                         "BlockType": "shape",
-                                        "WidthPercent": "{{Item.Driver1.Points.FloatValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Driver0.Points.FloatValue, Converter=NumberAdd, Parameter={Item.Driver1.Points.FloatValue}}}",
                                         "HorizontalAlignment": "Right",
                                         "Height": 160,
+                                        "Width": 280,
                                         "BackgroundImage": "components/horizontal.gradient.png",
                                         "ColorizeBackground": {
                                             "Enabled": true,
@@ -41,9 +41,26 @@
                                         },
                                         "Triggers": [
                                             {
+                                                "Condition": "{Item.Driver1.Points.IntValue, Converter=NumberEquals, Parameter=0}",
+                                                "ConditionOr": "{Item.Driver1.{{Comparison}}, Converter=NumberEquals, Parameter=0}",
+                                                "Property": "RenderIf",
+                                                "Value": false
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "BlockType": "shape",
+                                        "WidthPercent": "{{Item.Driver1.Points.FloatValue, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Driver0.Points.FloatValue, Converter=NumberAdd, Parameter={Item.Driver1.Points.FloatValue}}}",
+                                        "HorizontalAlignment": "Right",
+                                        "Height": 160,
+                                        "ShapeOptions": {
+                                            "Fill": "{Item.Team.SecondaryColor}"
+                                        },
+                                        "Triggers": [
+                                            {
                                                 "Condition": "{Comparison, Converter=StringNotEquals, Parameter=Points}",
                                                 "Property": "WidthPercent",
-                                                "Value": "{{Item.Driver1.{{Comparison}}, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.{{Comparison}}}}"
+                                                "Value": "{{Item.Driver1.{{Comparison}}, Converter=NumberMultiply, Parameter=100}, Converter=NumberDivide, Parameter={Item.Driver0.{{Comparison}}, Converter=NumberAdd, Parameter={Item.Driver1.{{Comparison}}}}}"
                                             },
                                             {
                                                 "Condition": "{Item.Driver1.{{Comparison}}, Converter=NumberEquals, Parameter=0}",
