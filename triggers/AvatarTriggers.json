@@ -73,7 +73,7 @@
     {
         "TriggerName": "AvatarDriver1",
         "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
-        "ConditionAnd": "{Item.Driver01.Driver.Description, Converter=EmptyObjectToFalse}",
+        "ConditionAnd": "{Item.Driver1.Driver.Description, Converter=EmptyObjectToFalse}",
         "Property": "Source",
         "Value": "avatars/{Item.Driver1.Driver.Description}.png"
     }
