@@ -18,7 +18,7 @@
                     "HorizontalAlignment": "Center",
                     "Triggers": [
                         {
-                            "Trigger": "AvatarL0"
+                            "Trigger": "AvatarL1"
                         },
                         {
                             "Condition": "{Item.Line1.Driver.Name, Converter=EmptyObjectToTrue}",
