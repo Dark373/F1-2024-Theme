@@ -6,7 +6,7 @@
         "Items": [
             {
                 "BlockType": "stack",
-                "RenderIf": "{RaceDriverCard}",
+                "RenderIf": "{QualDriverCard}",
                 "Orientation": "Vertical",
                 "Items": [
                     {
@@ -27,39 +27,57 @@
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "{DoubleSessionDriverCardLength}"
+                                        "h": "{SingleSessionDriverCardLength}"
                                     }
-                                }
+                                },
+                                "Triggers": [
+                                    {
+                                        "Condition": "{SessisonStartPos, Converter=NumberEquals, Parameter=11}",
+                                        "ComponentVar": "h",
+                                        "Value": 1086
+                                    },
+                                    {
+                                        "Condition": "{QualSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
+                                        "ComponentVar": "h",
+                                        "Value": "{DoubleSessionDriverCardLength}"
+                                    }
+                                ]
                             }
                         }
                     },
                     {
                         "BlockType": "itemstack",
+                        "RenderIf": "{QualSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
                         "HorizontalAlignment": "Center",
                         "Orientation": "Horizontal",
                         "ItemStackOptions": {
                             "ItemSource": "{Session.Drivers}",
-                            "FilterMember": "IsRace{{RaceSecondDriverCard}}",
-                            "FilterMemberValue": "True",
+                            "Limit": 1,
+                            "IndexStart": "{{QualSecondDriverCard}Index}",
                             "ItemTemplate": {
                                 "BlockType": "component",
                                 "Component": "V1DriverCard",
                                 "ComponentOptions": {
                                     "Vars": {
-                                        "source0": "{{RaceSecondDriverCard}source0}",
-                                        "source1": "{{RaceSecondDriverCard}source1}",
-                                        "ftsize": "{{RaceSecondDriverCard}FS}",
+                                        "source0": "{{QualSecondDriverCard}source0}",
+                                        "source1": "{{QualSecondDriverCard}source1}",
+                                        "ftsize": "{{QualSecondDriverCard}FS}",
                                         "bg": "{Item.Team.Color}",
                                         "teamname": "false",
                                         "teamlogo": "false",
-                                        "h": "{DoubleSessionDriverCardLength}"
+                                        "h": "{SingleSessionDriverCardLength}"
                                     }
                                 },
                                 "Triggers": [
                                     {
-                                        "Condition": "{RaceSecondDriverCard, Converter=StringEquals, Parameter=Fastest Lap}",
-                                        "ComponentVar": "bg",
-                                        "Value": "{SessionFastestLapFG}"
+                                        "Condition": "{SessisonStartPos, Converter=NumberEquals, Parameter=11}",
+                                        "ComponentVar": "h",
+                                        "Value": 1086
+                                    },
+                                    {
+                                        "Condition": "{QualSecondDriverCard, Converter=StringNotEquals, Parameter=Do Not Render}",
+                                        "ComponentVar": "h",
+                                        "Value": "{DoubleSessionDriverCardLength}"
                                     }
                                 ]
                             }
