@@ -50,13 +50,7 @@
                                 "Source": "avatars/{Item.Team.Name}_1.png",
                                 "Triggers": [
                                     {
-                                        "Trigger": "AvatarDescription"
-                                    },
-                                    {
-                                        "Trigger": "AvatarReserve"
-                                    },
-                                    {
-                                        "Trigger": "AvatarReserveDefault"
+                                        "Trigger": "AvatarDriver0"
                                     },
                                     {
                                         "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
@@ -86,13 +80,7 @@
                                 "Source": "avatars/{Item.Team.Name}_2.png",
                                 "Triggers": [
                                     {
-                                        "Trigger": "AvatarDescription"
-                                    },
-                                    {
-                                        "Trigger": "AvatarReserve"
-                                    },
-                                    {
-                                        "Trigger": "AvatarReserveDefault"
+                                        "Trigger": "AvatarDriver1"
                                     },
                                     {
                                         "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
