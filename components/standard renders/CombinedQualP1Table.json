@@ -87,7 +87,7 @@
                             "Value": "{SessionFastestLapFG}"
                         },
                         {
-                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
+                            "Condition": "{Item.QualQ1Time, Converter=EmptyObjectToTrue}",
                             "ComponentVar": "source",
                             "Value": "[No Time]"
                         }
@@ -134,7 +134,7 @@
                             "Value": "{SessionFastestLapFG}"
                         },
                         {
-                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
+                            "Condition": "{Item.QualQ2Time, Converter=EmptyObjectToTrue}",
                             "ComponentVar": "source",
                             "Value": "[No Time]"
                         }
@@ -176,7 +176,7 @@
                     },
                     "Triggers": [
                         {
-                            "Condition": "{Item.FastestLapTime, Converter=EmptyObjectToTrue}",
+                            "Condition": "{Item.QualQ3Time, Converter=EmptyObjectToTrue}",
                             "ComponentVar": "source",
                             "Value": "[No Time]"
                         }
