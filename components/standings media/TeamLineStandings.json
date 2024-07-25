@@ -114,72 +114,79 @@
                     ]
                 },
                 {
-                    "BlockType": "dock",
-                    "Height": 202,
-                    "Width": 360,
-                    "Background": "{Item.Team.Color}",
+                    "BlockType": "stack",
                     "VerticalAlignment": "Center",
-                    "PaddingRight": 100,
+                    "HorizontalAlignment": "Center",
                     "Items": [
                         {
-                            "BlockType": "image",
-                            "Height": "{{Item.Team.Name}LogoSizeTeamStandings}",
-                            "HorizontalAlignment": "Center",
+                            "BlockType": "dock",
+                            "Height": 202,
+                            "Width": 360,
+                            "Background": "{Item.Team.Color}",
                             "VerticalAlignment": "Center",
-                            "ImageOptions": {
-                                "Path": "{Item.Team.LightLogotypePath}",
-                                "HorizontalAlignment": "Center",
-                                "VerticalAlignment": "Center"
-                            },
-                            "Triggers": [
+                            "PaddingRight": 100,
+                            "Items": [
                                 {
-                                    "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Aston Martin}",
-                                    "ConditionAnd": "{Livery, Converter=BoolReverse}",
-                                    "Property": "Margin",
-                                    "Value": "-30,0,0,0"
-                                },
-                                {
-                                    "Condition": "{{Item.Team.Name}LogoSizeTeamStandings, Converter=EmptyObjectToTrue}",
-                                    "Property": "Height",
-                                    "Value": 320
-                                },
-                                {
-                                    "Condition": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
-                                    "Property": "Padding",
-                                    "Value": "80,4"
-                                },
-                                {
-                                    "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
-                                    "Setters": [
+                                    "BlockType": "image",
+                                    "Height": "{{Item.Team.Name}LogoSizeTeamStandings}",
+                                    "HorizontalAlignment": "Center",
+                                    "VerticalAlignment": "Center",
+                                    "ImageOptions": {
+                                        "Path": "{Item.Team.LightLogotypePath}",
+                                        "HorizontalAlignment": "Center",
+                                        "VerticalAlignment": "Center"
+                                    },
+                                    "Triggers": [
                                         {
-                                            "Property": "Background",
-                                            "Value": "{{ReserveMediaStandingsBG}}"
+                                            "Condition": "{Item.Team.Name, Converter=StringEquals, Parameter=Aston Martin}",
+                                            "ConditionAnd": "{Livery, Converter=BoolReverse}",
+                                            "Property": "Margin",
+                                            "Value": "-30,0,0,0"
                                         },
                                         {
-                                            "Property": "ImageOptions.Path",
-                                            "Value": "logotypes/reserve.png"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Condition": "{Item.Team.LightLogotypePath, Converter=EmptyObjectToTrue}",
-                                    "Property": "ImageOptions.Path",
-                                    "Value": "avatars/placeholder1.png"
-                                },
-                                {
-                                    "Condition": "{Livery}",
-                                    "Setters": [
-                                        {
-                                            "Property": "ImageOptions.Path",
-                                            "Value": "{Item.Team.LiveryPath}"
-                                        },
-                                        {
+                                            "Condition": "{{Item.Team.Name}LogoSizeTeamStandings, Converter=EmptyObjectToTrue}",
                                             "Property": "Height",
-                                            "Value": 110
+                                            "Value": 320
                                         },
                                         {
-                                            "Property": "PaddingLeft",
-                                            "Value": 180
+                                            "Condition": "{g3, Converter=StringNotEquals, Parameter=No Avatars}",
+                                            "Property": "Padding",
+                                            "Value": "80,4"
+                                        },
+                                        {
+                                            "Condition": "{Item.Team.Name, Converter=EmptyObjectToTrue}",
+                                            "Setters": [
+                                                {
+                                                    "Property": "Background",
+                                                    "Value": "{{ReserveMediaStandingsBG}}"
+                                                },
+                                                {
+                                                    "Property": "ImageOptions.Path",
+                                                    "Value": "logotypes/reserve.png"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "Condition": "{Item.Team.LightLogotypePath, Converter=EmptyObjectToTrue}",
+                                            "Property": "ImageOptions.Path",
+                                            "Value": "avatars/placeholder1.png"
+                                        },
+                                        {
+                                            "Condition": "{Livery}",
+                                            "Setters": [
+                                                {
+                                                    "Property": "ImageOptions.Path",
+                                                    "Value": "{Item.Team.LiveryPath}"
+                                                },
+                                                {
+                                                    "Property": "Height",
+                                                    "Value": 110
+                                                },
+                                                {
+                                                    "Property": "PaddingLeft",
+                                                    "Value": 180
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
