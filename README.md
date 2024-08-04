@@ -20,13 +20,13 @@ Users can switch between "Season Name", "Category Name" and "Category Short Name
 ![image](https://github.com/Dark373/F1-2024-Theme/assets/141680047/76cb3b7a-2e75-4971-8b0b-74982164ab37)
 
 ## DRIVER AVATARS
-Setting Driver Avatars option to "Custom Avatars" means the theme will search for images named after the driver description. Example: 
+Setting Driver Avatars option to "Custom Avatars" means the theme will search for images named after the driver general name. Example: 
 
-Driver Description: SomeText
+Driver General Name: SomeText
 
 Image Name: SomeText.png
 
-Add your images here -> theme/images/avatars
+Add your images here -> RacingLeagueTools/images/driver_avatars/
 
 Note that all custom images must be a 1:1 ratio between height and width. All images must be a .png file type.
 
