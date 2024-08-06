@@ -50,7 +50,7 @@
                                 "Source": "avatars/{Item.Team.Name}_1.png",
                                 "Triggers": [
                                     {
-                                        "Trigger": "AvatarDriver0"
+                                        "Trigger": "D0CustomAvatars"
                                     },
                                     {
                                         "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
@@ -80,7 +80,7 @@
                                 "Source": "avatars/{Item.Team.Name}_2.png",
                                 "Triggers": [
                                     {
-                                        "Trigger": "AvatarDriver1"
+                                        "Trigger": "D1CustomAvatars"
                                     },
                                     {
                                         "Condition": "{g3, Converter=StringEquals, Parameter=No Avatars}",
