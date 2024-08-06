@@ -33,7 +33,7 @@
                     "MarginLeft": 12,
                     "Height": 100,
                     "Width": 1000,
-                    "WidthPercent": "<stat>",
+                    "WidthPercent": "{<stat>, Converter=NumberAdd, Parameter=1}",
                     "VerticalAlignment": "Top",
                     "HorizontalAlignment": "Right",
                     "ShapeOptions": {
