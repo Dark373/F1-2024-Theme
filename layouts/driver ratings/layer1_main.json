@@ -21,13 +21,13 @@
                         "Items": [
                             {
                                 "BlockType": "image",
-                                "Source": "{Item.Driver.LogotypePath}",
+                                "Source": "{DriverInfo.Driver.LogotypePath}",
                                 "Height": 1600,
                                 "Padding": "-300,0",
                                 "Triggers": [
                                     {
                                         "Condition": "{g3, Converter=StringEquals, Parameter=Custom Avatars}",
-                                        "ConditionAnd": "{Item.Driver.LogotypePath, Converter=EmptyObjectToTrue}",
+                                        "ConditionAnd": "{DriverInfo.Driver.LogotypePath, Converter=EmptyObjectToTrue}",
                                         "Property": "Source",
                                         "Value": "avatars/placeholder1.png"
                                     },
