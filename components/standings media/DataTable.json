@@ -136,6 +136,7 @@
                                         },
                                         {
                                             "Condition": "{Item.RaceMajorPositionString, Converter=StringEquals, Parameter=DNF}",
+                                            "ConditionOr": "{Item.RaceMajorPositionString, Converter=StringEquals, Parameter=DSQ}",
                                             "Property": "FontSize",
                                             "Value": 80
                                         },
