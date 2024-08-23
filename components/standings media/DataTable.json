@@ -339,7 +339,7 @@
                     "Component": "DataTableColumn",
                     "ComponentOptions": {
                         "Vars": {
-                            "source": "{Item.BestPos1, Converter=NumberZeroToEmpty}",
+                            "source": "{Item.BestPosQual, Converter=NumberZeroToEmpty}",
                             "w": 220,
                             "fg": "{MainStandingsFG}"
                         }
