@@ -22,7 +22,6 @@
                     "Height": "175",
                     "HorizontalAlignment": "Center",
                     "Source": "logotypes/FiA.png",
-                    "RenderIf": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToTrue}"
                 }
             ]
         },
@@ -83,7 +82,6 @@
                     "Height": "75",
                     "HorizontalAlignment": "Right",
                     "Source": "logotypes/f1_logo.png",
-                    "RenderIf": "{Season.LeagueInfo.LeagueLogo, Converter=EmptyObjectToTrue}"
                 },
                 //{
                     //"Name": "LeagueLogo",
