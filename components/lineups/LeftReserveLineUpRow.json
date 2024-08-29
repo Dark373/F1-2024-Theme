@@ -71,13 +71,23 @@
                                             "Foreground": "{ReserveMediaStandingsFG}",
                                             "Triggers": [
                                                 {
-                                                    "Trigger": "Name1"
+                                                    "Condition": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.Name, Converter=StringToUpperString}"
                                                 },
                                                 {
-                                                    "Trigger": "Name2"
+                                                    "Condition": "{lnname1, Converter=StringEquals, Parameter=Name}",
+                                                    "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=RealName}",
+                                                    "ConditionOr": "{lnname1, Converter=StringEquals, Parameter=InGameName}",
+                                                    "ConditionAnd": "{name3, Converter=BoolReverse}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.{lnname1}}"
                                                 },
                                                 {
-                                                    "Trigger": "Name3"
+                                                    "Condition": "{name2}",
+                                                    "ConditionAnd": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
+                                                    "Property": "Source",
+                                                    "Value": "{Item.Driver.RealName, Converter=StringToUpperString}"
                                                 },
                                                 {
                                                     "Condition": "{lnname1, Converter=StringEquals, Parameter=Full Name}",
