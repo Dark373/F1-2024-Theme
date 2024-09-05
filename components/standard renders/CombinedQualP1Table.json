@@ -282,8 +282,8 @@
                             "style": "P1Default",
                             "fg": "{SessionP1FG}",
                             "font": "{FontNameBold}",
-                            "w": "50",
-                            "pad": "50,0",
+                            "w": "100",
+                            "pad": "20,0",
                             "source": "{Item.DriverPointsString}"
                         }
                     },
