@@ -367,7 +367,7 @@
                             "style": "P1Default",
                             "fg": "{PointsFG}",
                             "font": "{FontNameBold}",
-                            "w": "50",
+                            "w": "100",
                             "pad": "50,0",
                             "source": "{Item.DriverPointsString}"
                         }
