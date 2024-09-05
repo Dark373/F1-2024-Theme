@@ -235,7 +235,7 @@
                             "font": "{FontNameItalic}",
                             "w": "80",
                             "pad": "30,0",
-                            "source": "+{Item.PenaltyTimeTotal}s"
+                            "source": "{Item.PenaltyTimeTotal}s"
                         }
                     },
                     "Triggers": [
@@ -268,7 +268,7 @@
                             "font": "{FontNameItalic}",
                             "w": "80",
                             "pad": "30,0",
-                            "source": "+{Item.PenaltyTimeStewards}s"
+                            "source": "{Item.PenaltyTimeStewards}s"
                         }
                     },
                     "Triggers": [
@@ -301,7 +301,7 @@
                             "font": "{FontNameItalic}",
                             "w": "80",
                             "pad": "30,0",
-                            "source": "+{Item.PenaltyTimeIngame}s"
+                            "source": "{Item.PenaltyTimeIngame}s"
                         }
                     },
                     "Triggers": [
