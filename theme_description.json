@@ -2,15 +2,10 @@
   "ThemeId": "Dark373.F1_2024_Theme",
   "Name": "F1 2024 Theme",
   "Author": "Dark373",
-  "Version": "1.5",
+  "Version": "1.5.1",
   "DefaultLocalizationId": "en-GB",
   "ForceLiveriesLoading": true,
   "Links": [
-    {
-      "Type": "SupportAuthor",
-      "Url": "https://www.paypal.me/373Dark?locale.x=en_GB",
-      "Caption": "Support Me"
-    },
     {
       "Type": "ThemeIssueReport",
       "Url": "https://github.com/Dark373/F1-2024-Theme/issues",
